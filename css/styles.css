@@ -1,8 +1,7 @@
 .wrapper {
   position: relative;
   width: 100%;
-  background-color: #bfb9b9;
-  overflow-x: hidden; }
+  background-color: #bfb9b9; }
 
 .js-code {
   background-image: url("../img/js-bg.jpg");
@@ -18,7 +17,7 @@
   position: relative;
   margin: 40px 0;
   color: #fff;
-  font-size: 3em; }
+  font-size: 2em; }
   @media screen and (max-width: 640px) {
     .title {
       font-size: 1.6em; } }
@@ -84,7 +83,8 @@
           align-items: center;
   width: 80%;
   min-height: 100vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 60px; }
   @media screen and (max-width: 800px) {
     .header {
       width: 100%; } }
@@ -357,29 +357,62 @@
   @media screen and (max-width: 800px) {
     .skills {
       width: 100%; } }
-  .skills .tech-logo {
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .skills .tech-logo .row {
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .skills .tech-logo .row .item {
-        height: 100px;
-        margin: 20px; }
-        @media screen and (max-width: 640px) {
-          .skills .tech-logo .row .item {
-            height: 60px; } }
+  .skills .grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: "title	title	 title		title		  title			title		 title	   title" "haml   haml     pug        css           css           webpack      webpack   webpack"  "html   html     photoshop  css           css           sass         sass      npm "  "html   html     jquery     materialize   bootstrap     gulp         git       git"  "php    js       js         ajax          ajax          gulp         git       git"  "mysql  js       js         es6           http          scrum        scrum     scrum "; }
+    .skills .grid img {
+      width: 100%;
+      -ms-flex-item-align: center;
+          align-self: center;
+      justify-self: center; }
+    .skills .grid .title {
+      grid-area: title;
+      -ms-flex-item-align: center;
+          align-self: center;
+      justify-self: center; }
+    .skills .grid .ajax {
+      grid-area: ajax; }
+    .skills .grid .bootstrap {
+      grid-area: bootstrap; }
+    .skills .grid .css {
+      grid-area: css; }
+    .skills .grid .es6 {
+      grid-area: es6; }
+    .skills .grid .git {
+      grid-area: git; }
+    .skills .grid .gulp {
+      grid-area: gulp; }
+    .skills .grid .html {
+      grid-area: html; }
+    .skills .grid .http {
+      grid-area: http; }
+    .skills .grid .jquery {
+      grid-area: jquery; }
+    .skills .grid .js {
+      grid-area: js; }
+    .skills .grid .materialize {
+      grid-area: materialize; }
+    .skills .grid .mysql {
+      grid-area: mysql; }
+    .skills .grid .npm {
+      grid-area: npm; }
+    .skills .grid .photoshop {
+      grid-area: photoshop; }
+    .skills .grid .php {
+      grid-area: php; }
+    .skills .grid .sass {
+      grid-area: sass; }
+    .skills .grid .scrum {
+      grid-area: scrum; }
+    .skills .grid .webpack {
+      grid-area: webpack; }
+    .skills .grid .haml {
+      grid-area: haml; }
+    .skills .grid .pug {
+      grid-area: pug; }
 
 .contact {
   position: relative;
@@ -419,7 +452,8 @@
       height: 30px;
       width: 100%;
       margin: 10px 0;
-      padding: 2px; }
+      padding: 5px;
+      font-size: 20px; }
       .contact .mail .mail::-webkit-input-placeholder,
       .contact .mail .message::-webkit-input-placeholder,
       .contact .mail .theme::-webkit-input-placeholder {
@@ -454,3 +488,6 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+
+body {
+  overflow-x: hidden; }

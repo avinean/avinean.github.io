@@ -10,7 +10,7 @@ function fillSel() {
     $.get(
         'https://newsapi.org/v2/sources',
         {
-            "apiKey": "1170a74072b24f30af90e82526cb9049"
+            "apiKey": "854bd70b1227439fba390073d6bfd505"
         },
         json => {
             var out = `<option value="" selected disabled hidden></option>`
@@ -29,7 +29,7 @@ function printNews(src) {
         'https://newsapi.org/v2/everything',
         {
             "q": src,
-            "apiKey": "1170a74072b24f30af90e82526cb9049"
+            "apiKey": "854bd70b1227439fba390073d6bfd505"
         },
         json => {
             json = json.articles;

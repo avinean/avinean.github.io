@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cp.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="ininf">
+
+			<!-- border radius -->
+			<div class="styleButton borderstyle" onclick="openStyle(0)">Border radius</div>
+			<div class="blockStyle borderstyle">
+				<p>
+					<span class="title">Border-Radius</span> 
+					<input type="range" class="border" id="bdrs" value="0">
+				</p>
+				<p>
+					<span class="title">Top-Left</span>
+					<input type="range" class="border" id="tl" value="0">
+				</p>
+				<p>
+					<span class="title">Top-Right</span>
+					<input type="range" class="border" id="tr" value="0">
+				</p>
+				<p>
+					<span class="title">Bottom-Right</span>
+					<input type="range" class="border" id="br" value="0">
+				</p>
+				<p>
+					<span class="title">Bottom-Left</span>
+					<input type="range" class="border" id="bl" value="0">
+				</p>
+			</div>
+
+
+			<!-- border -->
+			<div class="styleButton borderstyle" onclick="openStyle(1)">Border</div>
+			<div class="blockStyle borderstyle">
+				<p>
+					<span class="title">Border width</span> 
+					<input type="range" id="border" min="0" max="50" value="1">
+				</p>
+				<p>
+					<span class="title">Border style</span>
+					<select id="borderStyle">
+						<option selected>solid</option>
+						<option>dotted</option>
+						<option>dashed</option>
+						<option>double</option>
+					</select>
+				</p>
+				<p>
+					<span class="title">Border color</span>
+					<div class="CP" data-cp="borderColorColorPicker">
+						<div class="CPResult">
+							<div class="CPColor"></div>
+							<div class="CPHEX"></div>
+						</div>
+						<canvas class="CPField" width="200" height="200"></canvas>
+						<canvas class="CPStripe" width="50" height="200"></canvas>
+					</div>
+
+					<div class="CPstartButton" data-cp="borderColorColorPicker"></div>
+				</p>
+
+			</div>
+
+
+			<!-- box shadow -->
+			<div class="styleButton  borderstyle" onclick="openStyle(2)">Box shadow</div>
+			<div class="blockStyle  borderstyle">
+				<p>
+					<span class="title">Inset shadow</span>
+					<input type="checkbox" id="checkShadow" value="inset">
+				</p>
+				<p>
+					<span class="title">Horizontal position</span> 
+					<input type="range" class="shadow" id="horiz" value="0">
+				</p>
+
+				<p>
+					<span class="title">Vertical position</span>
+					<input type="range" class="shadow" id="vert" value="0">
+				</p>
+				<p>
+					<span class="title">Blurring</span>
+					<input type="range" class="shadow" id="blur" value="0">
+				</p>
+				<p>
+					<span class="title">Radius</span>
+					<input type="range" class="shadow" id="rad" value="0">
+				</p>
+				<p>
+					<span class="title">Shadow color</span>
+					<div class="CP" data-cp="boxShadowColorPicker">
+						<div class="CPResult">
+							<div class="CPColor"></div>
+							<div class="CPHEX"></div>
+						</div>
+						<canvas class="CPField" width="200" height="200"></canvas>
+						<canvas class="CPStripe" width="50" height="200"></canvas>
+					</div>
+
+					<div class="CPstartButton" data-cp="boxShadowColorPicker"></div>
+				</p>
+
+			</div>
+
+
+			<!-- out information -->
+			<div>
+				<p id="result" class="borderstyle"></p>
+			</div>
+			<div class="back borderstyle">
+				<span>Change <br> BGC</span>		
+
+				<div class="CP" data-cp="backgroundColorPicker">
+					<div class="CPResult">
+						<div class="CPColor"></div>
+						<div class="CPHEX"></div>
+					</div>
+					<canvas class="CPField" width="200" height="200"></canvas>
+					<canvas class="CPStripe" width="50" height="200"></canvas>
+				</div>
+
+				<div class="CPstartButton" data-cp="backgroundColorPicker"></div>
+
+			</div>
+		</div>
+		<div class="outinf">
+			<h1 class=" borderstyle">CSS Generator</h1>
+			<div id="example">	</div>
+		</div>
+	</div>
+
+	<script src="js/cp.js"></script>
+	<script src="js/style.js"></script>
+	<script src="js/menu.js"></script>
+</body>
+</html>

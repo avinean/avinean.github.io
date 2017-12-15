@@ -43,7 +43,7 @@
     opacity: 0; } }
 
 .title--light {
-  color: #f1f1f1; }
+  color: rgba(206, 197, 197, 0.8); }
 
 .title--dark {
   color: #1f1f1f; }
@@ -232,13 +232,13 @@
     .about {
       width: 100%; } }
   .about .description {
-    color: #f1f1f1;
+    color: rgba(206, 197, 197, 0.8);
     font-size: 20px; }
 
 .footer {
   padding: 10px;
   background-color: #1f1f1f;
-  color: #f1f1f1;
+  color: rgba(206, 197, 197, 0.8);
   position: relative;
   z-index: 1;
   display: -ms-flex;
@@ -301,7 +301,7 @@
       list-style-type: none; }
       .footer .footer-nav .nav-item a {
         text-decoration: none;
-        color: #f1f1f1; }
+        color: rgba(206, 197, 197, 0.8); }
       .footer .footer-nav .nav-item:hover a {
         opacity: 0.6; }
     @media screen and (max-width: 800px) {
@@ -492,30 +492,28 @@
     .components {
       width: 100%; } }
   .components .grid {
-    width: 60%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 150px);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-areas: "one  one two " "one one three" "four five six"; }
+    -webkit-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    transition: all ease 1s; }
+    .components .grid .one, .components .grid .two, .components .grid .three, .components .grid .four, .components .grid .five, .components .grid .six {
+      width: 150px;
+      height: 150px; }
     .components .grid .one {
-      grid-area: one;
       background-color: red; }
+      .components .grid .one:hover {
+        height: 300px;
+        width: 300px; }
     .components .grid .two {
-      grid-area: two;
       background-color: blue; }
     .components .grid .three {
-      grid-area: three;
       background-color: yellow; }
     .components .grid .four {
-      grid-area: four;
       background-color: green; }
     .components .grid .five {
-      grid-area: five;
       background-color: pink; }
     .components .grid .six {
-      grid-area: six;
       background-color: grey; }
 
 * {

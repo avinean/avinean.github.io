@@ -32,12 +32,29 @@
     line-height: 25px;
 }
 
-.on {
-    margin-left: 0;
+.trig-on {
+    margin-left: 50%;
     background: rgb(87, 113, 199);
 }
 
-.off {
-    margin-left: 50%;
+.trig-off {
+    margin-left: 0%;
     background: rgb(85, 85, 85);
+}
+
+.check-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 5px 0 #713131;
+    border-radius: 4px;
+}
+
+.check-box-access {
+    position: absolute;
+    top: -12px;
+    left: -2px;
+    text-align: center;
+    font-size: 38px;
+    color: green;
 }

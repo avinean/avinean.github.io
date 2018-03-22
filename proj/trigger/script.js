@@ -85,6 +85,15 @@ class App extends React.Component {
 			<div>
 				<Trigger onChange={this.onTriggerClick} status={this.state.checked} size="small"/>
 				<p>{this.state.message}</p>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a>
 			</div>
 		);
 	}

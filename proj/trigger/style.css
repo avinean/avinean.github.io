@@ -33,11 +33,11 @@
 }
 
 .on {
-    margin-left: 0;
+    margin-left: 50%;
     background: rgb(87, 113, 199);
 }
 
 .off {
-    margin-left: 50%;
+    margin-left: 0%;
     background: rgb(85, 85, 85);
 }

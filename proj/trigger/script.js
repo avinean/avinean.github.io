@@ -61,7 +61,7 @@ class App extends React.Component {
 				<br />
 				<br />
 				<br />
-				{/*<CheckboxGroup data={fakeValues}/>*/}
+				<CheckboxGroup data={fakeValues}/>
 				<br />
 				<br />
 				<br />

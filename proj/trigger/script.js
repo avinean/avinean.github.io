@@ -9,6 +9,7 @@ class App extends React.Component {
 	}
 
 	onTriggerClick = (e) => {
+		console.log(e);
 		this.setState({
 			trigged: e,
 			trigMessage: e ? 'cool' : 'fuck'
@@ -17,20 +18,42 @@ class App extends React.Component {
 	
 	onCheckbox = (e) => {
 		this.setState({
-			checked: e,
-			checkMessage: e ? 'checked' : 'fuck'
+			checked: e.checked,
+			checkMessage: e.checked ? 'checked' : 'fuck'
 		});
 	};
 
 	onRadio = (e) => {
 		this.setState({
-			radioChecked: e,
-			radioMessage: e ? 'radio' : 'fuck'
+			radioChecked: e.checked,
+			radioMessage: e.checked ? 'radio' : 'fuck'
 		});
 	};
 
 	render() {
+
+		const fakeValues = [
+			{
+				id: 1,
+				answer: "London is a capital of Ukraine",
+				isok: false
+			},{
+				id: 2,
+				answer: "I am not me",
+				isok: false
+			},{
+				id: 3,
+				answer: "Right answer",
+				isok: true
+			},{
+				id: 4,
+				answer: "Duck",
+				isok: false
+			}
+		];
+
 		return(
+
 			<div>
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
@@ -38,9 +61,7 @@ class App extends React.Component {
 				<br />
 				<br />
 				<br />
-				{/*<TestFrom type="edit"/>*/}
-				{/*<TestFrom type="view"/>*/}
-				{/*<TestFrom />*/}
+				{/*<CheckboxGroup data={fakeValues}/>*/}
 				<br />
 				<br />
 				<br />

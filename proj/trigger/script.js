@@ -59,8 +59,8 @@ class App extends React.Component {
 		});
 	};
 
-	getRes = (e) => {
-		console.log(e);
+	onNewFormCreate = (e) => {
+
 	};
 
 	render() {
@@ -71,18 +71,15 @@ class App extends React.Component {
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
 				<br />
-				<CheckboxGroup response={this.getRes} data={this.state.fakeValuesRadio} typeMode="radioView"/>
-				<CheckboxGroup response={this.getRes} data={this.state.fakeValues} typeMode="radioEdit"/>
-				<CheckboxGroup response={this.getRes} data={this.state.fakeValuesCheck} typeMode="checkView"/>
+				<CheckboxGroup data={this.state.fakeValuesRadio} typeMode="radioView"/>
+				<CheckboxGroup onCreate={this.onNewFormCreate} typeMode="radioEdit"/>
+				<CheckboxGroup data={this.state.fakeValuesCheck} typeMode="checkView"/>
 				<br />
 				<br />
 				<br />
-				<Trigger onChange={this.onTriggerClick} status={this.state.trigged} size="small"/>
-				<p>{this.state.trigMessage}</p>
+				<InputChecks onChange={this.onTriggerClick} checked={this.state.trigged} type="trigger" size="small"/>
 				<InputChecks onChange={this.onCheckbox} checked={this.state.checked} type="checkbox"/>
-				<p>{this.state.checkMessage}</p>
 				<InputChecks onChange={this.onRadio} checked={this.state.radioChecked} type="radiobox"/>
-				<p>{this.state.radioMessage}</p>
 			</div>
 		);
 	}

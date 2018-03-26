@@ -3,7 +3,20 @@ class InputChecks extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: false
+            checked: false,
+			status: this.props.status,
+			sizes: {
+				big: {
+					wrap: 'big wrap',
+					on: 'big-trig trig trig-on',
+					off: 'big-trig trig trig-off'
+				},
+				small: {
+					wrap: 'small wrap',
+					on: 'small-trig trig trig-on',
+					off: 'small-trig trig trig-off'
+				}
+			}
         }
     }
 
@@ -22,9 +35,9 @@ class InputChecks extends React.Component {
         });
     };
 
-
     render() {
 		const title = this.props.title ? <div className="check box-title">{this.props.title}</div> : '';
+		const size = (this.props.size in this.state.sizes) ? this.props.size : 'big';
         return(
         	this.props.type === 'checkbox' ?
 				<div className="check-box-wrapper">
@@ -41,7 +54,14 @@ class InputChecks extends React.Component {
 					</div>
 					{title}
 				</div>
-				: null
+				:
+			this.props.type === 'trigger' ?
+				<div onClick={this.check} className={this.state.sizes[size].wrap}>
+					<div className={this.state.checked ?
+						this.state.sizes[size].on :
+						this.state.sizes[size].off}
+					>{this.state.checked ? 'ON' : 'OFF'}</div>
+				</div> : null
         );
     }
 }

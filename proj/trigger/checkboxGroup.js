@@ -2,64 +2,36 @@ class CheckboxGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			checkedId: null,
-		}
 	}
 
-	setRadioValue = (e) => {
-		this.setState({
-			checkedId: e.props.uniqid,
-		});
-	};
-
-	setCheckValue = (e) => {
-		this.props.data.forEach(el => {
-			if ((e.props.uniqid === el.id)) {
-				el.checked = true;
-			}
-		});
-	};
-
-	checkResult = () => {
-		let res;
-		let checkPreRes = 0;
-		let checkRes = 0;
-		let missed = 0;
-
-		if (this.props.typeMode === 'radioView') {
-			this.props.data.forEach(e => {
-				if (e.id === this.state.checkedId) {
-					res = e.isok;
+	setVal = (e) => {
+		Promise.resolve().then(() => {
+			this.props.data.forEach(el => {
+				if (this.props.typeMode === 'radioView') {
+					el.checked = e.props.uniqid === el.id;
+					this.setState({checkedId: el.id})
 				}
+				if (this.props.typeMode === 'checkView')
+					e.props.uniqid === el.id ? el.checked = !el.checked :  null;
 			});
-			console.log(res ? "It's ok" : "Looser");
-		}
-		else if (this.props.typeMode === 'checkView') {
-			this.props.data.forEach(e => {
-				if (e.isok)  checkPreRes++;
-				if (e.checked && e.isok)  checkRes++;
-				if (e.checked && !e.isok)  missed++;
-			});
-			console.log(checkRes + ' right answers; ' + missed + ' wrong answers; ' + checkRes/checkPreRes*100 + '% right answers');
-		}
-
-
+		}).then(() => {
+			this.props.response(this.props.data);
+		});
 	};
 
 	render() {
 		let items = null;
 		if (this.props.typeMode === 'radioView') {
 			items = this.props.data.map(e => {
+				console.log(1, e.checked);
 				return(
 					<div key={e.id}>
 						<InputChecks
-							onChange={this.setRadioValue}
+							onChange={this.setVal}
 							type="radiobox"
-							isok={e.isok}
 							title={e.answer}
 							uniqid={e.id}
-							checked={e.id === this.state.checkedId}
+							checked={e.checked}
 							prevent={true}
 						/>
 					</div>
@@ -71,9 +43,8 @@ class CheckboxGroup extends React.Component {
 				return(
 					<div key={e.id}>
 						<InputChecks
-							onChange={this.setCheckValue}
+							onChange={this.setVal}
 							type="checkbox"
-							isok={e.isok}
 							title={e.answer}
 							uniqid={e.id}
 						/>
@@ -87,7 +58,6 @@ class CheckboxGroup extends React.Component {
 		return(
 			<div>
 				{items}
-				<button onClick={this.checkResult}>Check result</button>
 			</div>
 		);
 	}

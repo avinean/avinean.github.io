@@ -77,6 +77,9 @@
     font-size: 14px;
     color: #713131;
 }
+.check-box:hover, .radio-box:hover {
+    box-shadow: 0 0 10px 0 #0a25c0;
+}
 
 /*Check boxes group*/
 

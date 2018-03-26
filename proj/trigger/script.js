@@ -4,53 +4,66 @@ class App extends React.Component {
 		this.state = {
 			trigged: true,
 			checked: true,
-			radioChecked: true
-		};		
+			radioChecked: true,
+			fakeValuesRadio: [
+				{
+					id: 1,
+					answer: "London is a capital of Ukraine",
+				},{
+					id: 2,
+					answer: "I am not me",
+				},{
+					id: 3,
+					answer: "Right answer",
+				},{
+					id: 4,
+					answer: "Duck",
+				}
+			],
+			fakeValuesCheck: [
+				{
+					id: 1,
+					answer: "London is a capital of Ukraine",
+				},{
+					id: 2,
+					answer: "I am not me",
+				},{
+					id: 3,
+					answer: "Right answer",
+				},{
+					id: 4,
+					answer: "Duck",
+				},{
+					id: 5,
+					answer: "Aimzibesovzibes",
+				}
+			]
+		}
 	}
 
 	onTriggerClick = (e) => {
-		console.log(e);
 		this.setState({
 			trigged: e,
-			trigMessage: e ? 'cool' : 'fuck'
 		});
 	};
 	
 	onCheckbox = (e) => {
 		this.setState({
 			checked: e.checked,
-			checkMessage: e.checked ? 'checked' : 'fuck'
 		});
 	};
 
 	onRadio = (e) => {
 		this.setState({
 			radioChecked: e.checked,
-			radioMessage: e.checked ? 'radio' : 'fuck'
 		});
 	};
 
-	render() {
+	getRes = (e) => {
+		console.log(e);
+	};
 
-		const fakeValues = [
-			{
-				id: 1,
-				answer: "London is a capital of Ukraine",
-				isok: false
-			},{
-				id: 2,
-				answer: "I am not me",
-				isok: false
-			},{
-				id: 3,
-				answer: "Right answer",
-				isok: true
-			},{
-				id: 4,
-				answer: "Duck",
-				isok: false
-			}
-		];
+	render() {
 
 		return(
 
@@ -58,11 +71,9 @@ class App extends React.Component {
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
 				<br />
-				<br />
-				<br />
-				<br />
-				<CheckboxGroup data={fakeValues} typeMode="radioView"/>
-				<CheckboxGroup data={fakeValues} typeMode="checkView"/>
+				<CheckboxGroup response={this.getRes} data={this.state.fakeValuesRadio} typeMode="radioView"/>
+				<CheckboxGroup response={this.getRes} data={this.state.fakeValues} typeMode="radioEdit"/>
+				<CheckboxGroup response={this.getRes} data={this.state.fakeValuesCheck} typeMode="checkView"/>
 				<br />
 				<br />
 				<br />

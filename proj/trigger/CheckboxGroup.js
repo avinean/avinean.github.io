@@ -2,20 +2,24 @@ class CheckboxGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {checkedId: null};
 	}
 
 	setVal = (e) => {
 		Promise.resolve().then(() => {
 			this.props.data.forEach(el => {
 				if (this.props.typeMode === 'radioView') {
-					el.checked = e.props.uniqid === el.id;
-					this.setState({checkedId: el.id})
+					el.value = e.props.uniqid === el.id;
+					this.setState({value: e.props.uniqid === el.id});
 				}
 				if (this.props.typeMode === 'checkView')
-					e.props.uniqid === el.id ? el.checked = !el.checked :  null;
+					e.props.uniqid === el.id ? el.value = !el.value :  null;
 			});
 		}).then(() => {
-			this.props.response(this.props.data);
+			this.props.callback({
+				props: this.props,
+				state: this.state
+			});
 		});
 	};
 
@@ -23,15 +27,14 @@ class CheckboxGroup extends React.Component {
 		let items = null;
 		if (this.props.typeMode === 'radioView') {
 			items = this.props.data.map(e => {
-				console.log(1, e.checked);
 				return(
 					<div key={e.id}>
-						<InputChecks
+						<Box
 							onChange={this.setVal}
 							type="radiobox"
 							title={e.answer}
 							uniqid={e.id}
-							checked={e.checked}
+							value={e.value}
 							prevent={true}
 						/>
 					</div>
@@ -42,7 +45,7 @@ class CheckboxGroup extends React.Component {
 			items = this.props.data.map(e => {
 				return(
 					<div key={e.id}>
-						<InputChecks
+						<Box
 							onChange={this.setVal}
 							type="checkbox"
 							title={e.answer}

@@ -41,45 +41,51 @@ class App extends React.Component {
 		}
 	}
 
-	onTriggerClick = (e) => {
-		this.setState({
-			trigged: e,
-		});
-	};
-	
-	onCheckbox = (e) => {
-		this.setState({
-			checked: e.checked,
-		});
+	callback = e => {
+		//for test
+		console.log(this.state);
 	};
 
-	onRadio = (e) => {
-		this.setState({
-			radioChecked: e.checked,
-		});
-	};
-
-	onNewFormCreate = (e) => {
+	onNewFormCreate = e => {
 
 	};
 
 	render() {
-
 		return(
 
 			<div>
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
 				<br />
-				<CheckboxGroup data={this.state.fakeValuesRadio} typeMode="radioView"/>
-				<CheckboxGroup onCreate={this.onNewFormCreate} typeMode="radioEdit"/>
-				<CheckboxGroup data={this.state.fakeValuesCheck} typeMode="checkView"/>
+				<CheckboxGroup
+					callback={this.callback}
+					data={this.state.fakeValuesRadio}
+					typeMode="radioView"
+				/>
+				<CheckboxGroup
+					callback={this.callback}
+					data={this.state.fakeValuesCheck}
+					typeMode="checkView"
+				/>
 				<br />
 				<br />
 				<br />
-				<InputChecks onChange={this.onTriggerClick} checked={this.state.trigged} type="trigger" size="small"/>
-				<InputChecks onChange={this.onCheckbox} checked={this.state.checked} type="checkbox"/>
-				<InputChecks onChange={this.onRadio} checked={this.state.radioChecked} type="radiobox"/>
+				<Box
+					value={this.state.trigged}
+					type="trigger"
+					size="small"
+					on="OK" off="Chpok"
+				/>
+				<Box
+					value={this.state.checked}
+					type="checkbox"
+					on="OK" off="Chpok"
+				/>
+				<Box
+					value={this.state.radioChecked}
+					type="radiobox"
+					on="OK" off="Chpok"
+				/>
 			</div>
 		);
 	}

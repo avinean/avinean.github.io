@@ -38,7 +38,8 @@ class App extends React.Component {
 					answer: "Aimzibesovzibes",
 				}
 			],
-			data: [{}]
+			dataRadio: [{}],
+			dataCheck: [{}],
 		}
 	}
 
@@ -58,20 +59,29 @@ class App extends React.Component {
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
 				<br />
+				<h1>Radiobox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesRadio}
 					typeMode="radioView"
 				/>
+				<h1>Checkbox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesCheck}
 					typeMode="checkView"
 				/>
+				<h1>Editable radiobox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
-					data={this.state.data}
+					data={this.state.dataRadio}
 					typeMode="radioEdit"
+				/>
+				<h1>Editable checkbox group</h1>
+				<CheckboxGroup
+					callback={this.callback}
+					data={this.state.dataCheck}
+					typeMode="checkEdit"
 				/>
 				<br />
 				<br />

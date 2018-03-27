@@ -41,10 +41,14 @@
     font-size: 14px;
     color: #713131;
 }
-.box-title>input {
+.box-title-input {
     border: none;
     border-bottom: 1px solid #f1a3d4;
-    min-width: 500px;
+    height: 23px;
+    min-width: 400px;
+    line-height: 23px;
+    padding-left: 10px;
+    outline: none;
 }
 .check-box:hover, .radio-box:hover {
     box-shadow: 0 0 10px 0 #0a25c0;

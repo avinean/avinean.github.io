@@ -4,6 +4,7 @@ class Box extends React.Component {
         super(props);
         this.state = {
         	value: this.props.value,
+        	title: this.props.title,
 			sizes: {
 				big: {
 					wrap: 'big wrap',
@@ -47,7 +48,7 @@ class Box extends React.Component {
     };
 
 	onInput = (e) => {
-		this.props.form.title = e.target.value || '';
+		this.props.form.title = e.target.innerText || '';
 		this.props.form.uniqid = this.props.uniqid;
 		if (this.props.onChange) {
 			this.props.onChange(this.props.form);
@@ -74,7 +75,12 @@ class Box extends React.Component {
 			if (this.props.type === 'checkbox') {
 
 				box = <div className="check-box-wrapper">
-					reserved
+					<div onClick={this.check} className="check-box">
+						{this.props.value &&
+						<i className="zmdi zmdi-check check-box-access"></i>}
+					</div>
+					<div contenteditable="true" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
+					{this.props.onDelete && <button onClick={() => this.props.onDelete(this.props.form)}>X</button>}
 				</div>;
 
 			}
@@ -85,7 +91,7 @@ class Box extends React.Component {
 						{this.props.value &&
 						<i className="zmdi zmdi-circle radio-box-access"></i>}
 					</div>
-					<div className="check box-title" onInput={this.onInput}><input type="text"/></div>
+					<div contenteditable="true" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
 					{this.props.onDelete && <button onClick={() => this.props.onDelete(this.props.form)}>X</button>}
 				</div>;
 

@@ -16,21 +16,43 @@ class Box extends React.Component {
 					off: 'small-trig trig trig-off'
 				}
 			}
-        }
+        };
+
+        if (this.props.editable) {
+			this.props.form.uniqid = this.props.uniqid;
+		}
     }
 
     check = () => {
 		this.props.value = !this.props.value;
+
+		if (this.props.editable) {
+			this.props.form.checked = this.props.value;
+			this.props.form.uniqid = this.props.uniqid;
+		}
+
 		this.setState({
 			value: !this.state.value
 		});
+
 		if (this.props.onChange) {
-			this.props.onChange({
-				props: this.props,
-				state: this.state
-			});
+			this.props.editable
+				? this.props.onChange(this.props.form)
+				: this.props.onChange({
+					props: this.props,
+					state: this.state,
+					uniqid: this.props.uniqid
+				});
 		}
     };
+
+	onInput = (e) => {
+		this.props.form.title = e.target.value || '';
+		this.props.form.uniqid = this.props.uniqid;
+		if (this.props.onChange) {
+			this.props.onChange(this.props.form);
+		}
+	};
 
     render() {
 		let title = '';
@@ -45,25 +67,56 @@ class Box extends React.Component {
 		}
 
 		const size = (this.props.size in this.state.sizes) ? this.props.size : 'big';
-        return(
-        	this.props.type === 'checkbox' ?
-				<div className="check-box-wrapper">
-					<div onClick={this.check} className="check-box">
-						{this.props.value && <i className="zmdi zmdi-check check-box-access"></i>}
-					</div>
-					{title}
-				</div>
-				:
-			this.props.type === 'radiobox' ?
-				<div className="check-box-wrapper">
+
+		let box = null;
+
+		if (this.props.editable) {
+			if (this.props.type === 'checkbox') {
+
+				box = <div className="check-box-wrapper">
+					reserved
+				</div>;
+
+			}
+			if (this.props.type === 'radiobox') {
+
+				box = <div className="check-box-wrapper">
 					<div onClick={this.check} className="radio-box">
-						{this.props.value && <i className="zmdi zmdi-circle radio-box-access"></i>}
+						{this.props.value &&
+						<i className="zmdi zmdi-circle radio-box-access"></i>}
+					</div>
+					<div className="check box-title" onInput={this.onInput}><input type="text"/></div>
+					{this.props.onDelete && <button onClick={() => this.props.onDelete(this.props.form)}>X</button>}
+				</div>;
+
+			}
+		}
+		else {
+			if (this.props.type === 'checkbox') {
+
+				box = <div className="check-box-wrapper">
+					<div onClick={this.check} className="check-box">
+						{this.props.value &&
+						<i className="zmdi zmdi-check check-box-access"></i>}
 					</div>
 					{title}
-				</div>
-				:
-			this.props.type === 'trigger' ?
-				<div className="check-box-wrapper">
+				</div>;
+
+			}
+			if (this.props.type === 'radiobox') {
+
+				box = <div className="check-box-wrapper">
+					<div onClick={this.check} className="radio-box">
+						{this.props.value &&
+						<i className="zmdi zmdi-circle radio-box-access"></i>}
+					</div>
+					{title}
+				</div>;
+
+			}
+			if (this.props.type === 'trigger') {
+
+				box = <div className="check-box-wrapper">
 					<div onClick={this.check} className={this.state.sizes[size].wrap}>
 						<div className={this.state.value ?
 							this.state.sizes[size].on :
@@ -71,7 +124,11 @@ class Box extends React.Component {
 						>{this.state.value ? 'ON' : 'OFF'}</div>
 					</div>
 					{title}
-				</div> : null
-        );
+				</div>;
+
+			}
+		}
+
+		return box;
     }
 }

@@ -9,17 +9,55 @@ class CheckboxGroup extends React.Component {
 		Promise.resolve().then(() => {
 			this.props.data.forEach(el => {
 				if (this.props.typeMode === 'radioView') {
-					el.value = e.props.uniqid === el.id;
-					this.setState({value: e.props.uniqid === el.id});
+					el.value = e.uniqid === el.id;
+					this.setState({value: e.uniqid === el.id});
 				}
 				if (this.props.typeMode === 'checkView')
-					e.props.uniqid === el.id ? el.value = !el.value :  null;
+					e.uniqid === el.id ? el.value = !el.value :  null;
 			});
 		}).then(() => {
 			this.props.callback({
 				props: this.props,
 				state: this.state
 			});
+		});
+	};
+
+	createForm = e => {
+		Promise.resolve()
+		.then(() => {
+			if (e.checked) {
+				this.setState({checkedId: e.uniqid});
+			}
+		}).then(() => {
+			this.props.data.forEach(el => {
+				if (this.props.typeMode === 'radioEdit') {
+					el.checked = e.uniqid === el.uniqid;
+				}
+			});
+		});
+		// }).then(() => {
+		// 	this.props.callback({
+		// 		props: this.props,
+		// 		state: this.state
+		// 	});
+		// });
+	};
+
+	deleteForm = e => {
+		Promise.resolve()
+		.then(() => {
+			this.props.data = this.props.data.filter(el => e.uniqid !== el.uniqid);
+		}).then(() => {
+			this.setState({checkedId: null});
+		})
+	};
+
+	addField = _ => {
+		Promise.resolve().then(() =>{
+			this.props.data.push({});
+		}).then(() => {
+			this.setState({data: this.props.data});
 		});
 	};
 
@@ -56,11 +94,28 @@ class CheckboxGroup extends React.Component {
 			});
 		}
 		else if (this.props.typeMode === 'checkEdit') {}
-		else if (this.props.typeMode === 'radioEdit') {}
+		else if (this.props.typeMode === 'radioEdit') {
+			items = this.props.data.map((e,i) => {
+				return(
+					<div key={i}>
+						<Box
+							onChange={this.createForm}
+							onDelete={this.deleteForm}
+							type="radiobox"
+							value={e.uniqid === this.state.checkedId}
+							form={e}
+							editable="1"
+							uniqid={i}
+						/>
+					</div>
+				);
+			});
+		}
 
 		return(
 			<div>
 				{items}
+				{this.props.typeMode === 'radioEdit' && <button onClick={this.addField}>add field</button>}
 			</div>
 		);
 	}

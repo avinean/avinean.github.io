@@ -37,7 +37,8 @@ class App extends React.Component {
 					id: 5,
 					answer: "Aimzibesovzibes",
 				}
-			]
+			],
+			data: [{}]
 		}
 	}
 
@@ -66,6 +67,11 @@ class App extends React.Component {
 					callback={this.callback}
 					data={this.state.fakeValuesCheck}
 					typeMode="checkView"
+				/>
+				<CheckboxGroup
+					callback={this.callback}
+					data={this.state.data}
+					typeMode="radioEdit"
 				/>
 				<br />
 				<br />

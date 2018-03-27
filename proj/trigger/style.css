@@ -11,6 +11,7 @@
 }
 .check-box {
     position: relative;
+    min-width: 20px;
     width: 20px;
     height: 20px;
     margin: 0 10px;
@@ -26,6 +27,7 @@
     color: green;
 }
 .radio-box {
+    min-width: 20px;
     width: 20px;
     height: 20px;
     padding: 3px;
@@ -38,6 +40,11 @@
     text-align: center;
     font-size: 14px;
     color: #713131;
+}
+.box-title>input {
+    border: none;
+    border-bottom: 1px solid #f1a3d4;
+    min-width: 500px;
 }
 .check-box:hover, .radio-box:hover {
     box-shadow: 0 0 10px 0 #0a25c0;

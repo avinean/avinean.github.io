@@ -54,7 +54,6 @@ class App extends React.Component {
 
 	render() {
 		return(
-
 			<div>
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />

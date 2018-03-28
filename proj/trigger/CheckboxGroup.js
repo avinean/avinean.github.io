@@ -24,24 +24,13 @@ class CheckboxGroup extends React.Component {
 	};
 
 	createForm = e => {
-		Promise.resolve()
-		.then(() => {
-			if (e.checked) {
-				this.setState({checkedId: e.uniqid});
-			}
-		}).then(() => {
-			this.props.data.forEach(el => {
-				if (this.props.typeMode === 'radioEdit') {
-					el.checked = e.uniqid === el.uniqid;
-				}
-			});
-		});
+		this.setState({checkedId: e.uniqid});
+		this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid);
 	};
 
 	delField = e => {
-		Promise.resolve()
-		.then(() => this.props.data = this.props.data.filter(el => e.uniqid !== el.uniqid))
-		.then(() => this.setState({checkedId: this.state.checkedId}));
+		this.setState({checkedId: this.state.checkedId});
+		this.props.data = this.props.data.filter(el => e.uniqid !== el.uniqid);
 	};
 
 	addField = _ => {

@@ -25,7 +25,11 @@ class CheckboxGroup extends React.Component {
 
 	createForm = e => {
 		Promise.resolve()
-		.then(() => this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid))
+		.then(() => {
+			if (this.props.typeMode  === 'radioView') {
+				this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid);
+			}
+		})
 		.then(() => this.setState({checkedId: e.uniqid}));
 	};
 

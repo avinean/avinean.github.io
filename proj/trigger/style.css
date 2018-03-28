@@ -87,14 +87,9 @@
     background: rgb(87, 113, 199);
 }
 .trig-off {
-    margin-left: 0%;
+    margin-left: 0;
     background: rgb(85, 85, 85);
 }
-
-/*Check boxes group*/
-
-div {}
-
 
 /*Test styles*/
 
@@ -119,5 +114,14 @@ div {}
 .test-form-textarea {
     width: 100%;
     height: 100px;
+}
+
+.test-form-title {
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+}
+
+.test-form-text {
+    background: linear-gradient(0.25turn,#babae2, #fff);
 }
 

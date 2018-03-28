@@ -40,8 +40,50 @@ class App extends React.Component {
 			],
 			dataRadio: [{}],
 			dataCheck: [{}],
+			fakeFormValuesRadio: {
+				id: '1232qweqwe',
+				text: 'This is a question?',
+				data: [
+					{
+						id: 1,
+						answer: "London is a capital of Ukraine",
+					}, {
+						id: 2,
+						answer: "I am not me",
+					}, {
+						id: 3,
+						answer: "Right answer",
+					}, {
+						id: 4,
+						answer: "Duck",
+					}
+				]
+			},
+			fakeFormValuesCheck: {
+				id: '1232qweqwe',
+				text: 'Is multiselect working?',
+				data: [
+					{
+						id: 1,
+						answer: "London is a capital of Ukraine",
+					}, {
+						id: 2,
+						answer: "I am not me",
+					}, {
+						id: 3,
+						answer: "Right answer",
+					}, {
+						id: 4,
+						answer: "Duck",
+					}
+				]
+			},
 		}
 	}
+
+	callback = e => {
+		console.log(e);
+	};
 
 	render() {
 		return(
@@ -49,29 +91,51 @@ class App extends React.Component {
 				<h1><a href="https://github.com/avinean/avinean.github.io/tree/master/proj/trigger">git hub</a></h1>
 				<br />
 				<br />
+				<h1>Ready forms</h1>
+				<TestForm
+					callback={this.callback}
+					data={this.state.fakeFormValuesRadio}
+					type="radioView"
+					title="Radio form testing"
+				/>
+				<TestForm
+					callback={this.callback}
+					data={this.state.fakeFormValuesCheck}
+					type="checkView"
+					title="Check form testing"
+				/>
+				<TestForm
+					callback={this.callback}
+					data={this.state.fakeFormValuesCheck}
+					type="checkView"
+					title="Check form testing"
+				/>
+				<br />
+				<br />
+				<br />
 				<h1>Radiobox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesRadio}
-					typeMode="radioView"
+					type="radioView"
 				/>
 				<h1>Checkbox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesCheck}
-					typeMode="checkView"
+					type="checkView"
 				/>
 				<h1>Editable radiobox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.dataRadio}
-					typeMode="radioEdit"
+					type="radioEdit"
 				/>
 				<h1>Editable checkbox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.dataCheck}
-					typeMode="checkEdit"
+					type="checkEdit"
 				/>
 				<br />
 				<br />

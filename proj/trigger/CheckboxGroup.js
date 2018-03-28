@@ -8,15 +8,15 @@ class CheckboxGroup extends React.Component {
 	setVal = (e) => {
 		Promise.resolve().then(() => {
 			this.props.data.forEach(el => {
-				if (this.props.typeMode === 'radioView') {
+				if (this.props.type === 'radioView') {
 					el.value = e.uniqid === el.id;
 					this.setState({value: e.uniqid === el.id});
 				}
-				if (this.props.typeMode === 'checkView')
+				if (this.props.type === 'checkView')
 					e.uniqid === el.id ? el.value = !el.value :  null;
 			});
 		}).then(() => {
-			this.props.callback({
+			this.props.callback && this.props.callback({
 				props: this.props,
 				state: this.state
 			});
@@ -26,7 +26,7 @@ class CheckboxGroup extends React.Component {
 	createForm = e => {
 		Promise.resolve()
 		.then(() => {
-			if (this.props.typeMode  === 'radioView') {
+			if (this.props.type  === 'radioView') {
 				this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid);
 			}
 		})
@@ -46,7 +46,7 @@ class CheckboxGroup extends React.Component {
 	};
 
 	render() {
-		let m = this.props.typeMode;
+		let m = this.props.type;
 		let items = this.props.data.map((e,i) => {
 			return(
 				m === 'radioView' ?
@@ -94,7 +94,7 @@ class CheckboxGroup extends React.Component {
 
 		return(
 			<div>
-				{this.props.typeMode === 'radioEdit' || this.props.typeMode === 'checkEdit' ? <button onClick={this.addField}>add field</button> : ''}
+				{this.props.type === 'radioEdit' || this.props.type === 'checkEdit' ? <button onClick={this.addField}>add field</button> : ''}
 				{items}
 			</div>
 		);

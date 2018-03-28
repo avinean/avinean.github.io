@@ -45,11 +45,12 @@
 .box-title-input {
     border: none;
     border-bottom: 1px solid #f1a3d4;
-    height: 23px;
-    min-width: 400px;
+    min-height: 23px;
+    width: 400px;
     line-height: 23px;
     padding-left: 10px;
     outline: none;
+    word-wrap: break-word;
 }
 .check-box:hover, .radio-box:hover {
     box-shadow: 0 0 10px 0 #0a25c0;
@@ -131,6 +132,7 @@
     box-shadow: 0 0 5px 0 #58606b;
     padding: 10px;
     font-style: italic;
+    word-wrap: break-word;
 }
 
 .add-button {

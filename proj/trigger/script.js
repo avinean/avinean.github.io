@@ -90,7 +90,7 @@ class App extends React.Component {
 	}
 
 	callback = e => {
-		// console.log(e);
+		console.log(this.state.dataFormRadio);
 	};
 
 	render() {

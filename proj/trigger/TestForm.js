@@ -1,19 +1,16 @@
 class TestForm extends React.Component {
 
-	constructor(props) {
-		super(props);
-	}
-
-	componentDidMount() {
-		// console.log(this.props);
-	}
+	onInput = (e) => {
+		this.props.data.text = e.target.innerText || '';
+		this.props.callback();
+	};
 
 	render() {
 		const p = this.props;
 		let m = p.type;
 		let title = p.title && <p className="test-form-title">{p.title}</p>;
 		let text = p.data.text && <p className="test-form-text">{p.data.text}</p>;
-		let textarea = <div contenteditable="true" className="check box-title-area">{this.props.text}</div>
+		let textarea = <div contenteditable="true" className="check box-title-area" onKeyPress={this.onInput}>{p.data.text}</div>
 		let form = this.props.editable ?
 			<CheckboxGroup
 				data={p.data.data}

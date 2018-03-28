@@ -43,15 +43,6 @@ class App extends React.Component {
 		}
 	}
 
-	callback = e => {
-		//for test
-		console.log(this.state);
-	};
-
-	onNewFormCreate = e => {
-
-	};
-
 	render() {
 		return(
 			<div>

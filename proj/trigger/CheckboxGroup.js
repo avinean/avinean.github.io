@@ -8,11 +8,11 @@ class CheckboxGroup extends React.Component {
 	setVal = (e) => {
 		Promise.resolve().then(() => {
 			this.props.data.forEach(el => {
-				if (this.props.type === 'radioView') {
+				if (this.props.type === 'radio') {
 					el.value = e.uniqid === el.id;
 					this.setState({value: e.uniqid === el.id});
 				}
-				if (this.props.type === 'checkView')
+				if (this.props.type === 'check')
 					e.uniqid === el.id ? el.value = !el.value :  null;
 			});
 		}).then(() => {
@@ -26,7 +26,7 @@ class CheckboxGroup extends React.Component {
 	createForm = e => {
 		Promise.resolve()
 		.then(() => {
-			if (this.props.type  === 'radioView') {
+			if (this.props.type  === 'radio') {
 				this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid);
 			}
 		})
@@ -49,7 +49,29 @@ class CheckboxGroup extends React.Component {
 		let m = this.props.type;
 		let items = this.props.data.map((e,i) => {
 			return(
-				m === 'radioView' ?
+				(m === 'check' && this.props.editable) ?
+					<Box
+						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						onChange={this.createForm}
+						onDelete={this.delField}
+						editable={1}
+						type="checkbox"
+						value={e.checked}
+						form={e}
+						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+					/> :
+				(m === 'radio' && this.props.editable) ?
+					<Box
+						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						onChange={this.createForm}
+						onDelete={this.delField}
+						editable={1}
+						type="radiobox"
+						value={e.uniqid === this.state.checkedId}
+						form={e}
+						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+					/> :
+				m === 'radio' ?
 					<Box
 						key={e.id}
 						onChange={this.setVal}
@@ -59,42 +81,20 @@ class CheckboxGroup extends React.Component {
 						value={e.value}
 						prevent={true}
 					/> :
-				m === 'checkView' ?
+				m === 'check' ?
 					<Box
 						key={e.id}
 						onChange={this.setVal}
 						type="checkbox"
 						title={e.answer}
 						uniqid={e.id}
-					/> :
-				m === 'checkEdit' ?
-					<Box
-						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
-						onChange={this.createForm}
-						onDelete={this.delField}
-						type="checkbox"
-						value={e.checked}
-						form={e}
-						editable="1"
-						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
-					/> :
-				m === 'radioEdit' ?
-					<Box
-						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
-						onChange={this.createForm}
-						onDelete={this.delField}
-						type="radiobox"
-						value={e.uniqid === this.state.checkedId}
-						form={e}
-						editable="1"
-						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
 					/> : ''
 			);
 		});
 
 		return(
 			<div>
-				{this.props.type === 'radioEdit' || this.props.type === 'checkEdit' ? <button onClick={this.addField}>add field</button> : ''}
+				{this.props.editable ? <button onClick={this.addField} class="add-button">add field</button> : ''}
 				{items}
 			</div>
 		);

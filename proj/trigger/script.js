@@ -78,11 +78,19 @@ class App extends React.Component {
 					}
 				]
 			},
+			dataFormRadio: {
+				text: '',
+				data: [{}]
+			},
+			dataFormCheck: {
+				text: '',
+				data: [{}]
+			},
 		}
 	}
 
 	callback = e => {
-		console.log(e);
+		// console.log(e);
 	};
 
 	render() {
@@ -95,20 +103,28 @@ class App extends React.Component {
 				<TestForm
 					callback={this.callback}
 					data={this.state.fakeFormValuesRadio}
-					type="radioView"
+					type="radio"
 					title="Radio form testing"
 				/>
 				<TestForm
 					callback={this.callback}
 					data={this.state.fakeFormValuesCheck}
-					type="checkView"
+					type="check"
 					title="Check form testing"
 				/>
 				<TestForm
 					callback={this.callback}
-					data={this.state.fakeFormValuesCheck}
-					type="checkView"
-					title="Check form testing"
+					data={this.state.dataFormRadio}
+					type="radio"
+					editable={1}
+					title="Radio creating form testing"
+				/>
+				<TestForm
+					callback={this.callback}
+					data={this.state.dataFormCheck}
+					type="check"
+					editable={1}
+					title="Check creating form testing"
 				/>
 				<br />
 				<br />
@@ -117,25 +133,27 @@ class App extends React.Component {
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesRadio}
-					type="radioView"
+					type="radio"
 				/>
 				<h1>Checkbox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.fakeValuesCheck}
-					type="checkView"
+					type="check"
 				/>
 				<h1>Editable radiobox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.dataRadio}
-					type="radioEdit"
+					type="radio"
+					editable={1}
 				/>
 				<h1>Editable checkbox group</h1>
 				<CheckboxGroup
 					callback={this.callback}
 					data={this.state.dataCheck}
-					type="checkEdit"
+					type="check"
+					editable={1}
 				/>
 				<br />
 				<br />

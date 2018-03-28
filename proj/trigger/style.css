@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /*Checkboxes styles*/
@@ -125,3 +126,16 @@
     background: linear-gradient(0.25turn,#babae2, #fff);
 }
 
+.box-title-area {
+    min-height: 100px;
+    box-shadow: 0 0 5px 0 #58606b;
+    padding: 10px;
+    font-style: italic;
+}
+
+.add-button {
+    border: none;
+    box-shadow: 0 0 5px 0 #58606b;
+    margin: 10px;
+    font-size: 16px;
+}

@@ -3,6 +3,11 @@
     font-family: sans-serif;
 }
 
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
 /*Checkboxes styles*/
 
 .check-box-wrapper {

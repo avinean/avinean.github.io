@@ -27,7 +27,7 @@ class CheckboxGroup extends React.Component {
 		});
 	};
 
-	createForm = e => {
+	changeVal = e => {
 		Promise.resolve()
 		.then(() => {
 			if (this.props.type  === 'radio') {
@@ -44,16 +44,19 @@ class CheckboxGroup extends React.Component {
 	};
 
 	addField = _ => {
-		let temp = [];
+		let keys = [];
+		let inputs = [];
 		Promise.resolve()
 		.then(() => this.props.data.push({id: Math.random(0,1)*Math.random(0,1)}))
 		.then(() => this.setState({data: this.props.data}))
 		.then(() => {
 			for (let k in this.refs) {
-				temp.push(this.refs[k].refs.input);
+				inputs.push(this.refs[k].refs.input);
+				keys.push(k);
 			}
-			temp[temp.length - 1].focus();
-		});
+			inputs[inputs.length - 1].focus();
+		})
+		.then(() => this.setState({checkedId: keys[keys.length - 1]}));
 	};
 
 	render() {
@@ -63,7 +66,7 @@ class CheckboxGroup extends React.Component {
 				(m === 'check' && this.props.editable) ?
 					<Box
 						key={e.id}
-						onChange={this.createForm}
+						onChange={this.changeVal}
 						onDelete={this.delField}
 						onEnter={this.addField}
 						editable={1}
@@ -76,7 +79,7 @@ class CheckboxGroup extends React.Component {
 				(m === 'radio' && this.props.editable) ?
 					<Box
 						key={e.id}
-						onChange={this.createForm}
+						onChange={this.changeVal}
 						onDelete={this.delField}
 						onEnter={this.addField}
 						editable={1}
@@ -109,7 +112,7 @@ class CheckboxGroup extends React.Component {
 
 		return(
 			<div>
-				{this.props.editable ? <button onClick={this.addField} class="add-button">add field</button> : ''}
+				{/*{this.props.editable ? <button onClick={this.addField} class="add-button">add field</button> : ''}*/}
 				{items}
 			</div>
 		);

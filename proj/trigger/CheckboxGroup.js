@@ -2,19 +2,22 @@ class CheckboxGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.props.data[0] = {uniqid: Math.random(0,1)*Math.random(0,1)};
+		if (!this.props.data[0].id) {
+			this.props.data[0] = {id: Math.random(0, 1) * Math.random(0, 1)};
+		}
 		this.state = {checkedId: null};
+		this.inputs = [];
 	}
 
 	setVal = (e) => {
 		Promise.resolve().then(() => {
 			this.props.data.forEach(el => {
 				if (this.props.type === 'radio') {
-					el.value = e.uniqid === el.id;
-					this.setState({value: e.uniqid === el.id});
+					el.value = e.id === el.id;
+					this.setState({value: e.id === el.id});
 				}
 				if (this.props.type === 'check')
-					e.uniqid === el.id ? el.value = !el.value :  null;
+					e.id === el.id ? el.value = !el.value :  null;
 			});
 		}).then(() => {
 			this.props.callback && this.props.callback({
@@ -28,22 +31,29 @@ class CheckboxGroup extends React.Component {
 		Promise.resolve()
 		.then(() => {
 			if (this.props.type  === 'radio') {
-				this.props.data.forEach(el => el.checked = e.uniqid === el.uniqid);
+				this.props.data.forEach(el => el.checked = e.id === el.id);
 			}
 		})
-		.then(() => this.setState({checkedId: e.uniqid}));
+		.then(() => this.setState({checkedId: e.id}));
 	};
 
 	delField = e => {
 		Promise.resolve()
-		.then(() => this.props.data = this.props.data.filter(el => e.uniqid !== el.uniqid))
+		.then(() => this.props.data = this.props.data.filter(el => e.id !== el.id))
 		.then(() => this.setState({checkedId: this.state.checkedId}));
 	};
 
 	addField = _ => {
+		let temp = [];
 		Promise.resolve()
-		.then(() => this.props.data.push({uniqid: Math.random(0,1)*Math.random(0,1)}))
-		.then(() => this.setState({data: this.props.data}));
+		.then(() => this.props.data.push({id: Math.random(0,1)*Math.random(0,1)}))
+		.then(() => this.setState({data: this.props.data}))
+		.then(() => {
+			for (let k in this.refs) {
+				temp.push(this.refs[k].refs.input);
+			}
+			temp[temp.length - 1].focus();
+		});
 	};
 
 	render() {
@@ -52,25 +62,29 @@ class CheckboxGroup extends React.Component {
 			return(
 				(m === 'check' && this.props.editable) ?
 					<Box
-						key={e.uniqid}
+						key={e.id}
 						onChange={this.createForm}
 						onDelete={this.delField}
+						onEnter={this.addField}
 						editable={1}
 						type="checkbox"
 						value={e.checked}
 						form={e}
-						uniqid={e.uniqid}
+						uniqid={e.id}
+						ref={'i' + e.id}
 					/> :
 				(m === 'radio' && this.props.editable) ?
 					<Box
-						key={e.uniqid}
+						key={e.id}
 						onChange={this.createForm}
 						onDelete={this.delField}
+						onEnter={this.addField}
 						editable={1}
 						type="radiobox"
-						value={e.uniqid === this.state.checkedId}
+						value={e.id === this.state.checkedId}
 						form={e}
-						uniqid={e.uniqid}
+						uniqid={e.id}
+						ref={'i' + e.id}
 					/> :
 				m === 'radio' ?
 					<Box

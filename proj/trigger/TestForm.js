@@ -2,7 +2,6 @@ class TestForm extends React.Component {
 
 	onInput = (e) => {
 		this.props.data.text = e.target.innerText || '';
-		this.props.callback();
 	};
 
 	render() {

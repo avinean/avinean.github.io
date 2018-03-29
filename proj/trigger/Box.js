@@ -48,11 +48,16 @@ class Box extends React.Component {
     };
 
 	onInput = (e) => {
+		let key = e.nativeEvent.keyCode;
+		if (key === 13) e.preventDefault();
 		Promise.resolve().then(() => {
 			this.props.form.title = this.refs.input.innerText || '';
 			this.props.form.uniqid = this.props.uniqid;
 			if (this.props.onChange) {
 				this.props.onChange(this.props.form);
+			}
+			if (this.props.onEnter && key === 13) {
+				this.props.onEnter();
 			}
 		});
 	};

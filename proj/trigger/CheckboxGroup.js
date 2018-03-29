@@ -2,6 +2,7 @@ class CheckboxGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
+		this.props.data[0] = {uniqid: Math.random(0,1)*Math.random(0,1)};
 		this.state = {checkedId: null};
 	}
 
@@ -41,7 +42,7 @@ class CheckboxGroup extends React.Component {
 
 	addField = _ => {
 		Promise.resolve()
-		.then(() => this.props.data.push({}))
+		.then(() => this.props.data.push({uniqid: Math.random(0,1)*Math.random(0,1)}))
 		.then(() => this.setState({data: this.props.data}));
 	};
 
@@ -51,25 +52,25 @@ class CheckboxGroup extends React.Component {
 			return(
 				(m === 'check' && this.props.editable) ?
 					<Box
-						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						key={e.uniqid}
 						onChange={this.createForm}
 						onDelete={this.delField}
 						editable={1}
 						type="checkbox"
 						value={e.checked}
 						form={e}
-						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						uniqid={e.uniqid}
 					/> :
 				(m === 'radio' && this.props.editable) ?
 					<Box
-						key={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						key={e.uniqid}
 						onChange={this.createForm}
 						onDelete={this.delField}
 						editable={1}
 						type="radiobox"
 						value={e.uniqid === this.state.checkedId}
 						form={e}
-						uniqid={e.uniqid || Math.random(0,1)*Math.random(0,1)}
+						uniqid={e.uniqid}
 					/> :
 				m === 'radio' ?
 					<Box

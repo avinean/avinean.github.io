@@ -48,11 +48,13 @@ class Box extends React.Component {
     };
 
 	onInput = (e) => {
-		this.props.form.title = e.target.innerText || '';
-		this.props.form.uniqid = this.props.uniqid;
-		if (this.props.onChange) {
-			this.props.onChange(this.props.form);
-		}
+		Promise.resolve().then(() => {
+			this.props.form.title = this.refs.input.innerText || '';
+			this.props.form.uniqid = this.props.uniqid;
+			if (this.props.onChange) {
+				this.props.onChange(this.props.form);
+			}
+		});
 	};
 
     render() {
@@ -79,7 +81,7 @@ class Box extends React.Component {
 						{this.props.value &&
 						<i className="zmdi zmdi-check check-box-access"></i>}
 					</div>
-					<div contenteditable="true" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
+					<div contenteditable="true" ref="input" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
 					{this.props.onDelete && <button onClick={() => this.props.onDelete(this.props.form)}>X</button>}
 				</div>;
 
@@ -91,7 +93,7 @@ class Box extends React.Component {
 						{this.props.value &&
 						<i className="zmdi zmdi-circle radio-box-access"></i>}
 					</div>
-					<div contenteditable="true" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
+					<div contenteditable="true" ref="input" className="check box-title-input" onKeyPress={this.onInput}>{this.props.title}</div>
 					{this.props.onDelete && <button onClick={() => this.props.onDelete(this.props.form)}>X</button>}
 				</div>;
 

@@ -1,0 +1,163 @@
+.main-slider {
+  position: relative;
+
+  .header {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 0;
+    background-color: $main-dark;
+
+    .svg-shadow { filter: drop-shadow(0 0 30px #090909) }
+    &--one   { background-color: #161b29 }
+    &--two   { background-color: #28151e }
+    &--three { background-color: #231528 }
+  }
+
+  &__booking-button {
+    position: absolute;
+    bottom: 13%;
+    right: 1.5%;
+    z-index: 2;
+    display: block;
+    border: solid 1px #263045;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      border: solid 1px $main-tan;
+    }
+  }
+
+  &__booking-link {
+    display: block;
+    padding: 25px 55px;
+    font: 1rem $ff-montserrat;
+    color: $main-tan;
+    text-decoration: none;
+    transition: .2s;
+    letter-spacing: 0.4px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 38%;
+    width: 3%;
+    height: 11%;
+    background: url(../../img/arrow-left.png) center/cover no-repeat;
+    cursor: pointer;
+    opacity: .75;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-next {
+    transform: rotate(180deg);
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 14%;
+    left: 1.5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28%;
+
+    &-bullet {
+      position: relative;
+      padding: 1% 1% 1% 0;
+      font: 1rem $ff-montserrat;
+      color: #fff;
+      background: transparent;
+      outline: none;
+      transition: .1s;
+      opacity: 1;
+      cursor: pointer;
+
+      &:hover {
+        &:before {
+          width: 32px;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        top: 2.5rem;
+        width: 0;
+        height: 2px;
+        content: '';
+        background-color: #fff;
+        transition: .4s ease-in-out;
+      }
+
+      &-active {
+        color: $main-tan;
+
+        &:before {
+          width: 65px;
+          background-color: $main-tan;
+        }
+
+        &:hover {
+          &:before {
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .svg-caption {
+    display: none;
+  }
+  .main-slider {
+
+    &__booking-link {
+      padding: 10px;
+      font: .8rem $ff-montserrat;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .main-slider {
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .main-slider {
+    .slide {
+      padding: 20% 0;
+    }
+
+    &__booking-button {
+      bottom: 5%;
+    }
+
+    &__booking-link {
+      padding: 5px;
+    }
+  }
+}

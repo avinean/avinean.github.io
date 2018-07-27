@@ -18,6 +18,10 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+* {
+  font-family: sans-serif;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -1539,7 +1543,11 @@ button.swiper-pagination-bullet {
   grid-template-columns: repeat(12, minmax(20px, 105px));
   grid-template-rows: repeat(3, 65px) auto 65px;
   grid-gap: 36px;
-  grid-template-areas: "day   day   month month year  year  hour  hour  hour  numb  numb  numb  " "name  name  name  name  name  name  tel   tel   tel   tel   tel   tel   " "email email email email email email menu  menu  menu  menu  menu  menu  " "msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   " "send  send  send  send  send  send  send  send  send  send  send  send  "; }
+  grid-template-areas: "day   day   month month year  year  hour  hour  hour  numb  numb  numb  "
+ "name  name  name  name  name  name  tel   tel   tel   tel   tel   tel   "
+ "email email email email email email menu  menu  menu  menu  menu  menu  "
+ "msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   msg   "
+ "send  send  send  send  send  send  send  send  send  send  send  send  "; }
 
 @media (max-width: 1050px) {
   .form .booking {
@@ -1551,7 +1559,14 @@ button.swiper-pagination-bullet {
   .form .booking {
     grid-template-columns: repeat(6, minmax(20px, 200px));
     grid-template-rows: repeat(5, 50px) 65px 120px 60px;
-    grid-template-areas: "day   day   month month year  year  " "hour  hour  hour  numb  numb  numb  " "name  name  name  name  name  name  " "tel   tel   tel   tel   tel   tel   " "email email email email email email " "menu  menu  menu  menu  menu  menu  " "msg   msg   msg   msg   msg   msg   " "send  send  send  send  send  send  "; } }
+    grid-template-areas: "day   day   month month year  year  "
+ "hour  hour  hour  numb  numb  numb  "
+ "name  name  name  name  name  name  "
+ "tel   tel   tel   tel   tel   tel   "
+ "email email email email email email "
+ "menu  menu  menu  menu  menu  menu  "
+ "msg   msg   msg   msg   msg   msg   "
+ "send  send  send  send  send  send  "; } }
 
 .form .field {
   box-sizing: border-box;

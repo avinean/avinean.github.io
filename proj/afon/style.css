@@ -36,8 +36,12 @@ a {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;            
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;            
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -51,7 +55,9 @@ a {
         -ms-flex-align: center;
             align-items: center;
     padding: 10px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     font-size: 25px;
 }
 
@@ -61,7 +67,9 @@ a {
 
 .right {
     padding: 10px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: right
 }
 
@@ -106,6 +114,11 @@ a {
     border-radius: 3px;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .soc, .phones {

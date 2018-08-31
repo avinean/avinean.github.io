@@ -236,7 +236,6 @@ a {
 }
 
 .logo-brig {
-    width: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,7 +247,7 @@ a {
 .logo-brig>img {
     width: 50px;
 }
-.logo-brig .title {
+.logo-brig>span {
     width: 50px;
-    font-size: 10px;    
+    font-size: 11px;    
 }

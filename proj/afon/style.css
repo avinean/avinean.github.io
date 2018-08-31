@@ -231,3 +231,17 @@ a {
         right: 10px;
     }
 }
+
+.logo-brig {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo-brig>img {
+    width: 50px;
+}
+.logo-brig .title {
+    width: 50px;
+    font-size: 10px;    
+}

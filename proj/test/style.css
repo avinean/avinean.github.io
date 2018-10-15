@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100vw;
+    border-bottom: 1px solid;
+    background-color: #fff;
+}
+
+.top-menu-item {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+.side-nav {
+    position: fixed;
+    top: 35px;
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 35px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid;
+}
+
+.side-nav-item {
+    position: relative;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.item-level-1 {
+    margin-left: 30px;
+}
+.item-level-2 {
+    margin-left: 40px;
+}
+.item-level-3 {
+    margin-left: 50px;
+}
+
+.side-nav-item:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.side-nav-item.folder-open:before {background-image: url(./img/open.png);}
+.side-nav-item.folder-close:before {background-image: url(./img/close.png);}
+.side-nav-item.plus:before {background-image: url(./img/plus.png);}
+.side-nav-item.minus:before {background-image: url(./img/minus.png);}
+.side-nav-item.check:before {background-image: url(./img/check.png);}
+.side-nav-item.checkout:before {background-image: url(./img/checkout.png);}
+.side-nav-item.right:before {background-image: url(./img/right.png);}
+.side-nav-item.down:before {background-image: url(./img/down.png);}
+.side-nav-item.file:before {background-image: url(./img/file.png);}
+
+.content {
+    margin-top: 35px;
+    margin-left: 300px;
+}
+
+.bread-crumbs {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+}
+
+.crumbs-items {
+    margin: 0 5px;
+    list-style-type: none;
+}
+
+.devider {
+    width: 20px;
+    height: 20px;
+    background-image: url("./img/devider.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+    background-color: grey;
+}

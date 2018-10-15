@@ -1,24 +1,11 @@
-// window.addEventListener('load', () => {
-//     printText('<Lubeznyy Vladyslav />');
-//     generateBG(htmlItems, 'body', '#ddd');
-//     createSlider('.slider3d', '#left', '#right');
-// });
+window.addEventListener('load', () => {
+    generateBG(htmlItems, 'body', '#ddd');
+});
 
-var $ = e => {
-    return document.querySelector(e)
-};
+// var $ = e => {
+//     return document.querySelector(e)
+// };
 
-// function printText(str) {
-//     var name = str.split('');
-//     function f(i) {
-//         setTimeout(() => {
-//             $('.title-out').innerText += name[i];
-//         }, (i + 1) * 300)
-//     }
-//     for (var i = 0; i < name.length; i++) {
-//         f(i);
-//     }
-// }
 
 // function createSlider(slider, left, right) {
     
@@ -72,8 +59,7 @@ var $ = e => {
 // }
 
 function generateBG(tags, selector, color) {
-
-    tags = tags.split('|');
+	tags = tags.split('|');
     var out = '';
     tags.forEach(e => {
         out += `<span data-id="tagElement">${e}</span>`

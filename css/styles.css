@@ -338,7 +338,12 @@
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-areas: "title	title	 title		title		  title			title		 title	   title" "haml   haml     pug        css           css           webpack      webpack   webpack"  "html   html     photoshop  css           css           sass         sass      npm "  "html   html     jquery     materialize   bootstrap     gulp         git       git"  "php    js       js         ajax          ajax          gulp         git       git"  "mysql  js       js         es6           http          scrum        scrum     scrum "; }
+    grid-template-areas: "title	title	 title		title		  title			title		 title	   title"
+ "haml   haml     pug        css           css           webpack      webpack   webpack" 
+ "html   html     photoshop  css           css           sass         sass      npm " 
+ "html   html     jquery     materialize   bootstrap     gulp         git       git" 
+ "php    js       js         ajax          ajax          gulp         git       git" 
+ "mysql  js       js         es6           http          scrum        scrum     scrum "; }
     .skills .grid img {
       width: 100%;
       -ms-flex-item-align: center;
@@ -528,4 +533,4 @@
           user-select: none; }
 
 body {
-  overflow-x: hidden; }
+  overflow: hidden; }

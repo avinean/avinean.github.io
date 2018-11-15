@@ -4,7 +4,8 @@
   <meta charset="UTF-8">    
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <title>Посещение Афона</title>
 </head>
 <body>
   
@@ -57,12 +58,12 @@
     </div>
 
 
-    <div class="form">
+    <form class="form" method="GET" action="mail.php">
       <i class="zmdi zmdi-close"></i>
-      <p class='inp'><input type="text" placeholder='Ваше имя'></p>
-      <p class='inp'><input type="text" placeholder='Ваш телефон'></p>
-      <p class='inp'><input type="text" placeholder='Ваш email'></p>
-      <p class='btn' id='btn'>Оставить заявку</p>
+      <p class='inp'><input type="text" placeholder='Ваше имя' name="name"></p>
+      <p class='inp'><input type="text" placeholder='Ваш телефон' name="phone"></p>
+      <p class='inp'><input type="text" placeholder='Ваш email' name="email"></p>
+      <input type="submit" class='btn' id='btn' value="Оставить заявку">
     </div>
 
     

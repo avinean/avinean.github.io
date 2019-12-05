@@ -29,11 +29,18 @@ class Calendar {
 
     constructor(selector) {
         this.calendarWrapper = document.querySelector(selector);
-        this.currentDate = new Date();
+        const date = sessionStorage.date;
+        if (date) { 
+            this.currentDate = new Date(date);
+        }
+        else {
+            this.currentDate = new Date();
+        }
         this.currentMonthName = this.months[this.currentMonth];
 
         this.initWrappers();
         this.renderHandlers();
+        this.renderContext();
         this.render();
     }
 
@@ -94,8 +101,46 @@ class Calendar {
         const html = `
             <div class="handler-wrapper"></div>
             <div class="calendar-wrapper"></div>
+            <div class="context-wrapper"></div>
         `;
         this.calendarWrapper.innerHTML = html;
+    }
+
+    renderContext() {
+        document.querySelector('.context-wrapper').innerHTML = `
+            <div class="context">
+                <div class="context__item" id="add">Add</div>
+            </div>
+        `;
+    }
+
+    initContextEvents() {
+        document
+            .querySelector('.calendar')
+            .addEventListener('contextmenu', e => {
+                e.preventDefault();
+                const context = document.querySelector('.context');
+                const target = e.target.closest('.calendar__cell');
+                if (!target) {
+                    context.style.display = 'none';
+                    return;
+                }
+
+                const date = target.dataset.date;
+                if (!date) {
+                    context.style.display = 'none';
+                    return;
+                }
+                
+
+
+                const x = e.pageX;
+                const y = e.pageY;
+
+                context.style.display = 'block';
+                context.style.top = y + 'px';
+                context.style.left = x + 'px';
+            });
     }
 
     renderHandlers() {
@@ -135,20 +180,34 @@ class Calendar {
     }
 
     render() {
+        sessionStorage.date = this.currentDate;
+
         let calendarTable = `
-            <table>
+            <table class="calendar">
                 <thead>
-                    <tr>
+                    <tr class="calendar__row">
                         ${
-                            this.days.map(day => `<th>${day}</th>`).join('')
+                            this.days.map(day => 
+                                `<th class="calendar__head-cell">${day}</th>`
+                            ).join('')
                         }
                     </tr>
                 </thead>
                 <tbody>
                     ${
                         this.weeksList.map(row => `
-                            <tr>
-                                ${row.map(char =>`<td>${char}</td>`).join('')}
+                            <tr class="calendar__row">
+                                ${
+                                    row.map(char =>
+                                        `<td class="calendar__cell" data-date="${char}">
+                                            <div class="calendar__cell-inner">
+                                                <span class="calendar__date">
+                                                    ${char}
+                                                </span>
+                                            </div>
+                                        </td>`
+                                    ).join('')
+                                }
                             </tr>
                         `).join('')
                     }
@@ -159,6 +218,8 @@ class Calendar {
         this.calendarWrapper
             .querySelector('.calendar-wrapper')
             .innerHTML = calendarTable;
+
+        this.initContextEvents();
     }
 }
 

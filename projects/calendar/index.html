@@ -12,6 +12,32 @@
     <div id="app">
     </div>
 
+    <div class="modal">
+        <div class="modal__top">
+
+            <div class="modal__close">&#10060;</div>
+        </div>
+        <form name="add-event-modal">
+            <label class="modal__field">
+                Message
+                <textarea name="message"></textarea>
+            </label>
+            <label class="modal__field">
+                Time
+                <input type="time" name="time">
+            </label>
+            <label class="modal__field">
+                Priority
+                <input min="1" max="10" type="number" name="priority">
+            </label>
+
+            <div class="modal__btn-wrapper">            
+                <input type="button" value="Cancel" class="modal__btn modal__btn--red" id="close-modal">
+                <input type="submit" value="Add event" class="modal__btn modal__btn--green">
+            </div>
+        </form>
+    </div>
+
     <script src="./date.js"></script>
 </body>
 </html>

@@ -26,6 +26,8 @@ class Calendar {
     currentDate = null;
     currentMonthName = null;
     monthField = null;
+    events = {};
+    selectedDate = null;
 
     constructor(selector) {
         this.calendarWrapper = document.querySelector(selector);
@@ -38,9 +40,11 @@ class Calendar {
         }
         this.currentMonthName = this.months[this.currentMonth];
 
+        this.parseEvents();
         this.initWrappers();
         this.renderHandlers();
         this.renderContext();
+        this.initModalHandlers();
         this.render();
     }
 
@@ -97,6 +101,16 @@ class Calendar {
         return weeksList;
     }
 
+    initModalHandlers() {
+        const close = document.querySelector('.modal__close');
+        const cancel = document.querySelector('#close-modal');
+        const form = document.forms['add-event-modal'];
+
+        close.addEventListener('click', this.closeModal.bind(this))
+        cancel.addEventListener('click', this.closeModal.bind(this))
+        form.addEventListener('submit', this.addNewEvent.bind(this))
+    }
+
     initWrappers() {
         const html = `
             <div class="handler-wrapper"></div>
@@ -107,11 +121,72 @@ class Calendar {
     }
 
     renderContext() {
-        document.querySelector('.context-wrapper').innerHTML = `
-            <div class="context">
-                <div class="context__item" id="add">Add</div>
-            </div>
-        `;
+        const contextWrapper = document.querySelector('.context-wrapper');
+
+        const context = document.createElement('div');
+        context.classList.add('context');
+
+        const addItem = document.createElement('div');
+        addItem.classList.add('context__item');
+        addItem.id = 'add';
+        addItem.innerText = 'Add';
+        addItem.addEventListener('click', this.showModal.bind(this));
+
+        context.appendChild(addItem);
+
+        contextWrapper.appendChild(context);
+    }
+
+    showModal() {
+        const modal = document.querySelector('.modal');
+        modal.style.display = 'block';
+
+        const context = document.querySelector('.context');
+        context.style.display = 'none';
+    }
+
+    closeModal() {
+        const modal = document.querySelector('.modal');
+        modal.style.display = 'none';
+    }
+
+    addNewEvent(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        const message = form.elements.message.value;
+        const time = form.elements.time.value;
+        const priority = form.elements.priority.value;
+
+        const day = this.selectedDate;
+        const month = this.currentDate.getMonth();
+        const year = this.currentDate.getFullYear();
+        const key = `${day}-${month}-${year}`;
+
+        if (this.events[key]) {
+            this.events[key].events.push({message, time, priority});
+        }
+        else {
+            this.events[key] = {
+                'events': [
+                    {message, time, priority}
+                ]
+            }
+        }
+
+        localStorage.calendar = JSON.stringify(this.events);
+
+        this.closeModal();
+        this.render();
+    }
+
+    parseEvents() {
+        try {
+            this.events = JSON.parse(localStorage.calendar);
+        }
+        catch(e) {
+            this.events = {}
+        }
     }
 
     initContextEvents() {
@@ -132,7 +207,7 @@ class Calendar {
                     return;
                 }
                 
-
+                this.selectedDate = date;
 
                 const x = e.pageX;
                 const y = e.pageY;
@@ -179,6 +254,20 @@ class Calendar {
             .appendChild(next);
     }
 
+    renderEvents(date) {
+        const month = this.currentDate.getMonth();
+        const year = this.currentDate.getFullYear();
+        const key = `${date}-${month}-${year}`;
+
+        if (!this.events[key]) return '';
+
+        return this.events[key].events.map(event => {
+            return `
+                ${event.time} - ${event.message} - ${event.priority}
+            `
+        }).join('');
+    }
+
     render() {
         sessionStorage.date = this.currentDate;
 
@@ -204,6 +293,9 @@ class Calendar {
                                                 <span class="calendar__date">
                                                     ${char}
                                                 </span>
+                                                <div class="calendar__events">
+                                                    ${this.renderEvents(char)}
+                                                </div>
                                             </div>
                                         </td>`
                                     ).join('')

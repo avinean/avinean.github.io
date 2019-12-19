@@ -8,15 +8,30 @@
 }
 
 .calendar__cell {
-    width: 100px;
-    min-width: 100px;
-    height: 100px;
+    position: relative;
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
     background: #ffecf0;
 }
 
 .calendar__cell-inner {
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #ffecf0;
+    transition: all ease .5s;
+}
+
+.calendar__cell-inner--open {
+    z-index: 1;
+    top: -50%;
+    left: -50%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 5px 0 gray;
 }
 
 .calendar__date {
@@ -24,6 +39,35 @@
     padding: 2px 5px;
     font-size: 25px;
     font-weight: bold;
+}
+
+.event {
+    display: flex;
+}
+
+.event__priority {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.event__priority--1 {background: green;}
+.event__priority--2 {background: yellow;}
+.event__priority--3 {background: black;}
+.event__priority--4 {background: gray;}
+.event__priority--5 {background: peru;}
+.event__priority--6 {background: plum;}
+.event__priority--7 {background: purple;}
+.event__priority--8 {background: pink;}
+.event__priority--9 {background: orange;}
+.event__priority--10 {background: red;}
+
+.event__message {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .context {

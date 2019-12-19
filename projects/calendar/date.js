@@ -218,6 +218,21 @@ class Calendar {
             });
     }
 
+    initEventsModal() {
+        document
+            .querySelector('.calendar')
+            .addEventListener('click', e => {
+
+                const eventsDate = e.target.dataset.events
+
+                const cell = e.target.closest('.calendar__cell-inner');
+                if (cell) {
+                    cell.classList.toggle('calendar__cell-inner--open');
+                }
+
+            });
+    }
+
     renderHandlers() {
         // button to move to the previous month   
         const prev = document.createElement('button');
@@ -261,11 +276,21 @@ class Calendar {
 
         if (!this.events[key]) return '';
 
-        return this.events[key].events.map(event => {
+        let btn = '';
+        if (this.events[key].events.length > 4) {
+            btn = `<span>...</span>`;
+        }
+
+        return this.events[key].events.slice(0, 4).map(event => {
             return `
-                ${event.time} - ${event.message} - ${event.priority}
+                <div class="event">
+                    <div
+                        class="event__priority event__priority--${event.priority}"
+                    ></div>
+                    <div class="event__message">${event.message}</div>
+                </div>
             `
-        }).join('');
+        }).join('') + btn;
     }
 
     render() {
@@ -289,7 +314,7 @@ class Calendar {
                                 ${
                                     row.map(char =>
                                         `<td class="calendar__cell" data-date="${char}">
-                                            <div class="calendar__cell-inner">
+                                            <div class="calendar__cell-inner" data-events="${char}>
                                                 <span class="calendar__date">
                                                     ${char}
                                                 </span>
@@ -312,6 +337,7 @@ class Calendar {
             .innerHTML = calendarTable;
 
         this.initContextEvents();
+        this.initEventsModal();
     }
 }
 

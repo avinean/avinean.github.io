@@ -1,6 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .calendar {
@@ -13,6 +22,7 @@
     min-width: 150px;
     height: 150px;
     background: #ffecf0;
+    border-radius: 4px;
 }
 
 .calendar__cell-inner {
@@ -23,6 +33,7 @@
     height: 150px;
     background: #ffecf0;
     transition: all ease .5s;
+    border-radius: 4px;
 }
 
 .calendar__cell-inner--open {
@@ -99,7 +110,7 @@
     display: none;
     width: 320px;
     max-width: 320px;
-    padding: 10px 5px;
+    padding: 0px 15px 15px 15px;
     background: white;
     border-radius: 4px;
     box-shadow: 1px 1px 5px -3px;
@@ -112,6 +123,9 @@
 }
 
 .modal__close {
+    font-size: 31px;
+    transform: scaleY(.8);
+    color: #a7a4a4;
     cursor: pointer;
 }
 
@@ -119,8 +133,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 16px;
+    color: #8a8989;
 }
 
 .modal__field input, 
@@ -128,9 +142,13 @@
     width: 100%;
     margin: 7px 0;
     padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #cdcbcb;
+    border: none;
     outline: none;
+    border-bottom: 1px solid #a2a2a2;
+}
+
+.modal__field textarea {
+    min-height: 100px;
 }
 
 .modal__btn-wrapper {
@@ -145,14 +163,14 @@
     outline: none;
     border-radius: 4px;
     color: white;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .modal__btn--red {
-    background: #f44336;
+    background: #f18078;
 }
 
 .modal__btn--green {
-    background: #0cd90c;
+    background: #25c325;
 }

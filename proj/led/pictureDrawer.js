@@ -16,7 +16,7 @@ app.component('app-picture-drawer', {
                     @mousedown="startDraw"
                     @mousemove="doDraw"
                     @mouseup="endDraw"
-                    @contextmenu.prevent="showPicker"
+                    @contextmenu.prevent="picker.show()"
                 >
                     <div
                         v-for="row in ySize"
@@ -44,6 +44,7 @@ app.component('app-picture-drawer', {
             ySize: 16,
             isDrawing: false,
             prevDrawnElement: null,
+            prevTouchedElement: null,
             charSize: 0,
             picker: null,
         };
@@ -57,10 +58,6 @@ app.component('app-picture-drawer', {
         }
     },
     methods: {
-        showPicker(e) {
-            console.log(this.picker);
-            this.picker.show();
-        },
         calculateCharSize() {
             const drawer = this.$refs.drawer;
             if (!drawer) return 0;
@@ -81,9 +78,23 @@ app.component('app-picture-drawer', {
                 this.currentColor = color.rgbaString;
             };
         },
+        callPicker(event) {
+            var xcoord = event.touches? event.touches[0].clientX : event.clientX;
+            var ycoord = event.touches? event.touches[0].clientY : event.clientY;
+            
+            var targetElement = document.elementFromPoint(xcoord, ycoord);
+            this.prevTouchedElement = targetElement;
+
+            setTimeout(() => {
+                if (targetElement === this.prevTouchedElement) {
+                    this.picker.show();
+                }
+            }, 1000);
+        },
         startDraw(event) {
             this.isDrawing = true;
             this.doDraw(event);
+            this.callPicker(event);
         },
         doDraw(event) {
             event.preventDefault();

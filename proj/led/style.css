@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    padding: 20px 0 50px;
+}
+
+.main__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.picture__row {
+    display: flex;
+}
+
+.picture__column {
+    width: 2px;
+    height: 2px;
+}
+
+.drawer {
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.drawer__row {
+    display: flex;
+}
+
+.drawer__col {
+    border: 1px solid #f5f5f5;
+}
+
+.picker_wrapper {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+}
+
+.picker_arrow {
+    display: none !important;
+}
+
+.upload__button {
+    text-align: center;
+}
+
+.upload__drawer {
+    display: none;
+    margin: 10px auto;
+}
+
+
+.mb-10 { margin-bottom: 10px;}

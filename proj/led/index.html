@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+        crossorigin="anonymous"
+    ></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="ui container main">
+            <div
+                v-if="currentTab === 'Picture'"
+                class="ui segment"
+            >
+                <app-picture></app-picture>
+            </div>
+            <div
+                v-if="currentTab === 'Effects for picture'"
+                class="ui segment"
+            >
+                <app-effects></app-effects>
+            </div>
+            <div
+                v-if="currentTab === 'Animations'"
+                class="ui segment"
+            >
+                <app-animations></app-animations>
+            </div>
+            
+            <div class="ui three item menu main__menu">
+                <a
+                    v-for="tab in tabs"
+                    class="item"
+                    :class="tab.key === currentTab ? 'active' : ''"
+                    :key="tab.key"
+                    @click="currentTab = tab.key"
+                >
+                    <i class="icon" :class="tab.icon"></i>
+                    {{ tab.label }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./appCreator.js"></script>
+
+    <script src="./picture.js"></script>
+    <script src="./pictureUpload.js"></script>
+    <script src="./pictureGallery.js"></script>
+    <script src="./pictureDrawer.js"></script>
+
+    <script src="./effects.js"></script>
+    <script src="./animations.js"></script>
+    <script src="./appMounter.js"></script>
+</body>
+</html>

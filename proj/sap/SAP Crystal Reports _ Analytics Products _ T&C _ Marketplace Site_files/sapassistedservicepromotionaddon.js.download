@@ -1,0 +1,139 @@
+ACC.assistedservicepromotion = {
+    bindAll: function () {
+        $(document).on('click', '.submitAsmCouponChanges', function(e) {
+            e.preventDefault && e.preventDefault();
+            ACC.assistedservicepromotion.handleApplyChangesButtonClick();
+        });
+
+        $(document).on('click', '.cancelAsmCouponChanges', function(e) {
+            e.preventDefault && e.preventDefault();
+            ACC.assistedservicepromotion.handleDiscardChangesButtonClick();
+        });
+
+        $(document).on('click', '.asm__customer360-apply-coupon-to-product', function(e) {
+            e.preventDefault && e.preventDefault();
+
+            ACC.assistedservicepromotion.handleApplyDiscountButtons(e.target);
+        });
+
+        $(document).on('change', '#entryCouponsCode select', function() {
+            ACC.assistedservicepromotion.hideErrorMessage();
+        });
+
+        $(document).on('click', '.asm__remove-discount', function(e) {
+            var $removeDiscountSection = $(e.target).parent().parent().find('.asm__order-coupon-data');
+            ACC.assistedservicepromotion.handleRemoveDiscountLinkClick(e, $removeDiscountSection.attr('data-entry-number'), $removeDiscountSection.attr('data-entry-name'));
+        });
+    },
+
+    init: function() {
+        $('.asm__order-coupon-data').each(function(i, e) {
+            ACC.assistedservicepromotion.removeAppliedEntry($(e).attr('data-entry-number'));
+        });
+    },
+
+    handleApplyDiscountButtons: function(element) {
+        var $couponSection = $(element).parents('.asm__customer360-coupon-entries-section');
+        var $entriesSelect = $couponSection.find('select');
+        var $entriesSelectedValue = $couponSection.find('select option:selected');
+
+        var couponCode = $entriesSelect.attr('name');
+        var couponName = $couponSection.find('.asm__customer360-coupon-name').text();
+        var entryNumber = $entriesSelectedValue.attr('value');
+        var entryName = $entriesSelectedValue.text();
+
+        $couponSection.find('.asm-consumed-entries')
+            .append(ACC.assistedservicepromotion.renderConsumedEntry(entryNumber, couponCode, couponName, entryName));
+
+        ACC.assistedservicepromotion.removeAppliedEntry(entryNumber);
+
+        $.colorbox.resize();
+    },
+
+    renderConsumedEntry: function(entryNumber, couponCode, couponName, entryName) {
+        return $('<div class="row"><div class="col-xs-8"><span class="asm__order-coupon-data" data-entry-number="' + entryNumber + '" data-entry-name="' + entryName + '" data-coupon-code="' + couponCode + '">' + couponName + ' is applied to ' + entryName +  '</span></div>')
+            .append(ACC.assistedservicepromotion.renderRemoveDiscountLink(entryNumber, entryName));
+    },
+
+    renderRemoveDiscountLink: function() {
+        return $('<div class="col-xs-2 asm__customer360-right-align"><a class="asm__remove-discount">Remove discount</a></div></div>');
+    },
+
+    handleRemoveDiscountLinkClick: function(e, entryNumber, entryName) {
+        e.preventDefault && e.preventDefault();
+        ACC.assistedservicepromotion.appendEntry(entryNumber, entryName);
+        $(e.target).parent().parent().remove();
+    },
+
+    handleApplyChangesButtonClick: function() {
+        var formData = ACC.assistedservicepromotion.prepareFormData();
+
+        jQuery.ajax({
+            url: ACC.common.encodedContextPath + '/assisted-service-coupons/updateCoupons',
+            data: formData,
+            type: 'POST',
+            success: function () {
+                location.reload();
+            },
+            error: function (data) {
+                $('.ASM-promo-error').css('visibility', 'visible');
+                console.log(data.statusText + ": " + data.responseText);
+            }
+        });
+    },
+
+    removeAppliedEntry: function(entryNumber) {
+        $('#entryCouponsCode').find('select option[value="' + entryNumber + '"]').remove();
+        ACC.assistedservicepromotion.toggleDisabledStateForApplyDiscountButton();
+    },
+
+    appendEntry: function(entryNumber, entryName) {
+        $('#entryCouponsCode').find('select').each(function(i, e) {
+            if ($(e).attr('data-entry-numbers').indexOf(entryNumber + ' ') >= 0) {
+                $(e).append('<option value="' + entryNumber + '">' + entryName + '</option>');
+            }
+        });
+        ACC.assistedservicepromotion.toggleDisabledStateForApplyDiscountButton();
+    },
+
+    toggleDisabledStateForApplyDiscountButton: function() {
+        $('#entryCouponsCode').find('select').each(function(i, e) {
+            var $select = $(e);
+
+            if ($select.find('option').length > 0) {
+                $select.removeAttr('disabled');
+                $select.parents('.asm__customer360-coupon-entries-section').find('.ASM-coupon-btn').removeAttr('disabled');
+            } else {
+                $select.attr('disabled', 'disabled');
+                $select.parents('.asm__customer360-coupon-entries-section').find('.ASM-coupon-btn').attr('disabled', 'disabled');
+            }
+        });
+
+        $.colorbox.resize();
+    },
+
+    handleDiscardChangesButtonClick: function() {
+        $('#cboxClose').click();
+    },
+
+    hideErrorMessage: function() {
+        $('.ASM-promo-error').css('visibility', 'hidden');
+    },
+
+    prepareFormData: function() {
+        var entriesCoupons = {};
+
+        $('.asm__order-coupon-data').each(function(i, e) {
+            entriesCoupons[$(e).attr('data-entry-number')] = $(e).attr('data-coupon-code');
+        });
+
+        return {
+            'entriesCoupons': entriesCoupons,
+            'ignoreOrderAsmCoupon': true
+        };
+    }
+};
+
+$(document).ready(function () {
+    ACC.assistedservicepromotion.bindAll();
+});

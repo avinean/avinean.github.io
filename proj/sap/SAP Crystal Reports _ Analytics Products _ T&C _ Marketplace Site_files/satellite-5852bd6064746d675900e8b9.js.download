@@ -1,0 +1,5 @@
+_satellite.pushBlockingScript(function(event, target, $variables){
+  try{
+  mboxCreate('sap_global_target');
+} catch(e) { _satellite.notify(e.message,5); }
+});

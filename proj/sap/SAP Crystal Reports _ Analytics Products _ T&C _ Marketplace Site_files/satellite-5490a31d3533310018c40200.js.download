@@ -1,0 +1,52 @@
+
+try {
+  
+  
+  /* 
+    bandaid: changed rule to pop on page bottom instead of window load 
+    and putting this in a timeout ~2s to see if it improves things.
+  */
+  console.log('DTM: s.t setTimeout set: 2000ms');
+  window.setTimeout(function() {
+    /* 
+       bandaid: save original products string on PDP to reference 
+       later on for trial button clicks
+    */
+    if (s.inList('prodView',s.events, ',')) {
+      s.o_products=s.products;
+    }
+    /* 
+      bandaid: see note in global js file where usePlugins is set
+    */
+    s.usePlugins=true;
+    console.log('DTM: setTimeout popped: page view s.t() called ');
+
+    try {
+      s_setPercentPageViewedVars();
+    } catch(e) {
+      console.log(e);
+    }
+    
+    
+    /* push omn vars to data element to expose for other stuff */
+    var sapDataLayer = {};
+    var named = ['campaign','channel','charSet','currencyCode','events','pageName','pageType','pageURL','products','purchaseID','referrer','server','state','TnT','transactionID','visitorID','zip'];
+    for(var n=0,l=named.length;n<l;n++) {
+      if(typeof s[named[n]] != 'undefined') sapDataLayer[named[n]]=s[named[n]];
+    }
+    for(n=1;n<=100;n++) {
+      if(typeof s['hier'+n] != 'undefined') sapDataLayer['hier'+n]=s['hier'+n];
+      if(typeof s['eVar'+n] != 'undefined') sapDataLayer['eVar'+n]=s['eVar'+n];
+      if(typeof s['prop'+n] != 'undefined') sapDataLayer['prop'+n]=s['prop'+n];
+      if(typeof s['list'+n] != 'undefined') sapDataLayer['list'+n]=s['list'+n];
+    }    
+    _satellite.setVar('sapDataLayer',sapDataLayer);
+
+                     
+    /* trigger omn call */
+    s.t();
+  },2000); 
+
+} catch(e) {
+  console.log(e); 
+}

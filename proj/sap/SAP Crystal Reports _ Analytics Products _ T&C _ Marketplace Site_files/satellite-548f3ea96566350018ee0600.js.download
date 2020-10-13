@@ -1,0 +1,257 @@
+/* SiteCatalyst code 
+ * Copyright 1997-2009 Omniture, Inc. More info available at
+ * http://www.omniture.com 
+
+ * sapstore Local File for SAP, maintained by Neil Evans 
+ */
+
+/************************ ADDITIONAL FEATURES ***********************/
+//var s_account = (typeof(s_account)!='undefined')?s_account:'sapstoredev';
+var s_account = (typeof(s_account)!='undefined')?s_account:'sap-blackhole';
+
+var sap = new Object();
+sap.lastFileUpdate = 'dtm:2020.05.28'; // ACR.DS
+/************************** CONFIG SECTION **************************/
+/* You may add or alter any code config here. */
+
+/* Editable options: */
+	
+/* Default Site Variables */
+sap.linkDownloadFileTypes = "rar,exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx,asc,txt,text,xml,xsl";
+sap.enableShare = true;        
+sap.linkInternalFilters = 'sapstore.com,store.sap.com,paypal.com,.sap.corp,digital.sap.com,workconnect.io,sapbusinessobjects.cloud,sapanalytics.cloud';
+
+/* DAL */
+sap.dynamicAccountSelection = true;
+//sap.dynamicAccountList = 'sapstoredev=www-stg.sapstore.com;sapstore,sapglobal=.sapstore.com';
+sap.dynamicAccountList = 'sapstoredev=www-test.sapstore.com,www-stg.sapstore.com,getlumira.sapstore.com,www-dev.sapstore.com;sapstore,sapglobal=.sapstore.com';
+
+/* Get page/server info */
+sap.thisHost=(typeof(s_devHost)!='undefined')?s_devHost:window.location.host.toLowerCase();
+sap.thisPathName=(typeof(s_devPath)!='undefined')?s_devPath:window.location.pathname.toLowerCase();
+sap.thisHash=(typeof(s_devHash)!='undefined')?s_devHash: window.location.hash.toLowerCase();
+sap.thisSearch=(typeof(s_devSearch)!='undefined')?s_devSearch:window.location.search.toLowerCase();
+sap.thisProtocol=window.location.protocol.toLowerCase();	
+sap.thisTitle = document.title;
+	
+
+try {
+    /** Baindaid for preserving original referrer because of trustarc reload **/
+    sap._getReferrer = function() {
+        var ref = document.cookie.match(/(?:^|;\s*)s_referrer=([^;]*)/);
+        if (ref && ref[1]) {
+            ref = unescape(ref[1]).split('|');
+            if (+ref[0] === 0 && ref[1]) {
+                document.cookie = 's_referrer=' + escape('1|' + ref[1]) + ';path=/;domain=' + location.hostname.split('.').slice(-2).join('.');
+                return ref[1];
+            }
+        }
+        return document.referrer || '';
+    }
+    //sap.referrer = sap._getReferrer();
+} catch (e) {
+    window.console&&console.error(e);
+}
+
+sap.getNormalizedPageName = function(pageName){
+ if (pageName && typeof pageName === "string"){
+   pageName = unescape(pageName);
+  
+   var regularExpressions = [/\/(\d+)$/, /;jsessionid=(\d+)/ ];
+     regularExpressions.forEach(function(regExp){        
+           pageName = pageName.replace(regExp,''); 
+        });
+  }
+  
+  return pageName;
+}
+
+
+/**
+ * Utility Function: s.removeEvent v1.0 
+ * Created By: Acronym
+ * Last Updated: 2015.05.07 
+ * Description: compliment s.apl; removes item from list (all instances) 
+ *
+ * @param1 string delimited list of values to search (s.events)
+ * @param2 string event to remove from list(don't include serial/numeric stuff)
+ * @return new list with value(s) removed
+ **/
+sap.removeEvent = function(el,e) {
+  var el=(el||'').split(',');
+  var e=e||'';
+  var nel=[];
+  for (var i=0,l=el.length;i<l;i++) {
+    var r=new RegExp('^'+e+'([=:]|$)');
+    if (!el[i].match(r)) nel.push(el[i]);
+  }
+  return nel.join(',');
+}
+
+/* 
+  bandaid: sapstore has some code on-page that is artificially triggering a click 
+  event on dom.ready. Meanwhile, core Omniture code listens for click events. 
+  Well apparently there is a bug in omn code where even though this doesn't invoke 
+  an s.t or s.tl call, s_doPlugins is getting called anyways. The effect of this is 
+  it is screwing with some of the code, particularly variables that are getValOnced. 
+  So for example if there is a source= param (campaign tracking), sap's artificial 
+  click is making omn call s_doPlugins which getValOnce's the value (and no actual 
+  s.t/l call is made). Then when the regular s.t() call for page view tracking is 
+  called (it happens after this, because it triggers on window.load - another workaround 
+  for sapstore..), and s_doPlugins is called for this.. well the param is getValOnced 
+  so campaign tracking is lost. 
+  
+  So, the bandaid here is to initially set s.usePlugins to false to prevent s_doPlugins
+  from being called from that bad first call.  Then immediately before s.t() we 
+  set it to true. 
+  
+  Note: this fixes the immediate issue here, but in general, this does NOT fix the core 
+  issue in that if a click event is artificially invoked, Omn code evals s_doPlugins 
+  when it should not!  
+
+  final note: allow on-page bug to do its thing in stage mode so adobe can investigate
+*/
+
+sap.usePlugins=false;
+//s.usePlugins=_satellite.settings.isStaging;
+
+/* Changes for local files, called from s_doPlugins section */
+function local_s( ) { 
+  var dp=s.dynamicVariablePrefix||'D=';
+  
+/* general config */
+  if (!s.server) {
+    s.server = 'sapstore';
+  }
+  if (!s.prop1) s.prop1 = 'gl';
+  if (!s.prop5) s.prop5 = 'glo';
+  else s.prop5=s.prop5.toLowerCase();
+  if (!s.prop9) s.prop9 = 'logN';
+  
+  
+/* page name */
+  if(!s.pageName || s.pageName=='') {
+    s.pageNamePath = s.thisPathName;
+    // bandaid: remove id from page name on order submitted page
+    if (s.pageNamePath.indexOf('/checkout/ordersubmitted')===0)
+      s.pageNamePath='/checkout/ordersubmitted';
+    s.pageName = (s.server+':'+s.pageNamePath).substring(0,254);
+  }
+  /* 
+    bandaid: code to include subdomain as part of site prefix
+    but some of the sites set pageName on-page and do not have it so 
+    this is outside the !s.pageName logic
+  */
+  var new_prefix = location.hostname.replace(/\.com$/,'').replace(/^www\./,'')+':';
+  s.pageName=s.pageName.replace(/^sapstore:/,(new_prefix));
+  /* 
+    bandaid: strip order ids from pageName
+  */
+  s.pageName=s.pageName.replace(/(.*\/checkout\/[^\/]+\/thank-you-page)\/.*/,'$1');
+  
+  /* normalize page name */
+    try {
+      s.pageName = s.getNormalizedPageName(s.pageName);
+    } catch(e) {
+      console.log(e);
+    }
+
+  /* site hierarchy,channel */
+  var path = s.thisPathName.replace(/\//g,',');
+  var hier = (s.server+','+s.prop1+','+s.prop5+','+path).replace(/,+/g,',').replace(/^,+|,+$/g,'');
+  hier = hier.split(',');
+  if(hier[3] && !s.channel) 
+    s.channel = hier[3];
+
+  /* default channel */
+  if (!s.channel) s.channel=s.eVar3="no site section";
+  
+    
+/* site:country */
+  if (!s.eVar1) s.eVar1 = s.server+":"+s.prop5;
+    
+/* page title */  
+  if(!s.prop28)
+    s.prop28 = s.thisTitle.toLowerCase();
+
+/* 404 pages */
+  if (s.pageType) {
+    if (!s.prop27) s.prop27 = location.href;
+	  if (!s.pageName) s.pageName = s.server+":errorpage";
+  }
+
+  
+  /* bandaid: suppress form tracking on live site until they fix it */
+  if (location.hostname=='www.sapstore.com') {
+    if (s.events) {
+	    if(s.inList('event2',s.events,',',':')){
+        s.transactionID='';
+      }
+      s.events=s.removeEvent(s.events,'event1');
+      s.events=s.removeEvent(s.events,'event2');
+      s.events=s.removeEvent(s.events,'event4');
+      s.events=s.removeEvent(s.events,'event5');
+      s.eVar22=s.eVar25=s.eVar26=s.eVar28=s.eVar29='';
+    }
+  }
+  
+  /* login event tracking */
+  s.prevProp9 = s.getPreviousValue(s.prop9, 'gpv_p9');
+  if (!s.prop9) s.prop9 = '';
+  // if visitor is logged in and was previously not...
+  if ((s.prop9.toLowerCase() == 'logy') && (!s.prevProp9 || (s.prevProp9.toLowerCase() == 'logn'))) {
+    s.events = s.apl(s.events, "event8", ",", 2);
+  }
+  
+
+  /* raw cc+products */
+  if (s.products) {
+    s.eVar74='D=cc+"|"+products';
+    if (s.linkType) 
+      s.linkTrackVars=s.apl(s.linkTrackVars,'eVar74',',',2);
+  }
+  
+  /* generic var dupes */
+  s.varDupes = {
+    // 'var to dupe to':['url param of var to dupe':'var to dupe']
+    // example: dupe eVar1 to prop1 - 'prop1':['v1','eVar1']
+    'prop55' : ['v55','eVar55'],
+    'eVar2'  : ['c2','prop2'],
+    'eVar6'  : ['c6','prop6'],
+    'eVar52'  : ['c12','prop12'],
+    'eVar37' : ['purchaseID','purchaseID']
+  }
+  for (var v in s.varDupes) {
+    if ( s.varDupes.hasOwnProperty(v)&&(typeof s[s.varDupes[v][1]] != 'undefined')&&(s[s.varDupes[v][1]]!='') ) {
+      s[v]=s[ s.varDupes[v][1] ];
+      if (s.linkType) s.linkTrackVars=s.apl(s.linkTrackVars,v,',',2);
+    }
+  }
+  
+
+
+  
+  /* 
+    TEMP: 2016.01.27 
+    Set trackInlineStats=true if cookie exists so sap devs can QA this thing
+  */
+  try{
+  	s.trackInlineStats = false;	
+    if (_satellite.readCookie('s_QA_trackInlineStats')) {
+      s.trackInlineStats=true;
+      s.account="sapstoredev";
+    }
+  }catch(e){}
+  
+  
+} // end local_s()
+
+function s_checkLocalInternalFilter () {
+
+	return false;
+  
+}
+
+
+
+/* EOF */

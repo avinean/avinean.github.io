@@ -1,0 +1,176 @@
+/**
+ * Created by c5241534 on 08.05.17.
+ */
+
+$(document).ready(function () {
+    // scroll to review section and trigger review button when link contains openReview
+    if (window.location.hash && window.location.hash.substring(1) === "openReview") {
+        $('html,body').animate({scrollTop: $('#reviewsSection').offset().top}, 1000, function () {
+                $('#reviewButton').click();
+            }
+        );
+    }
+    //hero section
+    showBarChart();
+    showReviewsAction();
+});
+
+//parsing url to button and call IDS login
+function logonToReview(button) {
+    var urlRedirect = $(button).data('urlredirect');
+    var loginUrl = $(button).data('loginurl');
+    var url = loginUrl + "?redirect=" + encodeURIComponent(urlRedirect);
+    $(button).attr('href', url);
+
+    if (navigator.userAgent.indexOf("iPad") != -1 || navigator.userAgent.indexOf("iPhone") != -1) {
+        callIDSLogin();
+        return false;
+    }
+}
+
+//when recommendations-section is empty, then elements will be removed / hidden
+$(function () {
+    if ($.trim($("#recommendations-section").html()) == '') {
+        $('#recommendations-nav').remove();
+        $('.recommendations-mobile-open').remove();
+        $('#recommendations-section').remove();
+    }
+});
+
+//hero section
+function showViewMoreReviews() {
+    $("#show_more_reviews_action").removeClass("hidden");
+}
+
+function hideViewMoreReviews() {
+    $("#show_more_reviews_action").addClass("hidden");
+}
+
+//ngPDP ds-select-box for dbUpliftProduct and maintenanceProduct
+$(function () {
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    const editions = document.querySelectorAll('#edition-section .row.hcp-choose-edition-row1');
+
+    if (editions != null) {
+        editions.forEach(function (edition) {
+            const dsSelectBoxes = edition.querySelectorAll(".ds-select-box");
+
+            dsSelectBoxes.forEach(function (selectBox) {
+                let input = selectBox.querySelector(".ds-input");
+                let dropdown = selectBox.querySelector(".ds-dropdown");
+                let options = selectBox.querySelectorAll(".ds-dropdown__option");
+                let iconDown = selectBox.querySelector(".ds-select-box__icon--down");
+                let iconUp = selectBox.querySelector(".ds-select-box__icon--up");
+
+                dropdown.addEventListener("mousedown", function (event) {
+                    event.preventDefault();
+                });
+
+                iconDown.addEventListener("click", function () {
+                    input.focus();
+                });
+
+                iconUp.addEventListener("click", function () {
+                    input.blur();
+                });
+
+                for (let i = 0; i < options.length; i++) {
+                    options[i].addEventListener("click", function (event) {
+                        changeInputValue(event);
+                    })
+                }
+
+                input.addEventListener("keydown", function (event) {
+                    const arrowUp = 38;
+                    const arrowDown = 40;
+                    const enter = 13;
+                    const selectClass = 'ds-selected';
+                    let selectPos;
+                    let nextPos;
+                    let firstPos = 0;
+                    let lastPos = options.length - 1;
+
+                    event.preventDefault();
+
+                    for (let x = 0; x < options.length; x++) {
+                        if (options[x].classList.contains(selectClass)) {
+                            selectPos = x;
+                        }
+                    }
+
+                    if (event.which === arrowUp) {
+                        options[selectPos].classList.remove(selectClass);
+                        nextPos = selectPos - 1;
+                        if (nextPos < firstPos) {
+                            options[lastPos].classList.add(selectClass);
+                        } else {
+                            options[nextPos].classList.add(selectClass);
+                        }
+                    } else if (event.which === arrowDown) {
+                        options[selectPos].classList.remove(selectClass);
+                        nextPos = selectPos + 1;
+                        if (nextPos > lastPos) {
+                            options[firstPos].classList.add(selectClass);
+                        } else {
+                            options[nextPos].classList.add(selectClass);
+                        }
+                    } else if (event.which === enter) {
+                        triggerEvent(options[selectPos], 'click');
+                    }
+                });
+
+                function triggerEvent(element, eventType) {
+                    let eventObj = document.createEvent('Events');
+                    eventObj.initEvent(eventType, true, false);
+                    element.dispatchEvent(eventObj);
+                }
+
+                function addClassIfFilled() {
+                    if (input.getAttribute("value")) {
+                        input.classList.add("ds-input--filled");
+                    } else {
+                        input.classList.remove("ds-input--filled");
+                    }
+                }
+
+                function changeInputValue(event) {
+                    input.setAttribute("value", event.target.getAttribute("data-name"));
+                    input.setAttribute("data-name", event.target.getAttribute("data-name"));
+                    input.setAttribute("data-value", event.target.getAttribute("data-value"));
+                    updatePostInput(event);
+
+                    for (let i = 0; i < options.length; i++) {
+                        options[i].classList.remove("ds-selected");
+                    }
+                    event.target.classList.add("ds-selected");
+                    addClassIfFilled();
+                    input.blur();
+                }
+
+                function updatePostInput(event) {
+                    let eventValue = event.target.getAttribute("data-value");
+                    let eventType = event.target.getAttribute("data-type");
+                    let variant = edition.id;
+                    let targetForm = edition.querySelector("#addCartFormBuyNow-" + variant);
+                    let targetInput;
+
+                    if (eventType === "dbUpliftProduct") {
+                        targetInput = targetForm.querySelector("#dbUpliftProductCode");
+                    } else if (eventType === "maintenanceProduct") {
+                        targetInput = targetForm.querySelector("#maintenanceProductCode");
+                    } else {
+                        return;
+                    }
+
+                    targetInput.setAttribute("value", eventValue);
+                }
+
+                //update PostInput on document ready
+                updatePostInput({'target': input});
+            });
+        });
+    }
+});

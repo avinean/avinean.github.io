@@ -21,15 +21,27 @@ body {
   margin: 40px auto;
 }
 
-.lessons {
+.row {
+  display: flex;
+}
+
+.col {
+
+}
+
+h1 {
+  padding: 20px 0;
+}
+
+.tasks {
   padding: 20px;
 }
 
-.lessons ul li {
+.tasks ul li {
   list-style-type: none;
 }
 
-.lessons ul li a {
+.tasks ul li a {
   text-decoration: none;
   color: #5d5b5b;
 }

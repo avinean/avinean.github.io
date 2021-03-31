@@ -1,3 +1,0 @@
-var ACC={common:{bindAll:function(){ACC.common.bindToUiCarouselLink()},bindToUiCarouselLink:function(){}}};$(document).ready(function(){ACC.common.bindAll()});$(function(){$("#dialog").dialog()});$.ajaxPrefilter(function(a,b,c){"POST"===a.type.toUpperCase()&&(a.data||(a.data=""),"string"===typeof a.data&&-1===a.data.indexOf("CSRFToken")&&(a.data=a.data+"\x26CSRFToken\x3d"+ACC.common.CSRFToken))});
-var iframeSupporter={postMessageToParentWindow:function(b,a){void 0===a&&(a="*");window!=top&&parent.postMessage(b,a)}};
-ACC.langcurrency={bindAll:function(){this.bindLangCurrencySelector()},bindLangCurrencySelector:function(){$("#country-selector").change(function(){$("#country-form").submit()})}};$(document).ready(function(){ACC.langcurrency.bindAll()});

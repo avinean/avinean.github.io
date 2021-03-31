@@ -77,6 +77,7 @@ function generateBG(tags, selector, color) {
     Array.prototype.forEach.call(tagMas, e => {
         e.style = `
 			position: absolute;
+            z-index: -1;
 			width: 500px;
 			color: ${color};
             font-size: ${Math.floor(Math.random(.8,1) * 20)}px;

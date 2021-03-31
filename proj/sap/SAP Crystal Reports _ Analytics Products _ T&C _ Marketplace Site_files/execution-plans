@@ -1,8 +1,0 @@
-(function () {
-  window.evolv.runtime.then(function (runtime) {
-    runtime.setAudience({"browser":"chrome","device":"desktop","location":"DE","platform":"windows","referrerUrl":"https://www-stg.sapstore.com/"});
-    runtime.stagePlans("browser-cache", function (builder) {
-    });
-  });
-})();
-

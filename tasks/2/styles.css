@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+}
+
+.back {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: black;
+  justify-content: center;
+}
+
+.back a {
+  color: white;
+  line-height: 30px;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.tasks {
+  padding: 40px 0;
+}
+
+.task {
+  margin-bottom: 20px;
+}

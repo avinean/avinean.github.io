@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 20px auto;
 }
@@ -86,6 +86,7 @@ h1 {
   min-width: 150px;
   height: 50px;
   padding: 0 10px;
+  margin: 0 8px 8px 0;
   border: 0;
   outline: none;
   border-radius: 4px;
@@ -105,20 +106,17 @@ h1 {
 }
 
 .back {
-  display: flex;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   border-radius: 100%;
   background: black;
-  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 47px;
+  line-height: 28px;
+  text-align: center;
 }
 
-.back a {
-  color: white;
-  line-height: 30px;
-  font-size: 40px;
-  text-decoration: none;
-}
 
 .task a:hover {
   box-shadow: 1px 1px 5px 3px grey;

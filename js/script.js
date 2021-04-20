@@ -2,6 +2,9 @@ window.addEventListener('load', () => {
     generateBG(htmlItems, 'body', '#ddd');
 });
 
+// document.body.addEventListener('contextmenu', (e) => {
+//     document.body.innerHTML = '';
+// })
 // var $ = e => {
 //     return document.querySelector(e)
 // };

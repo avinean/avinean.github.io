@@ -1,0 +1,253 @@
+* {
+  user-select: none;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 170px;
+  height: 35px;
+  box-shadow: 0 0 4px 0 grey;
+  border-radius: 4px;
+  background: #fff;
+  user-select: none;
+}
+
+.dropdown input {
+  display: none;
+}
+
+.dropdown__value {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown input:checked + .dropdown__list {
+  max-height: 500px;
+} 
+
+.dropdown__list {
+  max-height: 0px;
+  position: absolute;
+  top: 38px;
+  width: 100%;
+  box-shadow: 0 0 4px 0 grey;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+  transition: all ease .5s;
+}
+
+.dropdown__list li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.dropdown__list li:hover {
+  background: rgb(197, 192, 192);
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 5px 0;
+  box-shadow: 0 0 4px 0 grey;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.checkbox input:checked + label:before {
+  content: '✓';
+  position: relative;
+  top: -4px;
+  left: 2px;
+  display: block;
+  color: greenyellow;
+  font-size: 34px;
+}
+
+.radiobutton input {
+  display: none;
+}
+
+.radiobutton label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 5px 0;
+  box-shadow: 0 0 4px 0 grey;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.radiobutton input:checked + label:before {
+  content: '';
+  display: block;
+  background: red;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  margin: 0 5px 5px 0;
+  box-shadow: 0 0 4px 0 grey;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+}
+
+.trigger input,
+.trigger .trigger__on {
+  display: none;
+  position: absolute;
+  left: 22px;
+}
+.trigger .trigger__off {
+  display: block;
+  position: absolute;
+  right: 22px;
+}
+
+.trigger div {
+  height: 100%;
+  width: 20px;
+  border-radius: 4px;
+  margin-left: 0px;
+  background: #a4a4ab;
+  transition: all ease .5s;
+}
+
+.trigger input:checked ~ div {
+  margin-left: calc(100% - 20px);
+  background: #8f8fea;
+}
+
+.trigger input:checked ~ .trigger__on {
+  display: block;
+}
+
+.trigger input:checked ~ .trigger__off {
+  display: none;
+}
+
+.tabs {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs__header {
+  display: flex;
+  height: 30px;
+}
+
+.tabs__tab {
+  position: relative;
+  top: 1px;
+  padding: 4px 30px;
+  background: #fff;
+  border: 1px solid #c2c2c2;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+}
+
+.tabs__body {
+  display: none;
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+}
+
+#tab1:checked ~ .tabs__header [for="tab1"] {
+  border-bottom: 1px solid #fff;
+}
+#tab2:checked ~ .tabs__header [for="tab2"] {
+  border-bottom: 1px solid #fff;
+}
+#tab3:checked ~ .tabs__header [for="tab3"] {
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ .tabs__bodies .tab1 {
+  display: block;
+}
+#tab2:checked ~ .tabs__bodies .tab2 {
+  display: block;
+}
+#tab3:checked ~ .tabs__bodies .tab3 {
+  display: block;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion  input {
+  display: none;
+}
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background: #e1e1e1;
+  cursor: pointer;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.accordion__body {
+  max-height: 0px;
+  padding: 0px 10px;
+  align-items: center;
+  width: 100%;
+  background: #eee;
+  overflow-y: auto;
+  transition: all ease .5s;
+}
+
+input:checked ~ .accordion__body {
+  max-height: 200px;
+  padding: 10px;
+}

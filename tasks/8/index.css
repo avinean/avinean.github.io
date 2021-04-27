@@ -379,27 +379,6 @@ input:checked ~ .perspective__wrapper .transform-cube__example {
 }
 
 
-.transform__example .head,
-.transform__example button,
-.transform__example img {
-  transform: translateZ(80px);
-}
-
-.transform__example button {
-  margin: 20px;
-  box-shadow: 0 0 20px -5px grey;
-}
-
-.transform__example img {
-  width: 80px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px -5px grey;
-}
-
-.transform__back {
-  transform: rotateY(180deg);
-}
-
 @keyframes spin3d {
   0% {
     transform: rotate3d(1, 1, 1, 0deg);

@@ -140,3 +140,7 @@ h1 {
   display: inline-flex;
   padding: 0 10px;
 }
+
+table, tbody, thead, tr, td, th {
+  text-align: center;
+}

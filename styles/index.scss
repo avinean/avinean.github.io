@@ -17,7 +17,7 @@
 }
 
 @for $i from 1 through 50 {
-  .task__item:nth-child(50n + #{$i}):before {
+  .task__item:nth-of-type(50n + #{$i}):before {
     content: "#{$i}";
   }
 }

@@ -1,0 +1,220 @@
+.task__item {
+  position: relative;
+}
+
+.task__item:before {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  display: block;
+  text-align: center;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  display: block;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 11px -3px #7a7979;
+          box-shadow: 2px 2px 11px -3px #7a7979;
+}
+
+.task__item:nth-child(50n + 1):before {
+  content: "1";
+}
+
+.task__item:nth-child(50n + 2):before {
+  content: "2";
+}
+
+.task__item:nth-child(50n + 3):before {
+  content: "3";
+}
+
+.task__item:nth-child(50n + 4):before {
+  content: "4";
+}
+
+.task__item:nth-child(50n + 5):before {
+  content: "5";
+}
+
+.task__item:nth-child(50n + 6):before {
+  content: "6";
+}
+
+.task__item:nth-child(50n + 7):before {
+  content: "7";
+}
+
+.task__item:nth-child(50n + 8):before {
+  content: "8";
+}
+
+.task__item:nth-child(50n + 9):before {
+  content: "9";
+}
+
+.task__item:nth-child(50n + 10):before {
+  content: "10";
+}
+
+.task__item:nth-child(50n + 11):before {
+  content: "11";
+}
+
+.task__item:nth-child(50n + 12):before {
+  content: "12";
+}
+
+.task__item:nth-child(50n + 13):before {
+  content: "13";
+}
+
+.task__item:nth-child(50n + 14):before {
+  content: "14";
+}
+
+.task__item:nth-child(50n + 15):before {
+  content: "15";
+}
+
+.task__item:nth-child(50n + 16):before {
+  content: "16";
+}
+
+.task__item:nth-child(50n + 17):before {
+  content: "17";
+}
+
+.task__item:nth-child(50n + 18):before {
+  content: "18";
+}
+
+.task__item:nth-child(50n + 19):before {
+  content: "19";
+}
+
+.task__item:nth-child(50n + 20):before {
+  content: "20";
+}
+
+.task__item:nth-child(50n + 21):before {
+  content: "21";
+}
+
+.task__item:nth-child(50n + 22):before {
+  content: "22";
+}
+
+.task__item:nth-child(50n + 23):before {
+  content: "23";
+}
+
+.task__item:nth-child(50n + 24):before {
+  content: "24";
+}
+
+.task__item:nth-child(50n + 25):before {
+  content: "25";
+}
+
+.task__item:nth-child(50n + 26):before {
+  content: "26";
+}
+
+.task__item:nth-child(50n + 27):before {
+  content: "27";
+}
+
+.task__item:nth-child(50n + 28):before {
+  content: "28";
+}
+
+.task__item:nth-child(50n + 29):before {
+  content: "29";
+}
+
+.task__item:nth-child(50n + 30):before {
+  content: "30";
+}
+
+.task__item:nth-child(50n + 31):before {
+  content: "31";
+}
+
+.task__item:nth-child(50n + 32):before {
+  content: "32";
+}
+
+.task__item:nth-child(50n + 33):before {
+  content: "33";
+}
+
+.task__item:nth-child(50n + 34):before {
+  content: "34";
+}
+
+.task__item:nth-child(50n + 35):before {
+  content: "35";
+}
+
+.task__item:nth-child(50n + 36):before {
+  content: "36";
+}
+
+.task__item:nth-child(50n + 37):before {
+  content: "37";
+}
+
+.task__item:nth-child(50n + 38):before {
+  content: "38";
+}
+
+.task__item:nth-child(50n + 39):before {
+  content: "39";
+}
+
+.task__item:nth-child(50n + 40):before {
+  content: "40";
+}
+
+.task__item:nth-child(50n + 41):before {
+  content: "41";
+}
+
+.task__item:nth-child(50n + 42):before {
+  content: "42";
+}
+
+.task__item:nth-child(50n + 43):before {
+  content: "43";
+}
+
+.task__item:nth-child(50n + 44):before {
+  content: "44";
+}
+
+.task__item:nth-child(50n + 45):before {
+  content: "45";
+}
+
+.task__item:nth-child(50n + 46):before {
+  content: "46";
+}
+
+.task__item:nth-child(50n + 47):before {
+  content: "47";
+}
+
+.task__item:nth-child(50n + 48):before {
+  content: "48";
+}
+
+.task__item:nth-child(50n + 49):before {
+  content: "49";
+}
+
+.task__item:nth-child(50n + 50):before {
+  content: "50";
+}
+/*# sourceMappingURL=index.css.map */

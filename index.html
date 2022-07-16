@@ -53,7 +53,7 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Kaps" />
+    <meta name="application-name" content="ARSI" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
@@ -66,76 +66,61 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Kaps</title>
+    <title>ARSI</title>
   <script defer src="index.js"></script><link href="styles/index.css" rel="stylesheet"></head>
+
   <body>
-    <div class="header section">
-      <header class="container">
-        <div class="logo">
-          <img src="./../img/logo.svg" alt="logo" />
-        </div>
+    <header class="header section">
+      <img src="./../img/logo.png" alt="logo" />
+      <div class="divider"></div>
+      <div id="opener">
+        <img src="./../img/menu.svg" />
+        <img src="./../img/close.svg" />
+      </div>
+      <nav>
+        <a href="#how" class="anchor primary fz-14 fw-700">How to buy</a>
+        <a href="#about" class="anchor gray fz-14 fw-700">About us</a>
+        <a href="#token" class="anchor gray fz-14 fw-700">Tokenomics</a>
+        <a href="#social" class="anchor gray fz-14 fw-700">Social Media</a>
+        <a href="#team" class="anchor gray fz-14 fw-700">Team</a>
+        <a href="#faq" class="anchor gray fz-14 fw-700">FAQ</a>
+        <a href="#" class="gray fz-14 fw-700">Contact</a>
         <div class="divider"></div>
-        <div id="opener">
-          <img src="./../img/icons/menu.svg" />
-          <img src="./../img/icons/close.svg" />
-        </div>
-        <nav>
-          <a href="#how" class="primary fz-14 fw-700">How it works</a>
-          <a href="#features" class="gray fz-14 fw-700">Features</a>
-          <a href="#token" class="gray fz-14 fw-700">Token</a>
-          <a href="#ico" class="gray fz-14 fw-700">ICO</a>
-          <a href="#roadmap" class="gray fz-14 fw-700">Roadmap</a>
-          <a href="#" class="btn btn--sm btn--secondary">Login</a>
-          <a href="#" class="btn btn--sm btn--primary">Sign up for ICO</a>
-        </nav>
-      </header>
-    </div>
+        <a href="#" class="btn btn--sm btn--primary">Register for ICO</a>
+      </nav>
+    </header>
     <div class="hero section">
       <div class="container">
         <div class="info">
           <div class="hero__info">
-            <div class="headline primary">
-              The community-driven token with a limited supply, a growing
-              reserve and reward pool
-            </div>
+            <div class="headline">Cryptocurrency powered by real estate</div>
+            <div class="subheadline primary">by ARULSINGAM INVESTMENTS LTD</div>
             <div class="body">
-              KAPS is a BSC token on the BEP20 standard that offers a solid
-              price floor through the formation of an initial stablecoin reserve
-              and reinforcing it with transaction fees over time. The token is
-              used for governance and rewards its active community members with
-              fee cashbacks.
+              Introducting a cryptocurrency powered by stable cash-flow from an
+              existing real estate portfolio.
+              <br /><br />
+              The Arsi project is created by ARULSINGAM INVESTMENTS LIMITED, a
+              company located in the UK with years of experience in crypto and a
+              provable portfolio of real estate projects.
             </div>
             <div class="actions">
               <button class="btn btn--primary">Whitepaper</button>
-              <button class="btn btn--secondary">One Pager</button>
+              <button class="btn btn--secondary">Buy ARSI</button>
             </div>
           </div>
-          <div id="video" class="hero__video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/bBC-nXj3Ng4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <img src="./../img/icon-play.svg" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="timer container">
-        <div class="timer__header">Pre-Sale starting in</div>
-        <div class="timer__display">
-          <div class="timer__display-value" data-units="days" id="days">13</div>
-          <div class="timer__display-value" data-units="hours" id="hours">
-            21
-          </div>
-          <div class="timer__display-value" data-units="minutes" id="minutes">
-            34
-          </div>
-          <div class="timer__display-value" data-units="seconds" id="seconds">
-            11
+          <div class="hero__video">
+            <div id="video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/bBC-nXj3Ng4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <img src="./../img/play.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -143,445 +128,529 @@
         <div class="headline text-center">Known from</div>
         <div class="forms__list">
           <div class="forms__item">
-            <img src="./../img/cointelegraph.svg" alt="" />
+            <img src="./../img/cointelegraph.png" alt="" />
           </div>
           <div class="forms__item">
-            <img src="./../img/new-btc.svg" alt="" />
+            <img src="./../img/cointelegraph.png" alt="" />
           </div>
           <div class="forms__item">
-            <img src="./../img/cointelegraph.svg" alt="" />
+            <img src="./../img/cointelegraph.png" alt="" />
           </div>
           <div class="forms__item">
-            <img src="./../img/new-btc.svg" alt="" />
+            <img src="./../img/cointelegraph.png" alt="" />
           </div>
         </div>
       </div>
-    </div>
-    <div id="how" class="section info-meet">
-      <div class="container">
-        <div class="info">
-          <div></div>
-          <div>
-            <div class="headline">Meet KAPS</div>
-            <div class="body">
-              KAPS dedicates 100% of the proceedings collected via its initial
-              sale to the formation of a reserve consisting of stablecoins
-              (BUSD). The project continuously expands this reserve pool over
-              time by dedicating 60% of all future transaction fees to the
-              backing reserve. The KAPS collected through the fees will be
-              subsequently sold on exchanges and directly swapped to BUSD.
-            </div>
-            <img src="./../img/img_mob_hero1@2x.png" alt="" />
-          </div>
+      <div class="timer container">
+        <div class="headline">
+          <div class="border"></div>
+          <div>Pre-Sale will end in</div>
+          <div class="border"></div>
         </div>
+        <div class="display">
+          <div data-units="days" id="days">13</div>
+          <div data-units="hours" id="hours">21</div>
+          <div data-units="minutes" id="minutes">34</div>
+          <div data-units="seconds" id="seconds">11</div>
+        </div>
+        <div class="border"></div>
       </div>
     </div>
-    <div class="info-features section">
+    <div id="about" class="section info-meet">
       <div class="container">
         <div class="info">
+          <img src="./../img/meet-img.png" alt="meet" />
           <div>
-            <div class="headline">Features</div>
+            <div class="headline">Meet Arsi</div>
             <div class="body">
-              <div>
-                The KAPS project combines several aspects under one roof:
-              </div>
-              <div>
-                A growing reserve that increases over time through transaction
-                fees
-              </div>
-              <div>1% fee: among the lowest in the sector</div>
-              <div>Community voting on ecosystem development decisions</div>
-              <div>Community rewards in the form of fee cashback</div>
+              ARSI is a BSC token that offers a multitude of various use cases
+              for the real estate sector and its community. Starting with rental
+              payments in crypto that come with a discount compared to
+              traditional FIAT rents, ARSI offers all sorts of benefits
+              surrounding the growing real estate portfolio of ARULSINGAM
+              INVESTEMENTS LTD. Supported by this large portfolio of real estate
+              projects, the Arsi token adopts an ingenious tokenomics structure
+              that will nurture its use cases in the long-term and establish it
+              as the utility token for crypto and real estate enthusiasts.
             </div>
           </div>
-          <div class="grid">
-            <img src="./../img/growing-reverse.png" alt="" />
-            <img src="./../img/low-fees.png" alt="" />
-            <img src="./../img/comunity-voting.png" alt="" />
-            <img src="./../img/comunity-rewards.png" alt="" />
+        </div>
+      </div>
+      <div class="container investments">
+        <div class="info">
+          <div>
+            <div class="headline">By ARULSINGAM INVESTMENTS LTD</div>
+            <div class="body">
+              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
+              UK with currently two major projects that are strongly interlinked
+              – Project ARSI and ARSI Charity. Thanks to our previous business
+              endeavors, we can rely on an already existing international
+              community from England, Germany, Sri Lanka, Denmark, India and the
+              Netherlands. We are combining a decade of experience in real
+              estate with the latest blockchain technological advancements,
+              offering lower transaction costs and payment timeframes than any
+              other existing solution in the current real estate market.
+            </div>
+          </div>
+          <img src="./../img/investment-img.png" alt="investment" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="info">
+          <img src="./../img/charity-img.png" alt="charity" />
+          <div>
+            <div class="headline">Arsi Charity</div>
+            <div class="body">
+              Investors will benefit from the positive development of ARSI value
+              over time and we will ensure that a significant amount of ARSI
+              will benefit charitable projects to support people in need and
+              tackling current issues that we consider significant like creating
+              a steady supply of drinking water, access to education, reducing
+              CO2 consumption, fighting poverty and famine.
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <img src="./../img/growing-reverse.png" alt="" />
+          <img src="./../img/low-fees.png" alt="" />
+          <img src="./../img/comunity-voting.png" alt="" />
+          <img src="./../img/comunity-rewards.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="social" class="charity section">
+      <div class="container">
+        <div class="headline text-center">Arsi Charity</div>
+        <div class="infographics">
+          <div>
+            <img src="./../img/charity/1.png" alt="" /> Multiple use cases
+          </div>
+          <div>
+            <img src="./../img/charity/2.png" alt="" /> Experienced company
+          </div>
+          <div>
+            <img src="./../img/charity/3.png" alt="" /> Deflationary token
+          </div>
+          <div>
+            <img src="./../img/charity/4.png" alt="" /> Community rewards
+          </div>
+          <div>
+            <img src="./../img/charity/5.png" alt="" /> Supported by hard assets
+          </div>
+          <div>
+            <img src="./../img/charity/6.png" alt="" /> Limited NFT Collection
+          </div>
+          <div>
+            <img src="./../img/charity/7.png" alt="" /> Charity initiatives
           </div>
         </div>
       </div>
     </div>
-    <div class="section info-transparency">
+    <div id="how" class="section how">
+      <div class="container">
+        <div class="headline text-center">How it works</div>
+        <div class="body text-center">
+          The ARSI token supports a self-sufficient and reinforcing ecosystem
+          that is directly linked with our companies’ real estate assets.
+          <br /><br />
+          The ARSI token will facilitate all transactions within the ecosystem.
+          Our real estate portfolio will constantly create a rental income in
+          FIAT currencies that will be exchanged into ARSI by our team,
+          therefore creating a steady demand in ARSI.
+        </div>
+        <div class="image">
+          <img src="./../img/how-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="section section info-meet">
       <div class="container">
         <div class="info">
-          <div></div>
+          <img src="./../img/comnunity-img.png" alt="meet" />
           <div>
-            <div class="headline">Full transparency</div>
+            <div class="headline">Community incentives</div>
             <div class="body">
-              KAPS is dedicated towards publishing regular reports of the
-              current backing reserve. The reserve will further be audited by a
-              third party on regular intervals to ensure the utmost degree of
-              decentralization.
+              We want to give continuous loyalty benefits to the users who are
+              using the ARSI token. First and foremost, this will apply to
+              tenants with our own real estate portfolio, but we plan to extend
+              the benefits to all ARSI holders with the growth of the ecosystem.
+              The possibilities are reaching from a monthly discount on an ARSI
+              users rent in one of our apartments to a discount for a holiday
+              home or short-term rental office or apartment in one of Europe’s
+              major cities.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container investments">
+        <div class="info">
+          <div>
+            <div class="headline">The ARSI Dashboard</div>
+            <div class="body">
+              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
+              UK with currently two major projects that are strongly interlinked
+              – Project ARSI and ARSI Charity. Thanks to our previous business
+              endeavors, we can rely on an already existing international
+              community from England, Germany, Sri Lanka, Denmark, India and the
+              Netherlands. We are combining a decade of experience in real
+              estate with the latest blockchain technological advancements,
+              offering lower transaction costs and payment timeframes than any
+              other existing solution in the current real estate market.
+            </div>
+          </div>
+          <img src="./../img/dashboard-img.png" alt="investment" />
+        </div>
+      </div>
+    </div>
+    <div class="headline text-center">The ARSI NFT collection</div>
+    <div class="section collection">
+      <div class="container">
+        <div class="info">
+          <img src="./../img/collection-img.png" alt="" />
+          <div>
+            <div class="body">
+              We are launching a limited portfolio of ARSI-related
+              Non-Fungible-Tokens (NFTs) inspired by our own tech-lion that is
+              the symbol of our project. The proceedings collected via the sale
+              of our NFTs will provide additional funding and liquidity.
               <br /><br />
-              The BUSD reserve will allow no outgoing transactions unless
-              approved by the custodian.
-            </div>
-            <img src="./../img/img_mob_hero2@2x.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="features" class="section features">
-      <div class="container">
-        <div class="headline white">Features</div>
-        <div class="body white">
-          KAPS dedicates 100% of the proceedings collected via its initial sale
-          to the formation of a reserve consisting of stablecoins (BUSD). The
-          project continuously expands this reserve pool over time by dedicating
-          60% of all future transaction fees to the backing reserve. The KAPS
-          collected through the fees will be subsequently sold on exchanges and
-          directly swapped to BUSD.
-        </div>
-        <div class="tiles">
-          <div class="tiles__item">
-            <img src="./../img/features-1.svg" alt="" />
-            <div class="tiles__content">
-              KAPS conducts an Initial Coin Offering - 100% of the proceedings
-              collected are swapped to BUSD and stored in the Reserve.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/features-2.svg" alt="" />
-            <div class="tiles__content">
-              KAPS splits the transaction fees into the reserve and the
-              community reward pool. The KAPS collected via transaction fees are
-              sold on exchanges for BUSD.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/features-3.svg" alt="" />
-            <div class="tiles__content">
-              The BUSD is accumulated in the reserve, which grows over time and
-              increases the price floor of KAPS through a provable reserve.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/features-4.svg" alt="" />
-            <div class="tiles__content">
-              Community members are rewarded with a percentage of the Community
-              pool depending on their rank in the Gamification program.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section info-comunity">
-      <div class="container">
-        <div class="info">
-          <div></div>
-          <div>
-            <div class="headline">Empowered by the community</div>
-            <div class="body">
-              20% of all fees go to the Community pool. KAPS community members
-              with one of the gamification ranks share between 15% and 60% of
-              the pool in equal parts.
+              The NFTs are always based on four base pictures that become a set
+              of 25 NFTs per picture and build up to seasons that end in a
+              collection of 2.500 NFTs. In total only four collections will be
+              available, making it a limited portfolio of 10.000 NFTs.
               <br /><br />
-              The top 10 voters for each year will be additionally incentivized
-              by receiving 20% of the total pool split among them in various
-              percentages.
+              The rollout of additional sets and collections of NFTs with
+              various themes such as virtual reality, major cities, gaming and
+              countries, inspired by our company and its values will be exectued
+              by our talented design team in cooperation with external partners
+              and artists
+              <br /><br />
+              The first set of 25 NFT is already created and launched - youcan
+              find them on opensea.io/Arulsingam-ARSI
             </div>
-            <img src="./../img/img_mob_hero3@2x.png" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <div class="resources section">
-      <div class="container">
+    <div class="section section info-meet">
+      <div class="container resources">
         <div class="info">
           <div>
             <div class="headline">Resources</div>
             <div class="body">
-              Read our Whitepaper to understand how KAPS exactly works and what
-              problems it solves.
+              Please have a look at our White Paper. You will find a deep dive
+              into our project and our vision for project ARSI and ARSI Charity.
             </div>
-            <div class="actions desktop">
+            <div class="actions">
               <button class="btn btn--primary">Whitepaper</button>
               <button class="btn btn--secondary">One Pager</button>
             </div>
           </div>
-          <!-- <div> -->
-          <img src="./../img/img_folder@2x.png" alt="" />
-          <div class="actions mobile">
-            <button class="btn btn--primary">Whitepaper</button>
-            <button class="btn btn--secondary">One Pager</button>
+          <img src="./../img/resources-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="token" class="section tokenomics">
+      <div class="container">
+        <div class="headline text-center">Tokenomics</div>
+        <div class="grid body">
+          <div class="active">
+            <div>ARSI</div>
+            <div>Token name</div>
           </div>
-          <!-- </div> -->
+          <div>
+            <div>$ARSI</div>
+            <div>Token symbol</div>
+          </div>
+          <div>
+            <div>1’000’000’000.00 ARSI</div>
+            <div>Token supply</div>
+          </div>
+          <div>
+            <div>Secret sale: $3, Presale: $4,5, Open sale: $6</div>
+            <div>Token price</div>
+          </div>
+          <div>
+            <div>1’000’000 ARSI</div>
+            <div>Maximum purchase</div>
+          </div>
+          <div>
+            <div>BTC, ETH, USDT, Fiat Accepted</div>
+            <div>Purchase methods</div>
+          </div>
+          <div>
+            <div>0x60c4D3DcA38B66cBAc8fAe198aabCac3E37296e2</div>
+            <div>Contract address</div>
+          </div>
+          <div>
+            <div>Click here to see</div>
+            <div>Token explorer</div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="list">
+            <div>
+              <div>
+                <div class="body">Market supply</div>
+                <div class="body">500’000’000 ARSI</div>
+              </div>
+              <div>50%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">ARSI charity</div>
+                <div class="body">100’000’000 ARSI</div>
+              </div>
+              <div>10%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">ARSI team</div>
+                <div class="body">100’000’000 ARSI</div>
+              </div>
+              <div>10%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">ICO</div>
+                <div class="body">80’000’000 ARSI</div>
+              </div>
+              <div>8%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">Company reserve</div>
+                <div class="body">60’000’000 ARSI</div>
+              </div>
+              <div>6%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">Marketing</div>
+                <div class="body">50’000’000 ARSI</div>
+              </div>
+              <div>5%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">Incentives, events, airdrops, revards</div>
+                <div class="body">60’000’000 ARSI</div>
+              </div>
+              <div>6%</div>
+            </div>
+            <div>
+              <div>
+                <div class="body">Strategic partners & advisors</div>
+                <div class="body">60’000’000 ARSI</div>
+              </div>
+              <div>5%</div>
+            </div>
+          </div>
+          <div class="chart">
+            <div>
+              1’000’000’000
+              <br />
+              ARSI
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="token" class="token section">
-      <div class="container">
-        <div class="info">
-          <div class="token__list">
-            <div class="token__item">
-              <div>Token name:</div>
-              <div>KAPS</div>
-            </div>
-            <div class="token__item">
-              <div>Technology:</div>
-              <div>BEP20</div>
-            </div>
-            <div class="token__item">
-              <div>Token Type:</div>
-              <div>Utility</div>
-            </div>
-            <div class="token__item">
-              <div>Token Supply:</div>
-              <div>50,000,000 KAPS</div>
-            </div>
-            <div class="token__item">
-              <div>Token ICO:</div>
-              <div>50,000,000 KAPS</div>
-            </div>
-            <div class="token__item">
-              <div>ICO Price:</div>
-              <div>2 USD</div>
-            </div>
-            <div class="token__item">
-              <div>Hard Cap:</div>
-              <div>85,000,000 USD</div>
-            </div>
-          </div>
-          <div>
-            <div class="headline">The KAPS token</div>
-            <div class="body">
-              The KAPS utility token is based on the BEP20 (BSC) standard. It is
-              used to vote on important decisions related to the further
-              development of the KAPS project. The token further acts as an
-              reward mechanism. A transaction fee of 1% is applied, which is
-              split between the Reserve pool and the Community pool.
-              <br /><br />
-              KAPS secures a solid price floor by dedicating 100% of the
-              proceedings to the Reserve pool formation. 60% of the fees are
-              continuously added to the reserve pool, which grows over time and
-              secures the KAPS token price.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="ico" class="token-sale section">
-      <div class="container">
-        <div class="headline text-center">Token sale</div>
-        <div class="body text-center">
-          The KAPS token sale will commence in three stages. Early adopters
-          recieve 50% bonus on their investment. All proceedings collected are
-          transformed into BUSD, which is stored in securely in the reserve.
-        </div>
-        <div class="tiles">
-          <div class="tiles__item">
-            <div class="top">
-              <div class="subheadline white">Private sale</div>
-              <div class="subheadline white fw-400">
-                01.07.2022 — 31.08.2022
-              </div>
-            </div>
-            <div class="content">
-              <div>
-                <div class="fz-14">Amount</div>
-                <div class="fz-14 fw-600">10,000,000 KAPS</div>
-              </div>
-              <div>
-                <div class="fz-14">Price</div>
-                <div class="fz-14 fw-600">1 USD</div>
-              </div>
-              <div>
-                <div class="fz-14">Bonus</div>
-                <div class="fz-14 fw-600">50%</div>
-              </div>
-            </div>
-          </div>
-          <div class="tiles__item">
-            <div class="top">
-              <div class="subheadline white">Pre-sale</div>
-              <div class="subheadline white fw-400">
-                01.09.2022 — 31.10.2022
-              </div>
-            </div>
-            <div class="content">
-              <div>
-                <div class="fz-14">Amount</div>
-                <div class="fz-14 fw-600">10,000,000 KAPS</div>
-              </div>
-              <div>
-                <div class="fz-14">Price</div>
-                <div class="fz-14 fw-600">1,50 USD</div>
-              </div>
-              <div>
-                <div class="fz-14">Bonus</div>
-                <div class="fz-14 fw-600">25%</div>
-              </div>
-            </div>
-          </div>
-          <div class="tiles__item">
-            <div class="top">
-              <div class="subheadline white">Main sale</div>
-              <div class="subheadline white fw-400">
-                01.11.2022 — 31.12.2022
-              </div>
-            </div>
-            <div class="content">
-              <div>
-                <div class="fz-14">Amount</div>
-                <div class="fz-14 fw-600">30,000,000 KAPS</div>
-              </div>
-              <div>
-                <div class="fz-14">Price</div>
-                <div class="fz-14 fw-600">2 USD</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">
-          <button class="btn btn--primary">Register for ICO</button>
-        </div>
-      </div>
-    </div>
     <div id="roadmap" class="roadmap section">
       <div class="container">
         <div class="headline white text-center">Roadmap</div>
         <div class="roadmap__graph">
-          <div class="arrow-left">
-            <img src="./../img/icons/arrow-left.svg" alt="" />
-          </div>
-          <div
-            class="roadmap__point roadmap__point--bottom roadmap__point--active"
-          >
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">Q3 2022</div>
-              <div class="body white text-center">
-                Smart Contract development
-                <br /><br />
-                Smart Contract audit
+          <img class="arrow-left" src="./../img/arrow-left.svg" alt="" />
+
+          <div class="dash"></div>
+          <div class="active">
+            <div>
+              <div>
+                <div class="period">Q3 2022</div>
+                <div class="description">Initial Coin Offering</div>
               </div>
             </div>
           </div>
-          <div class="roadmap__middle"></div>
-          <div class="roadmap__point roadmap__point--top">
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">October 2022</div>
-              <div class="body white text-center">Start Private sale</div>
-            </div>
-          </div>
-          <div class="roadmap__middle"></div>
-          <div class="roadmap__point roadmap__point--bottom">
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">December 2022</div>
-              <div class="body white text-center">Start Pre-sale</div>
-            </div>
-          </div>
-          <div class="roadmap__middle"></div>
-          <div class="roadmap__point roadmap__point--top">
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">February 2022</div>
-              <div class="body white text-center">
-                Main sale
-                <br /><br />
-                Airdrop & Bounty campaigns
+
+          <div class="dash"></div>
+          <div>
+            <div>
+              <div>
+                <div class="period">Q4 2022</div>
+                <div class="description">Listing on exchanges</div>
               </div>
             </div>
           </div>
-          <div class="roadmap__middle"></div>
-          <div class="roadmap__point roadmap__point--bottom">
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">Q2 2022</div>
-              <div class="body white text-center">
-                Listing of KAPS on exchanges
+
+          <div class="dash"></div>
+          <div>
+            <div>
+              <div>
+                <div class="period">Q1 2023</div>
+                <div class="description">Airdrop & Bounty campaigns</div>
               </div>
             </div>
           </div>
-          <div class="roadmap__middle"></div>
-          <div class="roadmap__point roadmap__point--top">
-            <div class="roadmap__message">
-              <div class="subheadline white text-center">Q3 2022</div>
-              <div class="body white text-center">
-                Roll out of the voting dashboard
+
+          <div class="dash"></div>
+          <div>
+            <div>
+              <div>
+                <div class="period">Q2 2023</div>
+                <div class="description">
+                  Marketing Real estate assets acquisition
+                </div>
               </div>
             </div>
           </div>
-          <div class="arrow-right">
-            <img src="./../img/icons/arrow-right.svg" alt="" />
-          </div>
+
+          <div class="dash"></div>
+
+          <img class="arrow-right" src="./../img/arrow-left.svg" alt="" />
         </div>
       </div>
     </div>
 
-    <div class="team section">
+    <div id="team" class="team section">
       <div class="container">
-        <div class="headline text-center">Team</div>
+        <div class="headline text-center">Core Team</div>
+        <div class="body text-center">
+          Our long-lasting experience in the real estate industry and our
+          founders experience in cryptocurrencies combine the necessary skillset
+          to make ARSI a success. Our team is complemented by experts with
+          long-standing expertise in various sectors, allowing us to achieve the
+          utmost degree of excellence in all areas.
+        </div>
         <div class="team__list">
           <a href="#" class="team__item">
-            <img src="./../img/users/user-1.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
+            <img src="./../img/users/1.png" alt="" />
+            <div class="subheadline primary fw-600">Arulvarma Uthayakumar</div>
+            <div class="subheadline text-center fw-400">CEO & Founder</div>
           </a>
           <a href="#" class="team__item">
-            <img src="./../img/users/user-2.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
+            <img src="./../img/users/2.png" alt="" />
+            <div class="subheadline primary fw-600">Alexander Stehle</div>
+            <div class="subheadline text-center fw-400">
+              Director — Operations and Real Estate
+            </div>
           </a>
           <a href="#" class="team__item">
-            <img src="./../img/users/user-3.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/user-4.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
+            <img src="./../img/users/3.png" alt="" />
+            <div class="subheadline primary fw-600">Roman Levytskyi</div>
+            <div class="subheadline text-center fw-400">
+              Director — Corporate Identity and Design
+            </div>
           </a>
         </div>
-      </div>
-      <div class="container">
-        <div class="headline text-center">Advisory board</div>
-        <div class="team__list">
-          <a href="#" class="team__item">
-            <img src="./../img/users/user-5.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
+        <div class="headline text-center">Advisory Team</div>
+        <div class="team__list advisors">
+          <a href="#">
+            <img src="./../img/team2.png" alt="" />
+            <div class="item">
+              <div class="subheadline primary fw-600">Taylor Wessing</div>
+              <div class="subheadline text-center fw-400">Legal Advisor</div>
+            </div>
           </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/user-6.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/user-7.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/user-8.png" alt="" />
-            <div class="subheadline">Firstname Lastname</div>
-            <div class="body">CEO & Founder</div>
+          <a href="#">
+            <img src="./../img/team1.png" alt="" />
+            <div class="item">
+              <div class="subheadline primary fw-600">Krypto Vergleich</div>
+              <div class="subheadline text-center fw-400">
+                Marketing Advisors
+              </div>
+            </div>
           </a>
         </div>
       </div>
     </div>
-    <div class="adopter section">
+    <div id="faq" class="adopter section">
       <div class="container">
-        <div class="headline white text-center">Become an early adopter</div>
-        <div class="body text-center white">
+        <div class="headline text-center">Frequently Asked Questions</div>
+        <div class="accordeon">
+          <label>
+            <input type="checkbox" hidden />
+            <div>
+              <div class="subheadline">What motivated you to create ARSI?</div>
+              <div class="inner">
+                We see a huge opportunity in combining our knowledge and the
+                stability of the real estate sector with our own cryptocurrency
+                and its chances of growth. As experts of both worlds, we wish to
+                create a stable environment for our investors and users of our
+                ARSI coin without losing the opportunity that comes with a
+                successful cryptocurrency.
+              </div>
+            </div>
+            <img src="./../img/arrow-up.svg" alt="" />
+          </label>
+          <label>
+            <input type="checkbox" hidden />
+            <div>
+              <div class="subheadline">What motivated you to create ARSI?</div>
+              <div class="inner">
+                We see a huge opportunity in combining our knowledge and the
+                stability of the real estate sector with our own cryptocurrency
+                and its chances of growth. As experts of both worlds, we wish to
+                create a stable environment for our investors and users of our
+                ARSI coin without losing the opportunity that comes with a
+                successful cryptocurrency.
+              </div>
+            </div>
+            <img src="./../img/arrow-up.svg" alt="" />
+          </label>
+          <label>
+            <input type="checkbox" hidden />
+            <div>
+              <div class="subheadline">
+                What are the benefits of owning ARSI tokens?
+              </div>
+              <div class="inner">
+                We see a huge opportunity in combining our knowledge and the
+                stability of the real estate sector with our own cryptocurrency
+                and its chances of growth. As experts of both worlds, we wish to
+                create a stable environment for our investors and users of our
+                ARSI coin without losing the opportunity that comes with a
+                successful cryptocurrency.
+              </div>
+            </div>
+            <img src="./../img/arrow-up.svg" alt="" />
+          </label>
+          <label>
+            <input type="checkbox" hidden />
+            <div>
+              <div class="subheadline">How can we buy ARSI?</div>
+              <div class="inner">
+                We see a huge opportunity in combining our knowledge and the
+                stability of the real estate sector with our own cryptocurrency
+                and its chances of growth. As experts of both worlds, we wish to
+                create a stable environment for our investors and users of our
+                ARSI coin without losing the opportunity that comes with a
+                successful cryptocurrency.
+              </div>
+            </div>
+            <img src="./../img/arrow-up.svg" alt="" />
+          </label>
+        </div>
+        <div class="headline text-center">Become an early adopter</div>
+        <div class="body text-center description">
           First movers get up to 50% bonus on their investment.
         </div>
         <div class="text-center">
-          <button class="btn btn--big">Sign up for ICO</button>
+          <button class="btn btn--primary">Register for the ICO</button>
         </div>
       </div>
     </div>
-    <footer class="footer">
+
+    <footer id="contact" class="footer">
       <div class="container">
         <div class="sign-up">
           <div class="sign-up__content">
             <div class="sign-up__label fz-16 fw-600 white">
               Sign up for exclusive updates
             </div>
-            <div class="sign-up__form">
+            <div class="sign-up__form fw-600">
               Your email
-              <div class="sign-up__form-switch">Sign up</div>
+              <div class="sign-up__form-switch fw-600">Sign up</div>
             </div>
           </div>
           <div class="nav__section">
@@ -599,7 +668,7 @@
         </div>
         <div class="nav">
           <div class="nav__section">
-            <div class="nav__item-headers primary">About us</div>
+            <div class="nav__item-headers">About us</div>
             <a href="#" class="nav__item">Imprint</a>
             <a href="#" class="nav__item">Terms and conditions</a>
             <a href="#" class="nav__item">Token sale agreement</a>
@@ -607,17 +676,17 @@
             <a href="#" class="nav__item">AML policy</a>
           </div>
           <div class="nav__section">
-            <div class="nav__item-headers primary">For investors</div>
+            <div class="nav__item-headers">For investors</div>
             <a href="#" class="nav__item">Register for the ICO</a>
             <a href="#" class="nav__item">Login</a>
           </div>
           <div class="nav__section">
-            <div class="nav__item-headers primary">Documents</div>
+            <div class="nav__item-headers">Documents</div>
             <a href="#" class="nav__item">Whitepaper</a>
-            <a href="#" class="nav__item"> One Pager</a>
+            <a href="#" class="nav__item">One Pager</a>
           </div>
         </div>
-        <div class="copyright">© Kaps Limited All right reserved, 2022</div>
+        <div class="copyright">© ARSILimited All rights reserved, 2022</div>
       </div>
     </footer>
   </body>

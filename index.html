@@ -66,16 +66,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
     <title>ARSI</title>
   <script defer src="index.js"></script><link href="styles/index.css" rel="stylesheet"></head>
 
   <body>
     <header class="header section">
-      <img src="./../img/logo.png" alt="logo" />
+      <img src="../img/landing/logo.png" alt="logo" />
       <div class="divider"></div>
       <div id="opener">
-        <img src="./../img/menu.svg" />
-        <img src="./../img/close.svg" />
+        <img src="../img/landing/menu.svg" />
+        <img src="../img/landing/close.svg" />
       </div>
       <nav>
         <a href="#how" class="anchor primary fz-14 fw-700">How to buy</a>
@@ -86,82 +87,129 @@
         <a href="#faq" class="anchor gray fz-14 fw-700">FAQ</a>
         <a href="#" class="gray fz-14 fw-700">Contact</a>
         <div class="divider"></div>
-        <a href="#" class="btn btn--sm btn--primary">Register for ICO</a>
+        <a href="#" class="btn btn--sm btn--secondary">Register for ICO</a>
       </nav>
     </header>
     <div class="hero section">
       <div class="container">
         <div class="info">
           <div class="hero__info">
-            <div class="headline">Cryptocurrency powered by real estate</div>
-            <div class="subheadline primary">by ARULSINGAM INVESTMENTS LTD</div>
-            <div class="body">
-              Introducting a cryptocurrency powered by stable cash-flow from an
-              existing real estate portfolio.
-              <br /><br />
-              The Arsi project is created by ARULSINGAM INVESTMENTS LIMITED, a
-              company located in the UK with years of experience in crypto and a
-              provable portfolio of real estate projects.
+            <div class="headline">
+              ARSI - <span>CRYPTO <br />POWERED BY</span> <br />REAL ESTATE
             </div>
+            <div class="subheadline primary">by ARULSINGAM INVESTMENTS LTD</div>
             <div class="actions">
               <button class="btn btn--primary">Whitepaper</button>
               <button class="btn btn--secondary">Buy ARSI</button>
             </div>
           </div>
-          <div class="hero__video">
-            <div id="video">
-              <iframe
-                width="1280"
-                height="720"
-                src="https://www.youtube.com/embed/bBC-nXj3Ng4"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <img src="./../img/play.svg" alt="" />
-            </div>
-          </div>
+          <div></div>
         </div>
       </div>
-      <div class="forms container">
-        <div class="headline text-center">Known from</div>
-        <div class="forms__list">
-          <div class="forms__item">
-            <img src="./../img/cointelegraph.png" alt="" />
-          </div>
-          <div class="forms__item">
-            <img src="./../img/cointelegraph.png" alt="" />
-          </div>
-          <div class="forms__item">
-            <img src="./../img/cointelegraph.png" alt="" />
-          </div>
-          <div class="forms__item">
-            <img src="./../img/cointelegraph.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="timer container">
-        <div class="headline">
-          <div class="border"></div>
-          <div>Pre-Sale will end in</div>
-          <div class="border"></div>
-        </div>
+    </div>
+    <div class="section timer">
+      <div class="container">
+        <div class="text-center headline primary">Pre-Sale will end in</div>
         <div class="display">
           <div data-units="days" id="days">13</div>
           <div data-units="hours" id="hours">21</div>
           <div data-units="minutes" id="minutes">34</div>
           <div data-units="seconds" id="seconds">11</div>
         </div>
-        <div class="border"></div>
       </div>
     </div>
+    <div id="how" class="section how">
+      <div class="container">
+        <div class="text-center headline">How it works</div>
+        <div class="text-center body">
+          The ARSI token supports a self-sufficient and reinforcing ecosystem
+          that is directly linked with our companies’ real estate assets. The
+          ARSI token will facilitate all transactions within the ecosystem. Our
+          real estate portfolio will constantly create a rental income in FIAT
+          currencies that will be exchanged into ARSI by our team, therefore
+          creating a steady demand in ARSI.
+        </div>
+        <div class="image">
+          <img src="../img/landing/how-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="roadmap" class="roadmap section">
+      <img id="roadmap-parallax" src="./../img/landing/roadmap_bg.gif" alt="" />
+      <div class="container">
+        <div class="text-center headline white">Roadmap</div>
+        <div class="roadmap__graph">
+          <img class="arrow-left" src="../img/landing/arrow-left.svg" alt="" />
+
+          <div class="active">
+            <img src="./../img/landing/roadmap_hex.png" />
+            <div class="period">Q3 2022</div>
+            <div class="description">Initial Coin Offering</div>
+          </div>
+          <img
+            src="./../img/landing/roadmap_hex.png"
+            class="roadmap-separator"
+          />
+          <div>
+            <img src="./../img/landing/roadmap_hex.png" />
+            <div class="period">Q4 2022</div>
+            <div class="description">Listing on exchanges</div>
+          </div>
+          <img
+            src="./../img/landing/roadmap_hex.png"
+            class="roadmap-separator"
+          />
+          <div>
+            <img src="./../img/landing/roadmap_hex.png" />
+            <div class="period">Q1 2023</div>
+            <div class="description">Airdrop & Bounty campaigns</div>
+          </div>
+          <img
+            src="./../img/landing/roadmap_hex.png"
+            class="roadmap-separator"
+          />
+          <div>
+            <img src="./../img/landing/roadmap_hex.png" />
+            <div class="period">Q2 2023</div>
+            <div class="description">
+              Marketing Real estate assets acquisition
+            </div>
+          </div>
+
+          <img class="arrow-right" src="../img/landing/arrow-left.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
     <div id="about" class="section info-meet">
       <div class="container">
-        <div class="info">
-          <img src="./../img/meet-img.png" alt="meet" />
+        <div class="info investments-info">
           <div>
-            <div class="headline">Meet Arsi</div>
+            <img src="../img/landing/about-logo.png" />
+          </div>
+          <div>
+            <div class="headline">
+              <span>By</span> ARULSINGAM INVESTMENTS LTD
+            </div>
+            <div class="body">
+              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
+              UK with currently two major projects that are strongly interlinked
+              – Project ARSI and ARSI Charity. Thanks to our previous business
+              endeavors, we can rely on an already existing international
+              community from England, Germany, Sri Lanka, Denmark, India and the
+              Netherlands. We are combining a decade of experience in real
+              estate with the latest blockchain technological advancements,
+              offering lower transaction costs and payment timeframes than any
+              other existing solution in the current real estate market.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="info meet-info investments">
+          <div>
+            <div class="headline"><span>Meet</span> Arsi</div>
             <div class="body">
               ARSI is a BSC token that offers a multitude of various use cases
               for the real estate sector and its community. Starting with rental
@@ -174,32 +222,18 @@
               as the utility token for crypto and real estate enthusiasts.
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container investments">
-        <div class="info">
           <div>
-            <div class="headline">By ARULSINGAM INVESTMENTS LTD</div>
-            <div class="body">
-              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
-              UK with currently two major projects that are strongly interlinked
-              – Project ARSI and ARSI Charity. Thanks to our previous business
-              endeavors, we can rely on an already existing international
-              community from England, Germany, Sri Lanka, Denmark, India and the
-              Netherlands. We are combining a decade of experience in real
-              estate with the latest blockchain technological advancements,
-              offering lower transaction costs and payment timeframes than any
-              other existing solution in the current real estate market.
-            </div>
+            <img src="../img/landing/about-arsi.png" alt="meet" />
           </div>
-          <img src="./../img/investment-img.png" alt="investment" />
         </div>
       </div>
       <div class="container">
-        <div class="info">
-          <img src="./../img/charity-img.png" alt="charity" />
+        <div class="info arsi-info">
           <div>
-            <div class="headline">Arsi Charity</div>
+            <img src="../img/landing/about-charity.png" alt="charity" />
+          </div>
+          <div>
+            <div class="headline"><span>Arsi</span> Charity</div>
             <div class="body">
               Investors will benefit from the positive development of ARSI value
               over time and we will ensure that a significant amount of ARSI
@@ -210,104 +244,74 @@
             </div>
           </div>
         </div>
-        <div class="grid">
-          <img src="./../img/growing-reverse.png" alt="" />
-          <img src="./../img/low-fees.png" alt="" />
-          <img src="./../img/comunity-voting.png" alt="" />
-          <img src="./../img/comunity-rewards.png" alt="" />
-        </div>
       </div>
     </div>
+
     <div id="social" class="charity section">
       <div class="container">
-        <div class="headline text-center">Arsi Charity</div>
+        <div class="text-center headline fw-400">FEATURES</div>
         <div class="infographics">
           <div>
-            <img src="./../img/charity/1.png" alt="" /> Multiple use cases
+            <img src="../img/landing/charity/1.png" alt="" /> Multiple use cases
           </div>
           <div>
-            <img src="./../img/charity/2.png" alt="" /> Experienced company
+            <img src="../img/landing/charity/2.png" alt="" /> Experienced
+            company
           </div>
           <div>
-            <img src="./../img/charity/3.png" alt="" /> Deflationary token
+            <img src="../img/landing/charity/3.png" alt="" /> Deflationary token
           </div>
           <div>
-            <img src="./../img/charity/4.png" alt="" /> Community rewards
+            <img src="../img/landing/charity/4.png" alt="" /> Community rewards
           </div>
           <div>
-            <img src="./../img/charity/5.png" alt="" /> Supported by hard assets
+            <img src="../img/landing/charity/5.png" alt="" /> Supported by hard
+            assets
           </div>
           <div>
-            <img src="./../img/charity/6.png" alt="" /> Limited NFT Collection
+            <img src="../img/landing/charity/6.png" alt="" /> Limited NFT
+            Collection
           </div>
           <div>
-            <img src="./../img/charity/7.png" alt="" /> Charity initiatives
+            <img src="../img/landing/charity/7.png" alt="" /> Charity
+            initiatives
           </div>
         </div>
       </div>
     </div>
-    <div id="how" class="section how">
+
+    <div class="section comunity">
       <div class="container">
-        <div class="headline text-center">How it works</div>
-        <div class="body text-center">
-          The ARSI token supports a self-sufficient and reinforcing ecosystem
-          that is directly linked with our companies’ real estate assets.
-          <br /><br />
-          The ARSI token will facilitate all transactions within the ecosystem.
-          Our real estate portfolio will constantly create a rental income in
-          FIAT currencies that will be exchanged into ARSI by our team,
-          therefore creating a steady demand in ARSI.
+        <div class="headline">
+          <span>Community</span> <br />
+          Incentives
         </div>
-        <div class="image">
-          <img src="./../img/how-img.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="section section info-meet">
-      <div class="container">
         <div class="info">
-          <img src="./../img/comnunity-img.png" alt="meet" />
-          <div>
-            <div class="headline">Community incentives</div>
-            <div class="body">
-              We want to give continuous loyalty benefits to the users who are
-              using the ARSI token. First and foremost, this will apply to
-              tenants with our own real estate portfolio, but we plan to extend
-              the benefits to all ARSI holders with the growth of the ecosystem.
-              The possibilities are reaching from a monthly discount on an ARSI
-              users rent in one of our apartments to a discount for a holiday
-              home or short-term rental office or apartment in one of Europe’s
-              major cities.
-            </div>
+          <div class="body">
+            We want to give continuous loyalty benefits to the users who are
+            using the ARSI token. First and foremost, this will apply to tenants
+            with our own real estate portfolio, but we plan to extend the
+            benefits to all ARSI holders with the growth of the ecosystem.
+          </div>
+          <div class="body">
+            The possibilities are reaching from a monthly discount on an ARSI
+            users rent in one of our apartments to a discount for a holiday home
+            or short-term rental office or apartment in one of Europe’s major
+            cities.
           </div>
         </div>
-      </div>
-      <div class="container investments">
-        <div class="info">
-          <div>
-            <div class="headline">The ARSI Dashboard</div>
-            <div class="body">
-              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
-              UK with currently two major projects that are strongly interlinked
-              – Project ARSI and ARSI Charity. Thanks to our previous business
-              endeavors, we can rely on an already existing international
-              community from England, Germany, Sri Lanka, Denmark, India and the
-              Netherlands. We are combining a decade of experience in real
-              estate with the latest blockchain technological advancements,
-              offering lower transaction costs and payment timeframes than any
-              other existing solution in the current real estate market.
-            </div>
-          </div>
-          <img src="./../img/dashboard-img.png" alt="investment" />
-        </div>
+        <img src="./../img/landing/Community_Rank@2x.png" alt="" />
       </div>
     </div>
-    <div class="headline text-center">The ARSI NFT collection</div>
+
     <div class="section collection">
       <div class="container">
         <div class="info">
-          <img src="./../img/collection-img.png" alt="" />
           <div>
+            <div class="headline">
+              <span>The</span> ARSI NFT <br />
+              Collection
+            </div>
             <div class="body">
               We are launching a limited portfolio of ARSI-related
               Non-Fungible-Tokens (NFTs) inspired by our own tech-lion that is
@@ -329,10 +333,210 @@
               find them on opensea.io/Arulsingam-ARSI
             </div>
           </div>
+          <div>
+            <img src="../img/landing/NFT.png" alt="" />
+            <div class="text-center">
+              <button class="btn btn--primary">Open sea</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="section section info-meet">
+
+    <div class="section dashboard">
+      <div class="container">
+        <div class="text-center headline"><span>The ARSI</span> Dashboard</div>
+        <div class="text-center body">
+          The ARSI token supports a self-sufficient and reinforcing ecosystem
+          that is directly linked with our companies’ real estate assets. The
+          ARSI token will facilitate all transactions within the ecosystem. Our
+          real estate portfolio will constantly create a rental income in FIAT
+          currencies that will be exchanged into ARSI by our team, therefore
+          creating a steady demand in ARSI.
+        </div>
+        <div class="text-center">
+          <button class="btn btn--primary">Whitepaper</button>
+        </div>
+      </div>
+    </div>
+    <div id="token" class="section tokenomics">
+      <div class="container">
+        <div class="text-center headline fw-400">Tokenomics</div>
+        <div class="grid body">
+          <div>
+            <div>Token name</div>
+            <div>ARSI</div>
+          </div>
+          <div>
+            <div>Token symbol</div>
+            <div>$ARSI</div>
+          </div>
+          <div>
+            <div>Token supply</div>
+            <div>1’000’000’000.00 ARSI</div>
+          </div>
+          <div>
+            <div>Token price</div>
+            <div>Secret sale: $3, Presale: $4,5, Open sale: $6</div>
+          </div>
+          <div>
+            <div>Maximum purchase</div>
+            <div>1’000’000 ARSI</div>
+          </div>
+          <div>
+            <div>Purchase methods</div>
+            <div>BTC, ETH, USDT, Fiat Accepted</div>
+          </div>
+          <div>
+            <div>Contract address</div>
+            <div>0x60c4D3DcA38B66cBAc8fAe198aabCac3E37296e2</div>
+          </div>
+          <div>
+            <div>Token explorer</div>
+            <div>Click here to see</div>
+          </div>
+        </div>
+
+        <div class="list">
+          <div>
+            <div class="hexagonal">
+              <span class="body">65%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">Market supply</div>
+              <div class="body">500’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">10%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">ARSI charity</div>
+              <div class="body">100’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">6%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">ARSI team</div>
+              <div class="body">100’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">6%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">ICO</div>
+              <div class="body">80’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">4%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">Company reserve</div>
+              <div class="body">60’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">4%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">Marketing</div>
+              <div class="body">50’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">3%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">Incentives, events, airdrops, revards</div>
+              <div class="body">60’000’000 ARSI</div>
+            </div>
+          </div>
+          <div>
+            <div class="hexagonal">
+              <span class="body">2%</span>
+              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
+            </div>
+            <div>
+              <div class="body">Strategic partners & advisors</div>
+              <div class="body">60’000’000 ARSI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="team" class="team section">
+      <div class="container">
+        <div class="text-center headline">Core <span>Team</span></div>
+        <div class="team__list">
+          <a href="#" class="team__item">
+            <img src="../img/landing/Team_Arulvarma_Uthayakumar.png" alt="" />
+            <div class="subheadline primary fw-600">Arulvarma Uthayakumar</div>
+            <div class="text-center subheadline fw-400">CEO & Founder</div>
+          </a>
+          <a href="#" class="team__item">
+            <img src="../img/landing/Team_Alexander_Stehle.png" alt="" />
+            <div class="subheadline primary fw-600">Alexander Stehle</div>
+            <div class="text-center subheadline fw-400">
+              Director - Operations and Real Estate
+            </div>
+          </a>
+          <a href="#" class="team__item">
+            <img src="../img/landing/Team_Roman_Levytskyj.png" alt="" />
+            <div class="subheadline primary fw-600">Roman Levytskyi</div>
+            <div class="text-center subheadline fw-400">
+              Director - Corporate Identity and Design
+            </div>
+          </a>
+        </div>
+        <div class="text-center body">
+          Our long-lasting experience in the real estate industry and our
+          founders experience in cryptocurrencies combine the necessary skillset
+          to make ARSI a success. Our team is complemented by experts with
+          long-standing expertise in various sectors, allowing us to achieve the
+          utmost degree of excellence in all areas.
+        </div>
+      </div>
+      <div class="container advisors">
+        <div class="text-center headline">Advisory Team</div>
+        <div class="team__list advisors">
+          <a href="#">
+            <img src="../img/landing/team2.png" alt="" />
+            <div class="item">
+              <div class="subheadline primary fw-600">Taylor Wessing</div>
+              <div class="text-center subheadline fw-400">Legal Advisor</div>
+            </div>
+          </a>
+          <a href="#">
+            <img src="../img/landing/team1.png" alt="" />
+            <div class="item">
+              <div class="subheadline primary fw-600">Krypto Vergleich</div>
+              <div class="text-center subheadline fw-400">
+                Marketing Advisors
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="section">
       <div class="container resources">
         <div class="info">
           <div>
@@ -341,232 +545,22 @@
               Please have a look at our White Paper. You will find a deep dive
               into our project and our vision for project ARSI and ARSI Charity.
             </div>
+          </div>
+          <div>
             <div class="actions">
+              <img src="./../img/landing/Resources_PDF@2x.png" alt="" />
               <button class="btn btn--primary">Whitepaper</button>
-              <button class="btn btn--secondary">One Pager</button>
-            </div>
-          </div>
-          <img src="./../img/resources-img.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div id="token" class="section tokenomics">
-      <div class="container">
-        <div class="headline text-center">Tokenomics</div>
-        <div class="grid body">
-          <div>
-            <div>ARSI</div>
-            <div>Token name</div>
-          </div>
-          <div>
-            <div>$ARSI</div>
-            <div>Token symbol</div>
-          </div>
-          <div>
-            <div>1’000’000’000.00 ARSI</div>
-            <div>Token supply</div>
-          </div>
-          <div>
-            <div>Secret sale: $3, Presale: $4,5, Open sale: $6</div>
-            <div>Token price</div>
-          </div>
-          <div>
-            <div>1’000’000 ARSI</div>
-            <div>Maximum purchase</div>
-          </div>
-          <div>
-            <div>BTC, ETH, USDT, Fiat Accepted</div>
-            <div>Purchase methods</div>
-          </div>
-          <div>
-            <div>0x60c4D3DcA38B66cBAc8fAe198aabCac3E37296e2</div>
-            <div>Contract address</div>
-          </div>
-          <div>
-            <div>Click here to see</div>
-            <div>Token explorer</div>
-          </div>
-        </div>
-        <div class="info">
-          <div class="list">
-            <div>
-              <div>
-                <div class="body">Market supply</div>
-                <div class="body">500’000’000 ARSI</div>
-              </div>
-              <div>50%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">ARSI charity</div>
-                <div class="body">100’000’000 ARSI</div>
-              </div>
-              <div>10%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">ARSI team</div>
-                <div class="body">100’000’000 ARSI</div>
-              </div>
-              <div>10%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">ICO</div>
-                <div class="body">80’000’000 ARSI</div>
-              </div>
-              <div>8%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">Company reserve</div>
-                <div class="body">60’000’000 ARSI</div>
-              </div>
-              <div>6%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">Marketing</div>
-                <div class="body">50’000’000 ARSI</div>
-              </div>
-              <div>5%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">Incentives, events, airdrops, revards</div>
-                <div class="body">60’000’000 ARSI</div>
-              </div>
-              <div>6%</div>
-            </div>
-            <div>
-              <div>
-                <div class="body">Strategic partners & advisors</div>
-                <div class="body">60’000’000 ARSI</div>
-              </div>
-              <div>5%</div>
-            </div>
-          </div>
-          <div class="chart">
-            <div>
-              1’000’000’000
-              <br />
-              ARSI
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="roadmap" class="roadmap section">
-      <div class="container">
-        <div class="headline white text-center">Roadmap</div>
-        <div class="roadmap__graph">
-          <img class="arrow-left" src="./../img/arrow-left.svg" alt="" />
-
-          <div class="dash"></div>
-          <div class="active">
-            <div>
-              <div>
-                <div class="period">Q3 2022</div>
-                <div class="description">Initial Coin Offering</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="dash"></div>
-          <div>
-            <div>
-              <div>
-                <div class="period">Q4 2022</div>
-                <div class="description">Listing on exchanges</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="dash"></div>
-          <div>
-            <div>
-              <div>
-                <div class="period">Q1 2023</div>
-                <div class="description">Airdrop & Bounty campaigns</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="dash"></div>
-          <div>
-            <div>
-              <div>
-                <div class="period">Q2 2023</div>
-                <div class="description">
-                  Marketing Real estate assets acquisition
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="dash"></div>
-
-          <img class="arrow-right" src="./../img/arrow-left.svg" alt="" />
+    <footer id="contact" class="footer">
+      <div id="faq" class="container faq">
+        <div class="text-center headline">
+          <span>Frequently</span> Asked Questions
         </div>
-      </div>
-    </div>
-
-    <div id="team" class="team section">
-      <div class="container">
-        <div class="headline text-center">Core Team</div>
-        <div class="body text-center">
-          Our long-lasting experience in the real estate industry and our
-          founders experience in cryptocurrencies combine the necessary skillset
-          to make ARSI a success. Our team is complemented by experts with
-          long-standing expertise in various sectors, allowing us to achieve the
-          utmost degree of excellence in all areas.
-        </div>
-        <div class="team__list">
-          <a href="#" class="team__item">
-            <img src="./../img/users/1.png" alt="" />
-            <div class="subheadline primary fw-600">Arulvarma Uthayakumar</div>
-            <div class="subheadline text-center fw-400">CEO & Founder</div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/2.png" alt="" />
-            <div class="subheadline primary fw-600">Alexander Stehle</div>
-            <div class="subheadline text-center fw-400">
-              Director — Operations and Real Estate
-            </div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="./../img/users/3.png" alt="" />
-            <div class="subheadline primary fw-600">Roman Levytskyi</div>
-            <div class="subheadline text-center fw-400">
-              Director — Corporate Identity and Design
-            </div>
-          </a>
-        </div>
-        <div class="headline text-center">Advisory Team</div>
-        <div class="team__list advisors">
-          <a href="#">
-            <img src="./../img/team2.png" alt="" />
-            <div class="item">
-              <div class="subheadline primary fw-600">Taylor Wessing</div>
-              <div class="subheadline text-center fw-400">Legal Advisor</div>
-            </div>
-          </a>
-          <a href="#">
-            <img src="./../img/team1.png" alt="" />
-            <div class="item">
-              <div class="subheadline primary fw-600">Krypto Vergleich</div>
-              <div class="subheadline text-center fw-400">
-                Marketing Advisors
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div id="faq" class="adopter section">
-      <div class="container">
-        <div class="headline text-center">Frequently Asked Questions</div>
         <div class="accordeon">
           <label>
             <input type="checkbox" hidden />
@@ -584,7 +578,7 @@
                   opportunity that comes with a successful cryptocurrency.
                 </div>
               </div>
-              <img src="./../img/arrow-up.svg" alt="" />
+              <img src="../img/landing/arrow-up.svg" alt="" />
             </div>
           </label>
           <label>
@@ -603,7 +597,7 @@
                   opportunity that comes with a successful cryptocurrency.
                 </div>
               </div>
-              <img src="./../img/arrow-up.svg" alt="" />
+              <img src="../img/landing/arrow-up.svg" alt="" />
             </div>
           </label>
           <label>
@@ -622,7 +616,7 @@
                   opportunity that comes with a successful cryptocurrency.
                 </div>
               </div>
-              <img src="./../img/arrow-up.svg" alt="" />
+              <img src="../img/landing/arrow-up.svg" alt="" />
             </div>
           </label>
           <label>
@@ -639,25 +633,27 @@
                   opportunity that comes with a successful cryptocurrency.
                 </div>
               </div>
-              <img src="./../img/arrow-up.svg" alt="" />
+              <img src="../img/landing/arrow-up.svg" alt="" />
             </div>
           </label>
         </div>
-        <div class="headline text-center">Become an early adopter</div>
-        <div class="body text-center description">
-          First movers get up to 50% bonus on their investment.
+      </div>
+      <div class="container adopter">
+        <div class="text-center headline">
+          <span>Become</span> an early adopter
+        </div>
+        <div class="text-center body description fw-400">
+          First movers get up to <span class="fw-600">50% bonus</span> <br />
+          on their investment.
         </div>
         <div class="text-center">
           <button class="btn btn--primary">Register for the ICO</button>
         </div>
       </div>
-    </div>
-
-    <footer id="contact" class="footer">
       <div class="container">
         <div class="sign-up">
           <div class="sign-up__content">
-            <div class="sign-up__label fz-16 fw-600 white">
+            <div class="sign-up__label white fz-16 fw-600">
               Sign up for exclusive updates
             </div>
             <div class="sign-up__form fw-600">
@@ -666,15 +662,17 @@
             </div>
           </div>
           <div class="nav__section">
-            <div class="nav__label nav__label-connect fz-16 fw-600 white">
+            <div class="nav__label nav__label-connect white fz-16 fw-600">
               Connect
             </div>
             <div class="nav__icons">
-              <a href="#"><img src="./../img/facebook.svg" alt="" /></a>
-              <a href="#"><img src="./../img/ic_sc_tg0.svg" alt="" /></a>
-              <a href="#"><img src="./../img/ic_sc_tw.svg" alt="" /></a>
-              <a href="#"><img src="./../img/icons8-instagram.svg" alt="" /></a>
-              <a href="#"><img src="./../img/ic_sc_yt.svg" alt="" /></a>
+              <a href="#"><img src="../img/landing/facebook.svg" alt="" /></a>
+              <a href="#"><img src="../img/landing/ic_sc_tg0.svg" alt="" /></a>
+              <a href="#"><img src="../img/landing/ic_sc_tw.svg" alt="" /></a>
+              <a href="#"
+                ><img src="../img/landing/icons8-instagram.svg" alt=""
+              /></a>
+              <a href="#"><img src="../img/landing/ic_sc_yt.svg" alt="" /></a>
             </div>
           </div>
         </div>

@@ -63,616 +63,765 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
-    <title>ARSI</title>
+    <title>Apraemio</title>
   <script defer src="index.js"></script><link href="styles/index.css" rel="stylesheet"></head>
 
   <body>
-    <header class="header section">
-      <img src="../img/landing/logo.png" alt="logo" />
-      <div class="divider"></div>
-      <div id="opener">
-        <img src="../img/landing/menu.svg" />
-        <img src="../img/landing/close.svg" />
-      </div>
-      <nav>
-        <a href="#how" class="anchor primary fz-14 fw-700">How to buy</a>
-        <a href="#about" class="anchor gray fz-14 fw-700">About us</a>
-        <a href="#token" class="anchor gray fz-14 fw-700">Tokenomics</a>
-        <a href="#social" class="anchor gray fz-14 fw-700">Social Media</a>
-        <a href="#team" class="anchor gray fz-14 fw-700">Team</a>
-        <a href="#faq" class="anchor gray fz-14 fw-700">FAQ</a>
-        <a href="#" class="gray fz-14 fw-700">Contact</a>
+    <header class="header">
+      <div class="container">
+        <img src="../img/logo.svg" alt="logo" class="logo" />
         <div class="divider"></div>
-        <a href="#" class="btn btn--sm btn--secondary">Register for ICO</a>
-      </nav>
+        <div id="opener">
+          <img src="../img/menu.svg" />
+          <img src="../img/close.svg" />
+        </div>
+        <nav>
+          <div class="connect">Connect</div>
+          <div class="social">
+            <a href="#"><img src="./../img/fb.svg" alt="" /></a>
+            <a href="#"><img src="./../img/tg.svg" alt="" /></a>
+            <a href="#"><img src="./../img/tw.svg" alt="" /></a>
+            <a href="#"><img src="./../img/ln.svg" alt="" /></a>
+            <a href="#"><img src="./../img/yt.svg" alt="" /></a>
+            <a href="#"><img src="./../img/dc.svg" alt="" /></a>
+          </div>
+
+          <a href="#" class="btn btn--primary">Sign up for ICO</a>
+          <a href="#" class="btn btn--discord"></a>
+        </nav>
+      </div>
     </header>
     <div class="hero section">
       <div class="container">
         <div class="info">
           <div class="hero__info">
-            <div class="headline">
-              ARSI - <span>CRYPTO <br />POWERED BY</span> <br />REAL ESTATE
+            <div class="mb-40 headline">Better than gold</div>
+            <div class="mb-40 body">
+              APRA is a deflationary utility token with a growing backing gold
+              reserve and a variety of use cases that brings gold-powered
+              cryptocurrencies to the next level. Our exploration project is
+              already underway with a forecasted amount of gold between 100 and
+              500 tons, half of which will be distributed among token holders.
             </div>
-            <div class="subheadline primary">by ARULSINGAM INVESTMENTS LTD</div>
-            <div class="actions">
-              <button class="btn btn--primary">Whitepaper</button>
-              <button class="btn btn--secondary">Buy ARSI</button>
+            <div class="actions desktop">
+              <a href="#" class="btn btn--primary">Sign up for ICO</a>
+              <a href="#" class="btn btn--discord"></a>
             </div>
+          </div>
+          <div id="video" class="hero__video">
+            <iframe
+              width="1280"
+              height="720"
+              src="https://www.youtube.com/embed/bBC-nXj3Ng4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <img src="../img/play.svg" alt="" />
+          </div>
+
+          <div class="actions mobile">
+            <a href="#" class="btn btn--primary">Sign up for ICO</a>
+            <a href="#" class="btn btn--discord"></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="info">
+          <div class="hero__info" data-animate="left-to-right">
+            <div class="mb-40 headline">About Apraemio</div>
+            <div class="body">
+              The Apraemio project is a full-fledged ecosystem that will offer a
+              growing set of multiple use cases, various community rewards and
+              the possibility for token owners to exchange their APRA tokens
+              directly for physical gold acquired through our exploration,
+              drilling and mining activities.
+              <br />
+              <br />
+              Our mission is to create a universal cryptocurrency that lays out
+              the foundation of future crypto payments, while remaining an
+              investment asset with a solid price floor and great ROI potential.
+            </div>
+          </div>
+          <img
+            src="../img/mobile_phone_coin.png"
+            alt=""
+            data-animate="right-to-left"
+          />
+        </div>
+      </div>
+      <div class="container timer-section">
+        <div class="timer">
+          <div class="text-center headline">Pre-Sale starting in</div>
+          <div class="display">
+            <div data-units="days" id="days" data-animate="timer">00</div>
+            <div class="dots">:</div>
+            <div data-units="hours" id="hours" data-animate="timer">00</div>
+            <div class="dots">:</div>
+            <div data-units="minutes" id="minutes" data-animate="timer">00</div>
+            <div class="dots">:</div>
+            <div data-units="seconds" id="seconds" data-animate="timer">00</div>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="line">
+            <div class="inner" data-animate="scale-to-right">65%</div>
+
+            <div class="mark" style="left: 62%">
+              <div></div>
+              <div class="label">46,000 APRA</div>
+            </div>
+            <div class="mark" style="left: 95%">
+              <div class="label">soft cap</div>
+              <div class="label">90,000 APRA</div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <a href="#" class="btn btn--primary">Sign up for ICO</a>
+          <a href="#" class="btn btn--discord"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section known-forms" data-animate="right-to-left">
+      <div class="container">
+        <div class="headline">Known from</div>
+        <div class="small-tiles__list">
+          <div class="small-tiles__item">
+            <img src="./../img/known.png" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/known.png" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/known.png" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/known.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-info section">
+      <div class="container mb-80 key-features tiles">
+        <div class="headline">Key features of Apraemio</div>
+        <div class="tiles__list">
+          <div class="tiles__item">
+            <img src="./../img/gold-redemption.svg" alt="" />
+            <div class="subheadline">Gold redemption</div>
+            <div class="body">
+              The Gold Redemption Programme offers token holders the possibility
+              to exchange their APRA for 50% of the gold gained through mining
+              endeavors.
+            </div>
+          </div>
+          <div class="tiles__item">
+            <img src="./../img/deflationary-token.svg" alt="" />
+            <div class="subheadline">Deflationary token</div>
+            <div class="body">
+              We will incorporate several burning mechanisms that will steadily
+              reduce the total supply of APRA over time, supporting a long-term
+              appreciation of the price.
+            </div>
+          </div>
+          <div class="tiles__item">
+            <img src="./../img/use-cases.svg" alt="" />
+            <div class="subheadline">Use cases and incentives</div>
+            <div class="body">
+              The APRA token will offer multiple use cases — from The gold
+              redemption programme, gold purchasing, car selling to real estate
+              and more.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-80 ecosystem">
+        <div class="headline">The Apraemio ecosystem</div>
+        <div class="mb-40 info">
+          <div class="body">
+            The Apraemio ecosystem combines a multitude of services and
+            products, as well a wide array of community rewards.
           </div>
           <div></div>
         </div>
+        <div class="ecosystem__infograph">
+          <div class="ecosystem__row">
+            <div
+              class="ecosystem__item"
+              data-tooltip="APRA token holders will be able to directly purchase physical gold with their tokens"
+            >
+              <div class="text-right">Gold purchasing</div>
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-gold.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="ecosystem__item"
+              data-tooltip="Token holders will be able to get access to car purchasing and selling services with the APRA tokens at discounted prices."
+            >
+              <div class="text-right">Car purchasing</div>
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-car.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="ecosystem__item"
+              data-tooltip="We will implement a comprehensive gamification system that will reward community members for their contribution to the Apraemio ecosystem. Users will receive points for spending APRA tokens or redeeming them for gold."
+            >
+              <div class="text-right">Incentives</div>
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-incentives.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="ecosystem__middle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <img src="./../img/logo-simple.svg" alt="" />
+          </div>
+          <div class="ecosystem__row">
+            <div
+              class="ecosystem__item"
+              data-tooltip="APRA token holders will be able to exchange their tokens directly for gold."
+            >
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-gold-redemption.svg" alt="" />
+              </div>
+              <div>Gold redemption</div>
+            </div>
+            <div
+              class="ecosystem__item"
+              data-tooltip="We will introduce a credit card in order to allow APRA holders to directly pay for products and services at the point of interaction as the Apraemio ecosystem expands."
+            >
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-credit.svg" alt="" />
+              </div>
+              <div>Credit card</div>
+            </div>
+            <div
+              class="ecosystem__item"
+              data-tooltip="APRA token holders will get access to the real estate portfolio of Art Property, a company that is already accepting Bitcoin and Ethereum for real estate purchases.s"
+            >
+              <div class="ecosystem__image">
+                <img src="./../img/ecosystem-estate.svg" alt="" />
+              </div>
+              <div>Real estate</div>
+            </div>
+          </div>
+        </div>
+        <div class="ecosystem__actions">
+          <a href="#" class="btn btn--primary">Sign up for ICO</a>
+          <a href="#" class="btn btn--discord"></a>
+        </div>
       </div>
-    </div>
-    <div class="section timer">
-      <div class="container">
-        <div class="text-center headline primary">Pre-Sale will end in</div>
-        <div class="display">
-          <div data-units="days" id="days">13</div>
-          <div data-units="hours" id="hours">21</div>
-          <div data-units="minutes" id="minutes">34</div>
-          <div data-units="seconds" id="seconds">11</div>
+      <div class="container gold-redemption">
+        <div class="headline">The Gold redemption programme</div>
+        <div class="info">
+          <div class="body">
+            At the heart of the ecosystem is our Gold Redemption Programme that
+            offers token holders the possibility to exchange their APRA tokens
+            for real gold mined through our exploration project with large
+            proven reserves.
+          </div>
+          <div></div>
+        </div>
+        <div class="info">
+          <img
+            src="../img/internet_banking.png"
+            alt=""
+            data-animate="left-to-right"
+          />
+          <div>
+            <div class="flex mb-40" data-animate="right-to-left">
+              <img
+                src="./../img/redemption-checknark.svg"
+                alt=""
+                class="mr-36"
+              />
+              <div class="ml-49">
+                <div class="mb-10 subheadline secondary">
+                  Scientifically proven
+                </div>
+                <div class="body">
+                  The reserves have been estimated using the latest standards in
+                  3D satelite imaging technology. The full survey details and
+                  results are available on demand.
+                </div>
+              </div>
+            </div>
+            <div class="flex" data-animate="right-to-left">
+              <img src="./../img/redemption-cpmpas.svg" alt="" class="mr-36" />
+              <div class="ml-49">
+                <div class="mb-10 subheadline secondary">
+                  Full exploration rights
+                </div>
+                <div class="body">
+                  We have been granted the full exploitation rights on the basis
+                  of the Convention signed 2015 with the Government of the
+                  Republic of Mali and renewed in accordance with the new Mining
+                  Code in 2020.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <div id="how" class="section how">
-      <div class="container">
-        <div class="text-center headline">How it works</div>
-        <div class="text-center body">
-          The ARSI token supports a self-sufficient and reinforcing ecosystem
-          that is directly linked with our companies’ real estate assets. The
-          ARSI token will facilitate all transactions within the ecosystem. Our
-          real estate portfolio will constantly create a rental income in FIAT
-          currencies that will be exchanged into ARSI by our team, therefore
-          creating a steady demand in ARSI.
+      <div class="container mb-40 tiles">
+        <div class="headline">How it works</div>
+        <div class="mb-40 body">
+          The APRA deflationary utility token will allow holders to participate
+          in The gold redemption programme. The token will additionally be used
+          for payments within the Apraemio ecosystem, give holders the
+          possibility to acquire services and will further act as an incentive
+          mechanism.
         </div>
-        <div class="image">
-          <img src="../img/landing/how-img.png" alt="" />
+        <div class="tiles__list" data-animate="left-to-right">
+          <div class="tiles__item">
+            <img src="./../img/redemption-cpmpas.svg" alt="" />
+            <div class="subheadline">Exploration phase</div>
+            <div class="body">
+              After the crowdsale, we will immediately initiate the 3-phase
+              process of acquiring the gold (Exploration, Drilling and Mining).
+            </div>
+          </div>
+          <div class="tiles__item">
+            <img src="./../img/ecosystem-gold-redemption.svg" alt="" />
+            <div class="subheadline">Mining and reporting</div>
+            <div class="body">
+              Then we will estimate the APRA to gold ratio. In a realistic
+              scenario, 1 APRA sold at the main sale for 1 USD will be worth ~9
+              USD in gold.
+            </div>
+          </div>
+          <div class="tiles__item">
+            <img src="./../img/ecosystem-incentives.svg" alt="" />
+            <div class="subheadline">Distribution</div>
+            <div class="body">
+              Every APRA token holder can choose to redeem their tokens and
+              receive the amount of physical gold 1 APRA is tied to.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section utility">
+      <div class="container mb-40 tiles">
+        <div class="headline">The APRA Utility token</div>
+        <div class="mb-40 body">
+          The APRA deflationary utility token will allow holders to participate
+          in The gold redemption programme. The token will additionally be used
+          for payments within the Apraemio ecosystem, give holders the
+          possibility to acquire services and will further act as an incentive
+          mechanism.
+        </div>
+        <div class="tiles__list" data-animate="left-to-right">
+          <div class="tiles__item">
+            <div class="subheadline">APRA</div>
+            <div class="body">Token name</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">BEP-20</div>
+            <div class="body">Technology</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">Utility</div>
+            <div class="body">Token Type</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">1,000,000,000 APRA</div>
+            <div class="body">Token Supply</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">1,000,000,000 APRA</div>
+            <div class="body">Token ICO</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">1 EUR</div>
+            <div class="body">ICO price</div>
+          </div>
+          <div class="tiles__item">
+            <div class="subheadline">51,000,000 EUR</div>
+            <div class="body">Hard cap</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section stages">
+      <div class="container mb-40 tiles">
+        <div class="headline">Token sale stages</div>
+        <div class="tiles__list" data-animate="left-to-right">
+          <div class="tiles__item tiles__item--left">
+            <div class="subheadline">Private sale</div>
+            <div class="mb-40 body">01.09.2022 — 31.10.2022</div>
+            <div class="mb-10 body">
+              <div class="flex mb-10 between">
+                <div>Amount</div>
+                <div class="fw-600">12,000,000 APRA</div>
+              </div>
+              <div class="flex mb-10 between">
+                <div>Price</div>
+                <div class="fw-600">0,50 EUR</div>
+              </div>
+              <div class="flex mb-10 between">
+                <div>Bonus</div>
+                <div class="fw-600">50%</div>
+              </div>
+            </div>
+            <div class="flex-1"></div>
+            <a href="#" class="btn btn--secondary self-center"
+              >Secure your spot now</a
+            >
+          </div>
+          <div class="tiles__item tiles__item--left">
+            <div class="subheadline">Pre-sale</div>
+            <div class="mb-40 body">01.11.2022 — 31.12.2022</div>
+            <div class="mb-10 body">
+              <div class="flex mb-10 between">
+                <div>Amount</div>
+                <div class="fw-600">12,000,000 APRA</div>
+              </div>
+              <div class="flex mb-10 between">
+                <div>Price</div>
+                <div class="fw-600">0,75 EUR</div>
+              </div>
+              <div class="flex mb-10 between">
+                <div>Bonus</div>
+                <div class="fw-600">25%</div>
+              </div>
+            </div>
+            <div class="flex-1"></div>
+            <a href="#" class="btn btn--secondary self-center"
+              >Secure your spot now</a
+            >
+          </div>
+          <div class="tiles__item tiles__item--left">
+            <div class="subheadline">Main-sale</div>
+            <div class="mb-40 body">01.01.2023 — 29.02.2023</div>
+            <div class="mb-10 body">
+              <div class="flex mb-10 between">
+                <div>Amount</div>
+                <div class="fw-600">36,000,000 APRA</div>
+              </div>
+              <div class="flex mb-10 between">
+                <div>Price</div>
+                <div class="fw-600">1 EUR</div>
+              </div>
+            </div>
+            <div class="flex-1"></div>
+            <a href="#" class="btn btn--secondary self-center"
+              >Secure your spot now</a
+            >
+          </div>
         </div>
       </div>
     </div>
 
     <div id="roadmap" class="roadmap section">
-      <img id="roadmap-parallax" src="./../img/landing/roadmap_bg.gif" alt="" />
       <div class="container">
-        <div class="text-center headline white">Roadmap</div>
+        <div class="headline white">Roadmap</div>
         <div class="roadmap__graph">
-          <img class="arrow-left" src="../img/landing/arrow-left.svg" alt="" />
-
-          <div class="active">
-            <img src="./../img/landing/roadmap_hex.png" />
-            <div class="period">Q3 2022</div>
-            <div class="description">Initial Coin Offering</div>
-          </div>
-          <img
-            src="./../img/landing/dots_arrow.svg"
-            class="roadmap-separator"
-          />
-          <div>
-            <img src="./../img/landing/roadmap_hex.png" />
-            <div class="period">Q4 2022</div>
-            <div class="description">Listing on exchanges</div>
-          </div>
-          <img
-            src="./../img/landing/dots_arrow.svg"
-            class="roadmap-separator"
-          />
-          <div>
-            <img src="./../img/landing/roadmap_hex.png" />
-            <div class="period">Q1 2023</div>
-            <div class="description">Airdrop & Bounty campaigns</div>
-          </div>
-          <img
-            src="./../img/landing/dots_arrow.svg"
-            class="roadmap-separator"
-          />
-          <div>
-            <img src="./../img/landing/roadmap_hex.png" />
-            <div class="period">Q2 2023</div>
-            <div class="description">
-              Marketing Real estate assets acquisition
-            </div>
-          </div>
-
-          <img class="arrow-right" src="../img/landing/arrow-left.svg" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div id="about" class="section info-meet">
-      <div class="container">
-        <div class="info investments-info">
-          <div>
-            <img src="../img/landing/about-logo.png" />
-          </div>
-          <div>
-            <div class="headline">
-              <span>By</span> ARULSINGAM INVESTMENTS LTD
-            </div>
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">September 2022</div>
             <div class="body">
-              The founding company ARULSINGAM INVESTMENTS Ltd is located in the
-              UK with currently two major projects that are strongly interlinked
-              – Project ARSI and ARSI Charity. Thanks to our previous business
-              endeavors, we can rely on an already existing international
-              community from England, Germany, Sri Lanka, Denmark, India and the
-              Netherlands. We are combining a decade of experience in real
-              estate with the latest blockchain technological advancements,
-              offering lower transaction costs and payment timeframes than any
-              other existing solution in the current real estate market.
+              Start Private sale
+              <br />
+              Start marketing and community building
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="info meet-info investments">
-          <div>
-            <div class="headline"><span>Meet</span> Arsi</div>
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">November 2022</div>
+            <div class="body">Start Pre-sale</div>
+          </div>
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">January 2023</div>
             <div class="body">
-              ARSI is a BSC token that offers a multitude of various use cases
-              for the real estate sector and its community. Starting with rental
-              payments in crypto that come with a discount compared to
-              traditional FIAT rents, ARSI offers all sorts of benefits
-              surrounding the growing real estate portfolio of ARULSINGAM
-              INVESTEMENTS LTD. Supported by this large portfolio of real estate
-              projects, the Arsi token adopts an ingenious tokenomics structure
-              that will nurture its use cases in the long-term and establish it
-              as the utility token for crypto and real estate enthusiasts.
+              Listing of APRA on exchanges Start of the drilling activities
+              Blockchain development Additional use cases for APRA
             </div>
           </div>
-          <div>
-            <img src="../img/landing/about-arsi.png" alt="meet" />
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">March 2023</div>
+            <div class="body">Main sale</div>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="info arsi-info">
-          <div>
-            <img src="../img/landing/about-charity.png" alt="charity" />
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">Q3 2023</div>
+            <div class="body">Launch of the Apraemio blockchain platform</div>
           </div>
-          <div>
-            <div class="headline"><span>Arsi</span> Charity</div>
+          <div class="roadmap__graph-item" data-animate="fade-out">
+            <div class="subheadline">2025</div>
             <div class="body">
-              Investors will benefit from the positive development of ARSI value
-              over time and we will ensure that a significant amount of ARSI
-              will benefit charitable projects to support people in need and
-              tackling current issues that we consider significant like creating
-              a steady supply of drinking water, access to education, reducing
-              CO2 consumption, fighting poverty and famine.
+              First exchange round for APRA token holders for gold (The gold
+              redemption programme)
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="social" class="charity section">
-      <div class="container">
-        <div class="text-center headline fw-400">FEATURES</div>
-        <div class="infographics">
-          <div>
-            <img src="../img/landing/charity/1.png" alt="" /> Multiple use cases
-          </div>
-          <div>
-            <img src="../img/landing/charity/2.png" alt="" /> Experienced
-            company
-          </div>
-          <div>
-            <img src="../img/landing/charity/3.png" alt="" /> Deflationary token
-          </div>
-          <div>
-            <img src="../img/landing/charity/4.png" alt="" /> Community rewards
-          </div>
-          <div>
-            <img src="../img/landing/charity/5.png" alt="" /> Supported by hard
-            assets
-          </div>
-          <div>
-            <img src="../img/landing/charity/6.png" alt="" /> Limited NFT
-            Collection
-          </div>
-          <div>
-            <img src="../img/landing/charity/7.png" alt="" /> Charity
-            initiatives
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section comunity">
-      <div class="container">
-        <div class="headline">
-          <span>Community</span> <br />
-          Incentives
-        </div>
+    <div class="section charts">
+      <div class="container mb-80 token-distribution">
+        <div class="headline">Token distribution</div>
         <div class="info">
-          <div class="body">
-            We want to give continuous loyalty benefits to the users who are
-            using the ARSI token. First and foremost, this will apply to tenants
-            with our own real estate portfolio, but we plan to extend the
-            benefits to all ARSI holders with the growth of the ecosystem.
-          </div>
-          <div class="body">
-            The possibilities are reaching from a monthly discount on an ARSI
-            users rent in one of our apartments to a discount for a holiday home
-            or short-term rental office or apartment in one of Europe’s major
-            cities.
+          <img src="../img/chart1.png" alt="" />
+          <div>
+            <div class="charts__line">
+              <span>Reserve: 65%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Charity: 5%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>First sale (ICO): 6%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Second sale: 12%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Community: 4%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Team & Advisors: 4%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Liquidity: 4%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
           </div>
         </div>
-        <img src="./../img/landing/Community_Rank@2x.png" alt="" />
       </div>
-    </div>
-
-    <div class="section collection">
-      <div class="container">
+      <div class="container funds-distribution">
+        <div class="headline">Funds distribution</div>
         <div class="info">
           <div>
-            <div class="headline">
-              <span>The</span> ARSI NFT <br />
-              Collection
+            <div class="charts__line">
+              <span>Gold drilling and mining: 50%</span>
+              <div data-animate="scale-to-left"></div>
             </div>
-            <div class="body">
-              We are launching a limited portfolio of ARSI-related
-              Non-Fungible-Tokens (NFTs) inspired by our own tech-lion that is
-              the symbol of our project. The proceedings collected via the sale
-              of our NFTs will provide additional funding and liquidity.
-              <br /><br />
-              The NFTs are always based on four base pictures that become a set
-              of 25 NFTs per picture and build up to seasons that end in a
-              collection of 2.500 NFTs. In total only four collections will be
-              available, making it a limited portfolio of 10.000 NFTs.
-              <br /><br />
-              The rollout of additional sets and collections of NFTs with
-              various themes such as virtual reality, major cities, gaming and
-              countries, inspired by our company and its values will be exectued
-              by our talented design team in cooperation with external partners
-              and artists
-              <br /><br />
-              The first set of 25 NFT is already created and launched - youcan
-              find them on opensea.io/Arulsingam-ARSI
+            <div class="charts__line">
+              <span>Blockchain development: 20%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Marketing: 20%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Legal costs: 5%</span>
+              <div data-animate="scale-to-left"></div>
+            </div>
+            <div class="charts__line">
+              <span>Operational costs: 5%</span>
+              <div data-animate="scale-to-left"></div>
             </div>
           </div>
-          <div>
-            <img src="../img/landing/NFT.png" alt="" />
-            <div class="text-center">
-              <button class="btn btn--primary">Open sea</button>
-            </div>
+          <img src="../img/chart2.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section initiatives">
+      <div class="container">
+        <div class="headline">Charity initiatives</div>
+        <div class="mb-40 info">
+          <div class="body" data-animate="left-to-right">
+            At the heart of the ecosystem is our Gold Redemption Programme that
+            offers token holders the possibility to exchange their APRA tokens
+            for real gold mined through our exploration project with large
+            proven reserves.The Apraemio project is planning to run a variety of
+            transparent charity initiatives. We will also dedicate 5% of the
+            total token distribution for charity campaigns.
+            <br /><br />
+            We will introduce the possibility for APRA holders to vote on which
+            initiatives will be undertaken by the project. Every holder can cast
+            a vote through the platform where the projects and reporting will be
+            published.
+          </div>
+          <img
+            src="./../img/us_dollar_coin.png"
+            alt=""
+            data-animate="right-to-left"
+          />
+        </div>
+        <div class="flex center actions">
+          <a href="#" class="btn btn--primary">Sign up for ICO</a>
+          <a href="#" class="ml-20 btn btn--discord"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section company">
+      <div class="container">
+        <div class="headline">The Apraemio company</div>
+        <div class="mb-40 body">
+          The organization behind the Apraemio project is a group of multiple
+          companies across various industries, many of which are working in
+          conjunction. Our combined experience and existing customer base will
+          allow us to offer a wide set of different use cases with the APRA
+          token.
+        </div>
+        <div class="small-tiles__list" data-animate="right-to-left">
+          <div class="small-tiles__item">
+            <img src="./../img/company1.svg" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/company2.svg" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/company3.svg" alt="" />
+          </div>
+          <div class="small-tiles__item">
+            <img src="./../img/company4.svg" alt="" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section dashboard">
+    <div class="section resources">
       <div class="container">
-        <div class="text-center headline"><span>The ARSI</span> Dashboard</div>
-        <div class="text-center body">
-          The ARSI token supports a self-sufficient and reinforcing ecosystem
-          that is directly linked with our companies’ real estate assets. The
-          ARSI token will facilitate all transactions within the ecosystem. Our
-          real estate portfolio will constantly create a rental income in FIAT
-          currencies that will be exchanged into ARSI by our team, therefore
-          creating a steady demand in ARSI.
-        </div>
-        <div class="text-center">
-          <button class="btn btn--primary">Whitepaper</button>
-        </div>
-      </div>
-    </div>
-    <div id="token" class="section tokenomics">
-      <div class="container">
-        <div class="text-center headline fw-400">Tokenomics</div>
-        <div class="grid body">
-          <div>
-            <div>Token name</div>
-            <div>ARSI</div>
-          </div>
-          <div>
-            <div>Token symbol</div>
-            <div>$ARSI</div>
-          </div>
-          <div>
-            <div>Token supply</div>
-            <div>1’000’000’000.00 ARSI</div>
-          </div>
-          <div>
-            <div>Token price</div>
-            <div>Secret sale: $3, Presale: $4,5, Open sale: $6</div>
-          </div>
-          <div>
-            <div>Maximum purchase</div>
-            <div>1’000’000 ARSI</div>
-          </div>
-          <div>
-            <div>Purchase methods</div>
-            <div>BTC, ETH, USDT, Fiat Accepted</div>
-          </div>
-          <div>
-            <div>Contract address</div>
-            <div>0x60c4D3DcA38B66cBAc8fAe198aabCac3E37296e2</div>
-          </div>
-          <div>
-            <div>Token explorer</div>
-            <div>Click here to see</div>
-          </div>
-        </div>
-
-        <div class="list">
-          <div>
-            <div class="hexagonal">
-              <span class="body">65%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">Market supply</div>
-              <div class="body">500’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">10%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">ARSI charity</div>
-              <div class="body">100’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">6%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">ARSI team</div>
-              <div class="body">100’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">6%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">ICO</div>
-              <div class="body">80’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">4%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">Company reserve</div>
-              <div class="body">60’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">4%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">Marketing</div>
-              <div class="body">50’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">3%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">Incentives, events, airdrops, revards</div>
-              <div class="body">60’000’000 ARSI</div>
-            </div>
-          </div>
-          <div>
-            <div class="hexagonal">
-              <span class="body">2%</span>
-              <img src="./../img/landing/Tokenomics_hex-shape-stroke@2x.png" />
-            </div>
-            <div>
-              <div class="body">Strategic partners & advisors</div>
-              <div class="body">60’000’000 ARSI</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="team" class="team section">
-      <div class="container">
-        <div class="text-center headline">Core <span>Team</span></div>
-        <div class="team__list">
-          <a href="#" class="team__item">
-            <img src="../img/landing/Team_Arulvarma_Uthayakumar.png" alt="" />
-            <div class="subheadline primary fw-600">Arulvarma Uthayakumar</div>
-            <div class="text-center subheadline fw-400">CEO & Founder</div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="../img/landing/Team_Alexander_Stehle.png" alt="" />
-            <div class="subheadline primary fw-600">Alexander Stehle</div>
-            <div class="text-center subheadline fw-400">
-              Director - Operations and Real Estate
-            </div>
-          </a>
-          <a href="#" class="team__item">
-            <img src="../img/landing/Team_Roman_Levytskyj.png" alt="" />
-            <div class="subheadline primary fw-600">Roman Levytskyi</div>
-            <div class="text-center subheadline fw-400">
-              Director - Corporate Identity and Design
-            </div>
-          </a>
-        </div>
-        <div class="text-center body">
-          Our long-lasting experience in the real estate industry and our
-          founders experience in cryptocurrencies combine the necessary skillset
-          to make ARSI a success. Our team is complemented by experts with
-          long-standing expertise in various sectors, allowing us to achieve the
-          utmost degree of excellence in all areas.
-        </div>
-      </div>
-      <div class="container advisors">
-        <div class="text-center headline">Advisory Team</div>
-        <div class="team__list advisors">
-          <a href="#">
-            <img src="../img/landing/team2.png" alt="" />
-            <div class="item">
-              <div class="subheadline primary fw-600">Taylor Wessing</div>
-              <div class="text-center subheadline fw-400">Legal Advisor</div>
-            </div>
-          </a>
-          <a href="#">
-            <img src="../img/landing/team1.png" alt="" />
-            <div class="item">
-              <div class="subheadline primary fw-600">Krypto Vergleich</div>
-              <div class="text-center subheadline fw-400">
-                Marketing Advisors
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container resources">
         <div class="info">
-          <div>
-            <div class="headline">Resources</div>
-            <div class="body">
-              Please have a look at our White Paper. You will find a deep dive
-              into our project and our vision for project ARSI and ARSI Charity.
+          <div data-animate="left-to-right">
+            <div class="mb-40 headline">Resources</div>
+            <div class="mb-60 body">
+              Read our Whitepaper and One Pager to learn more about our mission
+              and offering.
+            </div>
+            <div class="flex actions">
+              <a href="#" class="btn btn--primary">Whitepaper</a>
+              <a href="#" class="ml-40 btn btn--tertiary">One page</a>
             </div>
           </div>
-          <div>
-            <div class="actions">
-              <img src="./../img/landing/Resources_PDF@2x.png" alt="" />
-              <button class="btn btn--primary">Whitepaper</button>
-            </div>
+          <div class="flex center" data-animate="right-to-left">
+            <img src="./../img/resources.svg" alt="" />
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom section">
+      <div class="container mb-40 platform">
+        <div class="headline">The Apraemio blockchain platform</div>
+        <div class="info">
+          <div class="body" data-animate="left-to-right">
+            In Version 2 of the project development we will incorporate a web
+            platform that will allow users to execute all payments for services
+            and products including physical gold and the gold redeemed through
+            our Gold redemption programme through a user friendly interface.
+            <br /><br />
+            Token holders will have the full information about their past
+            transactions and will also be able to track their progress in the
+            gamification program.
+          </div>
+          <img
+            src="./../img/platform.png"
+            class="desktop"
+            alt=""
+            data-animate="right-to-left"
+          />
+          <img
+            src="./../img/platform-mobile.png"
+            class="mobile"
+            alt=""
+            data-animate="right-to-left"
+          />
+        </div>
+      </div>
+
+      <div class="container mb-80 partners">
+        <div class="headline">Our partners</div>
+        <div class="small-tiles__list" data-animate="right-to-left">
+          <div class="small-tiles__item">
+            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
+          </div>
+          <div class="small-tiles__item">
+            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
+          </div>
+          <div class="small-tiles__item">
+            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
+          </div>
+          <div class="small-tiles__item">
+            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-80 team">
+        <div class="headline">Team</div>
+        <div class="small-tiles__list" data-animate="right-to-left">
+          <a href="#" class="small-tiles__item">
+            <img src="../img/user.png" alt="" />
+            <div class="subheadline secondary">Max Mustermann</div>
+            <div class="body">CEO</div>
+          </a>
+          <a href="#" class="small-tiles__item">
+            <img src="../img/user.png" alt="" />
+            <div class="subheadline secondary">Max Mustermann</div>
+            <div class="body">CEO</div>
+          </a>
+          <a href="#" class="small-tiles__item">
+            <img src="../img/user.png" alt="" />
+            <div class="subheadline secondary">Max Mustermann</div>
+            <div class="body">CEO</div>
+          </a>
+          <a href="#" class="small-tiles__item">
+            <img src="../img/user.png" alt="" />
+            <div class="subheadline secondary">Max Mustermann</div>
+            <div class="body">CEO</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="container adopter">
+        <div class="text-center mb-40 headline">Become an early adopter</div>
+        <div class="text-center mb-60 body">
+          First movers get up to 50% bonus on their investment.
+        </div>
+        <div class="flex center actions">
+          <a href="#" class="btn btn--primary">Register for the ICO</a>
+          <a href="#" class="ml-20 btn btn--discord"></a>
         </div>
       </div>
     </div>
 
     <footer id="contact" class="footer">
-      <div id="faq" class="container faq">
-        <div class="text-center headline">
-          <span>Frequently</span> Asked Questions
-        </div>
-        <div class="accordeon">
-          <label>
-            <input type="checkbox" hidden />
-            <div class="accordeon__section">
-              <div>
-                <div class="subheadline">
-                  What motivated you to create ARSI?
-                </div>
-                <div class="inner">
-                  We see a huge opportunity in combining our knowledge and the
-                  stability of the real estate sector with our own
-                  cryptocurrency and its chances of growth. As experts of both
-                  worlds, we wish to create a stable environment for our
-                  investors and users of our ARSI coin without losing the
-                  opportunity that comes with a successful cryptocurrency.
-                </div>
-              </div>
-              <img src="../img/landing/arrow-up.svg" alt="" />
-            </div>
-          </label>
-          <label>
-            <input type="checkbox" hidden />
-            <div class="accordeon__section">
-              <div>
-                <div class="subheadline">
-                  What motivated you to create ARSI?
-                </div>
-                <div class="inner">
-                  We see a huge opportunity in combining our knowledge and the
-                  stability of the real estate sector with our own
-                  cryptocurrency and its chances of growth. As experts of both
-                  worlds, we wish to create a stable environment for our
-                  investors and users of our ARSI coin without losing the
-                  opportunity that comes with a successful cryptocurrency.
-                </div>
-              </div>
-              <img src="../img/landing/arrow-up.svg" alt="" />
-            </div>
-          </label>
-          <label>
-            <input type="checkbox" hidden />
-            <div class="accordeon__section">
-              <div>
-                <div class="subheadline">
-                  What are the benefits of owning ARSI tokens?
-                </div>
-                <div class="inner">
-                  We see a huge opportunity in combining our knowledge and the
-                  stability of the real estate sector with our own
-                  cryptocurrency and its chances of growth. As experts of both
-                  worlds, we wish to create a stable environment for our
-                  investors and users of our ARSI coin without losing the
-                  opportunity that comes with a successful cryptocurrency.
-                </div>
-              </div>
-              <img src="../img/landing/arrow-up.svg" alt="" />
-            </div>
-          </label>
-          <label>
-            <input type="checkbox" hidden />
-            <div class="accordeon__section">
-              <div>
-                <div class="subheadline">How can we buy ARSI?</div>
-                <div class="inner">
-                  We see a huge opportunity in combining our knowledge and the
-                  stability of the real estate sector with our own
-                  cryptocurrency and its chances of growth. As experts of both
-                  worlds, we wish to create a stable environment for our
-                  investors and users of our ARSI coin without losing the
-                  opportunity that comes with a successful cryptocurrency.
-                </div>
-              </div>
-              <img src="../img/landing/arrow-up.svg" alt="" />
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="container adopter">
-        <div class="text-center headline">
-          <span>Become</span> an early adopter
-        </div>
-        <div class="text-center body description fw-400">
-          First movers get up to <span class="fw-600">50% bonus</span> <br />
-          on their investment.
-        </div>
-        <div class="text-center">
-          <button class="btn btn--primary">Register for the ICO</button>
-        </div>
-      </div>
       <div class="container">
         <div class="sign-up">
           <div class="sign-up__content">
-            <div class="sign-up__label white fz-16 fw-600">
+            <div class="sign-up__label white fz-18 fw-600">
               Sign up for exclusive updates
             </div>
             <div class="sign-up__form fw-600">
-              Your email
-              <div class="sign-up__form-switch fw-600">Sign up</div>
+              <input type="text" placeholder="Your email" />
+              <button class="btn btn--primary">Sign up</button>
             </div>
           </div>
-          <div class="nav__section">
-            <div class="nav__label nav__label-connect white fz-16 fw-600">
-              Connect
-            </div>
+          <div class="nav__section nav__section--social">
+            <div class="nav__label white fz-16 fw-600">Connect</div>
             <div class="nav__icons">
-              <a href="#"><img src="../img/landing/facebook.svg" alt="" /></a>
-              <a href="#"><img src="../img/landing/ic_sc_tg0.svg" alt="" /></a>
-              <a href="#"><img src="../img/landing/ic_sc_tw.svg" alt="" /></a>
-              <a href="#"
-                ><img src="../img/landing/icons8-instagram.svg" alt=""
-              /></a>
-              <a href="#"><img src="../img/landing/ic_sc_yt.svg" alt="" /></a>
+              <a href="#"><img src="../img/fbn.svg" alt="" /></a>
+              <a href="#"><img src="../img/tgn.svg" alt="" /></a>
+              <a href="#"><img src="../img/twn.svg" alt="" /></a>
+              <a href="#"><img src="../img/lnn.svg" alt="" /></a>
+              <a href="#"><img src="../img/ytn.svg" alt="" /></a>
+              <a href="#"><img src="../img/dcn.svg" alt="" /></a>
             </div>
           </div>
         </div>
@@ -696,7 +845,13 @@
             <a href="#" class="nav__item">One Pager</a>
           </div>
         </div>
-        <div class="copyright">© ARSILimited All rights reserved, 2022</div>
+        <a
+          href="mailto: info@apreamio.com"
+          class="flex copyright center align-center"
+        >
+          <img src="./../img/mail.svg" alt="" class="mr-20" />
+          info@apreamio.com
+        </a>
       </div>
     </footer>
   </body>

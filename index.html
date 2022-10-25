@@ -1,847 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="57x57"
-      href="apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="60x60"
-      href="apple-touch-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="120x120"
-      href="apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="76x76"
-      href="apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="152x152"
-      href="apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="favicon-196x196.png"
-      sizes="196x196"
-    />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="ARSI" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Apraemio</title>
-  <script defer src="index.js"></script><link href="styles/index.css" rel="stylesheet"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1></h1>
+  <button>NEXT</button>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <img src="../img/logo.svg" alt="logo" class="logo" />
-        <div class="divider"></div>
-        <div id="opener">
-          <img src="../img/menu.svg" />
-          <img src="../img/close.svg" />
-        </div>
-        <nav>
-          <div class="connect">Connect</div>
-          <div class="social">
-            <a href="#"><img src="./../img/fb.svg" alt="" /></a>
-            <a href="#"><img src="./../img/tg.svg" alt="" /></a>
-            <a href="#"><img src="./../img/tw.svg" alt="" /></a>
-            <a href="#"><img src="./../img/ln.svg" alt="" /></a>
-            <a href="#"><img src="./../img/yt.svg" alt="" /></a>
-            <a href="#"><img src="./../img/dc.svg" alt="" /></a>
-          </div>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
 
-          <a href="#" class="btn btn--primary">Sign up for ICO</a>
-          <a href="#" class="btn btn--discord"></a>
-        </nav>
-      </div>
-    </header>
-    <div class="hero section">
-      <div class="container">
-        <div class="info">
-          <div class="hero__info">
-            <div class="mb-40 headline">Better than gold</div>
-            <div class="mb-40 body">
-              APRA is a deflationary utility token with a growing backing gold
-              reserve and a variety of use cases that brings gold-powered
-              cryptocurrencies to the next level. Our exploration project is
-              already underway with a forecasted amount of gold between 100 and
-              500 tons, half of which will be distributed among token holders.
-            </div>
-            <div class="actions desktop">
-              <a href="#" class="btn btn--primary">Sign up for ICO</a>
-              <a href="#" class="btn btn--discord"></a>
-            </div>
-          </div>
-          <div id="video" class="hero__video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/bBC-nXj3Ng4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <img src="../img/play.svg" alt="" />
-          </div>
+    button {
+      border: none;
+      outline: none;
+      background: #61206b;
+      color: aliceblue;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0px 2px 2px -2px #61206b;
+      transition: all ease .2s;
+    }
+    button:hover {
+       background: #6a2875;
+      box-shadow: 0px 2px 4px -2px #61206b;
+    }
+    button:active {
+       background: #5b1566;
+      box-shadow: 0px 2px 1px -2px #61206b;
+    }
+  </style>
 
-          <div class="actions mobile">
-            <a href="#" class="btn btn--primary">Sign up for ICO</a>
-            <a href="#" class="btn btn--discord"></a>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="info">
-          <div class="hero__info" data-animate="left-to-right">
-            <div class="mb-40 headline">About Apraemio</div>
-            <div class="body">
-              The Apraemio project is a full-fledged ecosystem that will offer a
-              growing set of multiple use cases, various community rewards and
-              the possibility for token owners to exchange their APRA tokens
-              directly for physical gold acquired through our exploration,
-              drilling and mining activities.
-              <br />
-              <br />
-              Our mission is to create a universal cryptocurrency that lays out
-              the foundation of future crypto payments, while remaining an
-              investment asset with a solid price floor and great ROI potential.
-            </div>
-          </div>
-          <img
-            src="../img/mobile_phone_coin.png"
-            alt=""
-            data-animate="right-to-left"
-          />
-        </div>
-      </div>
-      <div class="container timer-section">
-        <div class="timer">
-          <div class="text-center headline">Pre-Sale starting in</div>
-          <div class="display" data-animate="timer">
-            <div data-units="days" id="days">00</div>
-            <div class="dots">:</div>
-            <div data-units="hours" id="hours">00</div>
-            <div class="dots">:</div>
-            <div data-units="minutes" id="minutes">00</div>
-            <div class="dots">:</div>
-            <div data-units="seconds" id="seconds">00</div>
-          </div>
-        </div>
-        <div class="progress">
-          <div class="line">
-            <div class="inner" data-animate="scale-to-right">65%</div>
+  <script>
+    const phrases = [
+      "Could you tell me ....?",
+      "What’s your opinion about ...?",
+      "How do you feel about ....?",
+      "Could you explain to me ....?",
+      "Just tell me the reason why ....?",
+      "I just don’t see why/what/how .... What do you mean by that?",
+      "I didn’t quite get that.",
+      "In my opinion/view ....",
+      "As far as I can see/I’m concerned .... I have the/a feeling that ....",
+      "Well, I’d say ....",
+      "You can take it from me that .... What we have to decide is ....",
+      "It’s a fact that ....",
+      "The way/As I see it",
+      "Let me put it this/another way .... Sorry to interrupt you, but .... Personally (speaking) I think ....",
+      "My view/point of view is that .... What I actually meant was ....",
+      "Look, it’s like this:",
+      "The reason for this is ....",
+      "Just let me explain ....",
+      "Well, the thing is ....",
+      "What do you think about/of ....? Do you think/feel ....?",
+      "May I ask you ....?",
+      "Could someone please tell me ....? I don’t really understand ....?",
+      "Are you saying that ....?",
+      "I beg your pardon?",
+      "Excuse me, did you say that ....?",
+      "If you ask me ....",
+      "It seems to me that ....",
+      "I think/feel/reckon/believe ....",
+      "If you want my opinion ....",
+      "First of all/To start with I’d like to point out ... There can be no doubt that ....",
+      "Nobody will deny that ....",
+      "Everyone knows ....",
+      "Let’s get this clear (first) ....",
+      "The point I’m trying to make is ....",
+      "I’m absolutely convinced that ....",
+      "The way I look at/see it is this",
+      "What I mean is ....",
+      "The main problem is ....",
+      "Well, the reason is ....",
+      "Above all we must keep in mind that ....",
+      "Useful phrases for discussions",
+      "I (quite) agree.",
+      "I couldn’t agree (with you) more.",
+      "That’s true/right. Quite/Exactly/Precisely/Right/Certainly/Definitely. I think so, too.",
+      "That’s just my feeling/opinion.",
+      "That’s a very good/important point.",
+      "Yes, of course/definitely/absolutely",
+      "That’s exactly what I mean/say.",
+      "That’s exactly how I see it.",
+      "How very true.",
+      "Yes, indeed.",
+      "Yes, perhaps, but ....",
+      "Yes, but on the other hand ....",
+      "I agree up to a certain point, but ....",
+      "Maybe, I suppose so.",
+      "I don’t think it’s as simple as that .....",
+      "You may be right there.",
+      "I disagree (with you), I’m afraid.",
+      "I don’t quite agree there.",
+      "I’m not (quite) so sure (really).",
+      "Do you really think so/believe that? Well, that’s one way of looking at it, (but) You can’t really mean that.",
+      "I wouldn’t say so.",
+      "I don’t think you’re right/that’s right.",
+      "I don’t want to argue with you, but .... Are you seriously suggesting that ...?",
+      "I agree completely/entirely.",
+      "I entirely/completely agree with you on that. That’s just it.",
+      "You’re quite/so right.",
+      "I don’t think so either.",
+      "That’s just how I see it/feel about it, too. You’ve got a good point there.",
+      "Marvelous.",
+      "Yes, that’s obvious.",
+      "That’s what I think",
+      "So do I/So am I",
+      "I’m all in favor of what you’ve been saying.",
+      "Yes, possibly, although .... Yes, up to a point.",
+      "Yes, in a way.",
+      "Well, it depends.",
+      "I see what you mean, but I think that’s not the whole story",
+      "Yes, but there’s also another aspect to consider",
+      "No, I really can’t agree, I’m afraid.",
+      "I’m not so certain/at all sure if that’s true/correct I’m sorry I can’t agree.",
+      "I’m not convinced that ....",
+      "Well, I have my doubts about that",
+      "You don’t really mean that, do you?",
+      "I don’t think so.",
+      "Surely you don’t mean that?",
+      "I can’t go all the way with you on that point.",
+      "I have my problems with what you’re saying",
+      "I doubt that very much",
+      "Don’t you dare say so!",
+      "Bloody hell, no!",
+      "You’re pulling my leg!",
+      "That doesn’t convince me at all. I’ve never heard of such a thing. You can’t be serious!",
+      "That’s not correct",
+      "You don’t understand.",
+      "I don’t think so, really!",
+      "That’s out of the question",
+      "I can’t accept your view, that ....",
+      "I’m afraid, I can’t agree with you there Really?",
+      "How stupid can you get?",
+      "That’s (simply) not true!",
+      "Surely you’re not serious, are you?",
+      "You can’t be serious!",
+      "I doubt if ...",
+      "I don’t agree with you at all.",
+      "Oh, come on, you must be joking/kidding! That’s not how I see it",
+      "That’s no excuse",
+      "That doesn’t make sense to me",
+      "You’re hopeless/wrong",
+      "I think you got that wrong",
+      "For heaven’s sake!",
+      "I think you got that wrong Rubbish!",
+      "Shame on you!",
+      "On the contrary!",
+      "You’re contradicting yourself. You’re wrong, you know.",
+      "It’s not like that at all!",
+      "You’re contradicting yourself",
+      "I’m afraid, I don’t think you quite understand. That’s not fair!",
+      "I can’t believe that I’m afraid",
+      "Do you really think that’s a good idea?",
+      "Well, you would, wouldn’t you?",
+      "Don’t be silly/stupid!",
+      "What a silly/stupid thing to say!",
+      "I don’t think, you can say ....",
+      "I doubt it/that very much",
+      "Oh, come on, think about what you’ve just said! I’ve got my doubts about that.",
+      "I disagree entirely/completely.",
+      "That’s out of the question",
+      "It’s not as simple as that!",
+      "I believe you’re mistaken",
+      "Let’s be sensible about this",
+      "You won’t listen to reason",
+      "I’m not impressed",
+      "Well that’s one way of looking at it, but",
+      "I can’t quite understand how/why I’m disappointed with",
+      "It really is terrible/ridiculous that Forgive me for mentioning it, but .... Do you realize that ....?",
+      "I’m disappointed to hear that.",
+      "Something ought to be done about it.",
+      "Can’t something be done to/about ....",
+      "I’m (awfully) sorry to hear that",
+      "Well, there’s nothing we can do about that, I’m afraid",
+      "What do you expect us/me to do? I’m sorry you should take it that way.",
+      "I’ve come to complain about ... I’m fed up with ....",
+      "I’m sorry I have to say this, but .... That’s what I want to know.",
+      "Are you aware that ....?",
+      "What are you going to do about it? Look, I really must protest about ....",
+      "Î really must apologize for this. This isn’t my/our fault, you know.",
+      "I’ll find out what has happened I'll see what I can do.",
+      ]
+  
+    const display = document.querySelector('h1');
+    const button = document.querySelector('button');
 
-            <div class="mark" style="left: 53%">
-              <div></div>
-              <div class="label">46,000 APRA</div>
-            </div>
-            <div class="mark" style="left: 90%">
-              <div class="label">soft cap</div>
-              <div class="label">90,000 APRA</div>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <a href="#" class="btn btn--primary">Sign up for ICO</a>
-          <a href="#" class="btn btn--discord"></a>
-        </div>
-      </div>
-    </div>
+    function getPhrase() {
+      const i = Math.floor(Math.random() * (phrases.length - 1))
+      return phrases[i]
+    }
 
-    <div class="section known-forms" data-animate="right-to-left">
-      <div class="container">
-        <div class="headline">Known from</div>
-        <div class="small-tiles__list">
-          <div class="small-tiles__item">
-            <img src="./../img/known.png" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/known.png" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/known.png" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/known.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+    display.innerText = getPhrase()
 
-    <div class="main-info section">
-      <div class="container mb-80 key-features tiles">
-        <div class="headline">Key features of Apraemio</div>
-        <div class="tiles__list">
-          <div class="tiles__item">
-            <img src="./../img/gold-redemption.svg" alt="" />
-            <div class="subheadline">Gold redemption</div>
-            <div class="body">
-              The Gold Redemption Programme offers token holders the possibility
-              to exchange their APRA for 50% of the gold gained through mining
-              endeavors.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/deflationary-token.svg" alt="" />
-            <div class="subheadline">Deflationary token</div>
-            <div class="body">
-              We will incorporate several burning mechanisms that will steadily
-              reduce the total supply of APRA over time, supporting a long-term
-              appreciation of the price.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/use-cases.svg" alt="" />
-            <div class="subheadline">Use cases and incentives</div>
-            <div class="body">
-              The APRA token will offer multiple use cases — from The gold
-              redemption programme, gold purchasing, car selling to real estate
-              and more.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mb-80 ecosystem">
-        <div class="headline">The Apraemio ecosystem</div>
-        <div class="mb-40 info">
-          <div class="body">
-            The Apraemio ecosystem combines a multitude of services and
-            products, as well a wide array of community rewards.
-          </div>
-          <div></div>
-        </div>
-        <div class="ecosystem__infograph">
-          <div class="ecosystem__row">
-            <div
-              class="ecosystem__item"
-              data-tooltip="APRA token holders will be able to directly purchase physical gold with their tokens"
-            >
-              <div class="text-right">Gold purchasing</div>
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-gold.svg" alt="" />
-              </div>
-            </div>
-            <div
-              class="ecosystem__item"
-              data-tooltip="Token holders will be able to get access to car purchasing and selling services with the APRA tokens at discounted prices."
-            >
-              <div class="text-right">Car purchasing</div>
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-car.svg" alt="" />
-              </div>
-            </div>
-            <div
-              class="ecosystem__item"
-              data-tooltip="We will implement a comprehensive gamification system that will reward community members for their contribution to the Apraemio ecosystem. Users will receive points for spending APRA tokens or redeeming them for gold."
-            >
-              <div class="text-right">Incentives</div>
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-incentives.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="ecosystem__middle">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <img src="./../img/logo-simple.svg" alt="" />
-          </div>
-          <div class="ecosystem__row">
-            <div
-              class="ecosystem__item"
-              data-tooltip="APRA token holders will be able to exchange their tokens directly for gold."
-            >
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-gold-redemption.svg" alt="" />
-              </div>
-              <div>Gold redemption</div>
-            </div>
-            <div
-              class="ecosystem__item"
-              data-tooltip="We will introduce a credit card in order to allow APRA holders to directly pay for products and services at the point of interaction as the Apraemio ecosystem expands."
-            >
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-credit.svg" alt="" />
-              </div>
-              <div>Credit card</div>
-            </div>
-            <div
-              class="ecosystem__item"
-              data-tooltip="APRA token holders will get access to the real estate portfolio of Art Property, a company that is already accepting Bitcoin and Ethereum for real estate purchases.s"
-            >
-              <div class="ecosystem__image">
-                <img src="./../img/ecosystem-estate.svg" alt="" />
-              </div>
-              <div>Real estate</div>
-            </div>
-          </div>
-        </div>
-        <div class="ecosystem__actions">
-          <a href="#" class="btn btn--primary">Sign up for ICO</a>
-          <a href="#" class="btn btn--discord"></a>
-        </div>
-      </div>
-      <div class="container gold-redemption">
-        <div class="headline">The Gold redemption programme</div>
-        <div class="info">
-          <div class="body">
-            At the heart of the ecosystem is our Gold Redemption Programme that
-            offers token holders the possibility to exchange their APRA tokens
-            for real gold mined through our exploration project with large
-            proven reserves.
-          </div>
-          <div></div>
-        </div>
-        <div class="info">
-          <img
-            src="../img/internet_banking.png"
-            alt=""
-            data-animate="left-to-right"
-          />
-          <div>
-            <div class="flex mb-40" data-animate="right-to-left">
-              <img
-                src="./../img/redemption-checknark.svg"
-                alt=""
-                class="mr-36"
-              />
-              <div class="ml-49">
-                <div class="mb-10 subheadline secondary">
-                  Scientifically proven
-                </div>
-                <div class="body">
-                  The reserves have been estimated using the latest standards in
-                  3D satelite imaging technology. The full survey details and
-                  results are available on demand.
-                </div>
-              </div>
-            </div>
-            <div class="flex" data-animate="right-to-left">
-              <img src="./../img/redemption-cpmpas.svg" alt="" class="mr-36" />
-              <div class="ml-49">
-                <div class="mb-10 subheadline secondary">
-                  Full exploration rights
-                </div>
-                <div class="body">
-                  We have been granted the full exploitation rights on the basis
-                  of the Convention signed 2015 with the Government of the
-                  Republic of Mali and renewed in accordance with the new Mining
-                  Code in 2020.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="how" class="section how">
-      <div class="container mb-40 tiles">
-        <div class="headline">How it works</div>
-        <div class="mb-40 body">
-          The APRA deflationary utility token will allow holders to participate
-          in The gold redemption programme. The token will additionally be used
-          for payments within the Apraemio ecosystem, give holders the
-          possibility to acquire services and will further act as an incentive
-          mechanism.
-        </div>
-        <div class="tiles__list" data-animate="left-to-right">
-          <div class="tiles__item">
-            <img src="./../img/redemption-cpmpas.svg" alt="" />
-            <div class="subheadline">Exploration phase</div>
-            <div class="body">
-              After the crowdsale, we will immediately initiate the 3-phase
-              process of acquiring the gold (Exploration, Drilling and Mining).
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/ecosystem-gold-redemption.svg" alt="" />
-            <div class="subheadline">Mining and reporting</div>
-            <div class="body">
-              Then we will estimate the APRA to gold ratio. In a realistic
-              scenario, 1 APRA sold at the main sale for 1 USD will be worth ~9
-              USD in gold.
-            </div>
-          </div>
-          <div class="tiles__item">
-            <img src="./../img/ecosystem-incentives.svg" alt="" />
-            <div class="subheadline">Distribution</div>
-            <div class="body">
-              Every APRA token holder can choose to redeem their tokens and
-              receive the amount of physical gold 1 APRA is tied to.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section utility">
-      <div class="container mb-40 tiles">
-        <div class="headline">The APRA Utility token</div>
-        <div class="mb-40 body">
-          The APRA deflationary utility token will allow holders to participate
-          in The gold redemption programme. The token will additionally be used
-          for payments within the Apraemio ecosystem, give holders the
-          possibility to acquire services and will further act as an incentive
-          mechanism.
-        </div>
-        <div class="tiles__list" data-animate="left-to-right">
-          <div class="tiles__item">
-            <div class="subheadline">APRA</div>
-            <div class="body">Token name</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">BEP-20</div>
-            <div class="body">Technology</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">Utility</div>
-            <div class="body">Token Type</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">1,000,000,000 APRA</div>
-            <div class="body">Token Supply</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">1,000,000,000 APRA</div>
-            <div class="body">Token ICO</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">1 EUR</div>
-            <div class="body">ICO price</div>
-          </div>
-          <div class="tiles__item">
-            <div class="subheadline">51,000,000 EUR</div>
-            <div class="body">Hard cap</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section stages">
-      <div class="container mb-40 tiles">
-        <div class="headline">Token sale stages</div>
-        <div class="tiles__list" data-animate="left-to-right">
-          <div class="tiles__item tiles__item--left">
-            <div class="subheadline">Private sale</div>
-            <div class="mb-40 body">01.09.2022 — 31.10.2022</div>
-            <div class="mb-10 body">
-              <div class="flex mb-10 between">
-                <div>Amount</div>
-                <div class="fw-600">12,000,000 APRA</div>
-              </div>
-              <div class="flex mb-10 between">
-                <div>Price</div>
-                <div class="fw-600">0,50 EUR</div>
-              </div>
-              <div class="flex mb-10 between">
-                <div>Bonus</div>
-                <div class="fw-600">50%</div>
-              </div>
-            </div>
-            <div class="flex-1"></div>
-            <a href="#" class="btn btn--secondary self-center"
-              >Secure your spot now</a
-            >
-          </div>
-          <div class="tiles__item tiles__item--left">
-            <div class="subheadline">Pre-sale</div>
-            <div class="mb-40 body">01.11.2022 — 31.12.2022</div>
-            <div class="mb-10 body">
-              <div class="flex mb-10 between">
-                <div>Amount</div>
-                <div class="fw-600">12,000,000 APRA</div>
-              </div>
-              <div class="flex mb-10 between">
-                <div>Price</div>
-                <div class="fw-600">0,75 EUR</div>
-              </div>
-              <div class="flex mb-10 between">
-                <div>Bonus</div>
-                <div class="fw-600">25%</div>
-              </div>
-            </div>
-            <div class="flex-1"></div>
-            <a href="#" class="btn btn--secondary self-center"
-              >Secure your spot now</a
-            >
-          </div>
-          <div class="tiles__item tiles__item--left">
-            <div class="subheadline">Main-sale</div>
-            <div class="mb-40 body">01.01.2023 — 29.02.2023</div>
-            <div class="mb-10 body">
-              <div class="flex mb-10 between">
-                <div>Amount</div>
-                <div class="fw-600">36,000,000 APRA</div>
-              </div>
-              <div class="flex mb-10 between">
-                <div>Price</div>
-                <div class="fw-600">1 EUR</div>
-              </div>
-            </div>
-            <div class="flex-1"></div>
-            <a href="#" class="btn btn--secondary self-center"
-              >Secure your spot now</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="roadmap" class="roadmap section">
-      <div class="container">
-        <div class="headline white">Roadmap</div>
-        <div class="roadmap__graph">
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">September 2022</div>
-            <div class="body">
-              Start Private sale
-              <br />
-              Start marketing and community building
-            </div>
-          </div>
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">November 2022</div>
-            <div class="body">Start Pre-sale</div>
-          </div>
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">January 2023</div>
-            <div class="body">
-              Listing of APRA on exchanges Start of the drilling activities
-              Blockchain development Additional use cases for APRA
-            </div>
-          </div>
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">March 2023</div>
-            <div class="body">Main sale</div>
-          </div>
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">Q3 2023</div>
-            <div class="body">Launch of the Apraemio blockchain platform</div>
-          </div>
-          <div class="roadmap__graph-item" data-animate="fade-out">
-            <div class="subheadline">2025</div>
-            <div class="body">
-              First exchange round for APRA token holders for gold (The gold
-              redemption programme)
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section charts">
-      <div class="container mb-80 token-distribution">
-        <div class="headline">Token distribution</div>
-        <div class="info">
-          <img src="../img/chart1.png" alt="" />
-          <div>
-            <div class="charts__line">
-              <span>Reserve: 65%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Charity: 5%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>First sale (ICO): 6%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Second sale: 12%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Community: 4%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Team & Advisors: 4%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Liquidity: 4%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container funds-distribution">
-        <div class="headline">Funds distribution</div>
-        <div class="info">
-          <div>
-            <div class="charts__line">
-              <span>Gold drilling and mining: 50%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Blockchain development: 20%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Marketing: 20%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Legal costs: 5%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-            <div class="charts__line">
-              <span>Operational costs: 5%</span>
-              <div data-animate="scale-to-left"></div>
-            </div>
-          </div>
-          <img src="../img/chart2.png" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="section initiatives">
-      <div class="container">
-        <div class="headline">Charity initiatives</div>
-        <div class="mb-40 info">
-          <div class="body" data-animate="left-to-right">
-            At the heart of the ecosystem is our Gold Redemption Programme that
-            offers token holders the possibility to exchange their APRA tokens
-            for real gold mined through our exploration project with large
-            proven reserves.The Apraemio project is planning to run a variety of
-            transparent charity initiatives. We will also dedicate 5% of the
-            total token distribution for charity campaigns.
-            <br /><br />
-            We will introduce the possibility for APRA holders to vote on which
-            initiatives will be undertaken by the project. Every holder can cast
-            a vote through the platform where the projects and reporting will be
-            published.
-          </div>
-          <img
-            src="./../img/us_dollar_coin.png"
-            alt=""
-            data-animate="right-to-left"
-          />
-        </div>
-        <div class="flex center actions">
-          <a href="#" class="btn btn--primary">Sign up for ICO</a>
-          <a href="#" class="ml-20 btn btn--discord"></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="section company">
-      <div class="container">
-        <div class="headline">The Apraemio company</div>
-        <div class="mb-40 body">
-          The organization behind the Apraemio project is a group of multiple
-          companies across various industries, many of which are working in
-          conjunction. Our combined experience and existing customer base will
-          allow us to offer a wide set of different use cases with the APRA
-          token.
-        </div>
-        <div class="small-tiles__list" data-animate="right-to-left">
-          <div class="small-tiles__item">
-            <img src="./../img/company1.svg" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/company2.svg" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/company3.svg" alt="" />
-          </div>
-          <div class="small-tiles__item">
-            <img src="./../img/company4.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section resources">
-      <div class="container">
-        <div class="info">
-          <div data-animate="left-to-right">
-            <div class="mb-40 headline">Resources</div>
-            <div class="mb-60 body">
-              Read our Whitepaper and One Pager to learn more about our mission
-              and offering.
-            </div>
-            <div class="flex actions">
-              <a href="#" class="btn btn--primary">Whitepaper</a>
-              <a href="#" class="ml-40 btn btn--tertiary">One page</a>
-            </div>
-          </div>
-          <div class="flex center" data-animate="right-to-left">
-            <img src="./../img/resources.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bottom section">
-      <div class="container mb-40 platform">
-        <div class="headline">The Apraemio blockchain platform</div>
-        <div class="info">
-          <div class="body" data-animate="left-to-right">
-            In Version 2 of the project development we will incorporate a web
-            platform that will allow users to execute all payments for services
-            and products including physical gold and the gold redeemed through
-            our Gold redemption programme through a user friendly interface.
-            <br /><br />
-            Token holders will have the full information about their past
-            transactions and will also be able to track their progress in the
-            gamification program.
-          </div>
-          <img src="./../img/platform.png" data-animate="right-to-left" />
-        </div>
-      </div>
-
-      <div class="container mb-80 partners">
-        <div class="headline">Our partners</div>
-        <div class="small-tiles__list" data-animate="right-to-left">
-          <div class="small-tiles__item">
-            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
-          </div>
-          <div class="small-tiles__item">
-            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
-          </div>
-          <div class="small-tiles__item">
-            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
-          </div>
-          <div class="small-tiles__item">
-            <div class="pt-60 pb-60 w-100"><!-- placeholder --></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container mb-80 team">
-        <div class="headline">Team</div>
-        <div class="small-tiles__list" data-animate="right-to-left">
-          <a href="#" class="small-tiles__item">
-            <img src="../img/user.png" alt="" />
-            <div class="subheadline secondary">Max Mustermann</div>
-            <div class="body">CEO</div>
-          </a>
-          <a href="#" class="small-tiles__item">
-            <img src="../img/user.png" alt="" />
-            <div class="subheadline secondary">Max Mustermann</div>
-            <div class="body">CEO</div>
-          </a>
-          <a href="#" class="small-tiles__item">
-            <img src="../img/user.png" alt="" />
-            <div class="subheadline secondary">Max Mustermann</div>
-            <div class="body">CEO</div>
-          </a>
-          <a href="#" class="small-tiles__item">
-            <img src="../img/user.png" alt="" />
-            <div class="subheadline secondary">Max Mustermann</div>
-            <div class="body">CEO</div>
-          </a>
-        </div>
-      </div>
-
-      <div class="container adopter">
-        <div class="text-center mb-40 headline">Become an early adopter</div>
-        <div class="text-center mb-60 body">
-          First movers get up to 50% bonus on their investment.
-        </div>
-        <div class="flex center actions">
-          <a href="#" class="btn btn--primary">Register for the ICO</a>
-          <a href="#" class="ml-20 btn btn--discord"></a>
-        </div>
-      </div>
-    </div>
-
-    <footer id="contact" class="footer">
-      <div class="container">
-        <div class="sign-up">
-          <div class="sign-up__content">
-            <div class="sign-up__label white fz-18 fw-600">
-              Sign up for exclusive updates
-            </div>
-            <div class="sign-up__form fw-600">
-              <input type="text" placeholder="Your email" />
-              <button class="btn btn--primary">Sign up</button>
-            </div>
-          </div>
-          <div class="nav__section nav__section--social">
-            <div class="nav__label white fz-16 fw-600">Connect</div>
-            <div class="nav__icons">
-              <a href="#"><img src="../img/fbn.svg" alt="" /></a>
-              <a href="#"><img src="../img/tgn.svg" alt="" /></a>
-              <a href="#"><img src="../img/twn.svg" alt="" /></a>
-              <a href="#"><img src="../img/lnn.svg" alt="" /></a>
-              <a href="#"><img src="../img/ytn.svg" alt="" /></a>
-              <a href="#"><img src="../img/dcn.svg" alt="" /></a>
-            </div>
-          </div>
-        </div>
-        <div class="nav">
-          <div class="nav__section">
-            <div class="nav__item-headers">About us</div>
-            <a href="#" class="nav__item">Imprint</a>
-            <a href="#" class="nav__item">Terms and conditions</a>
-            <a href="#" class="nav__item">Token sale agreement</a>
-            <a href="#" class="nav__item">Privacy policy</a>
-            <a href="#" class="nav__item">AML policy</a>
-          </div>
-          <div class="nav__section">
-            <div class="nav__item-headers">For investors</div>
-            <a href="#" class="nav__item">Register for the ICO</a>
-            <a href="#" class="nav__item">Login</a>
-          </div>
-          <div class="nav__section">
-            <div class="nav__item-headers">Documents</div>
-            <a href="#" class="nav__item">Whitepaper</a>
-            <a href="#" class="nav__item">One Pager</a>
-          </div>
-        </div>
-        <a
-          href="mailto: info@apreamio.com"
-          class="flex copyright center align-center"
-        >
-          <img src="./../img/mail.svg" alt="" class="mr-20" />
-          info@apreamio.com
-        </a>
-      </div>
-    </footer>
-  </body>
+    button.addEventListener('click', () => {
+      display.innerText = getPhrase()
+    })
+  </script>
+</body>
 </html>

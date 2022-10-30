@@ -12,23 +12,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Vetapp</title>
-    <script type="module" crossorigin src="/assets/index.4add11c7.js"></script>
-    <link rel="stylesheet" href="/assets/index.e2b15a1f.css">
+    <script type="module" crossorigin src="/assets/index.e292748a.js"></script>
+    <link rel="stylesheet" href="/assets/index.e69d95b2.css">
   </head>
   <body class="bg-[#f8fcfb]">
     <header class="bg-white w-ful top-0 z-10 sticky">
-      <div class="container flex items-center justify-between">
+      <div class="container !p-5 flex items-center justify-between">
         <img src="/logo.svg" alt="logo" class="logo" />
         <div id="opener" class="mobile">
           <img src="/menu.svg" />
           <img src="/close.svg" />
         </div>
         <nav>
-          <a href="#">How it works</a>
-          <a href="#">Features</a>
-          <a href="#">Token</a>
-          <a href="#">ICO</a>
-          <a href="#">Roadmap</a>
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#token">Token</a>
+          <a href="#ico">ICO</a>
+          <a href="#roadmap">Roadmap</a>
           <a href="#" class="btn-primary btn mobile">Sign up for ICO</a>
         </nav>
         <a href="#" class="btn-primary btn desktop !py-2.5">Sign up for ICO</a>
@@ -36,7 +36,7 @@
     </header>
     <div class="section mb-20">
       <div class="container">
-        <img src="/hero.png" alt="" class="lg:hidden w-full">
+        <img src="/hero.png" alt="" class="lg:hidden w-full relative left-12">
         <div class="lg:flex lg:children:w-1/2 items-end lt-lg:text-center">
           <div class="space-y-10">
             <div class="text-8.5 font-700">The first full-fledged blockchain-based solution for veterinarians and pet owners</div>
@@ -77,6 +77,7 @@
       </div>
     </div>
     <div class="section">
+      <div id="how" class="absolute -top-[100px]"></div>
       <div class="container !max-w-[800px]">
         <div class="headline text-center">Meet VetAPP</div>
         <div class="body text-center mb-10">
@@ -125,6 +126,7 @@
       </div>
     </div>
     <div class="section">
+      <div id="features" class="absolute -top-[100px]"></div>
       <div class="container md:rounded-2xl bg-light pt-15">
         <div class="headline text-center">The VetAPP ecosystem</div>
         <div class="body mb-10 text-center">The VetAPP ecosystem combines a wide array of features for both pet owners and veterinarians.</div>
@@ -257,6 +259,7 @@
       </div>
     </div>
     <div class="section bg-main bg-bottom bg-cover !px-0 !md:pb-0" style="background-image: url(/vets-token.png)">
+      <div id="ico" class="absolute -top-[100px]"></div>
       <img src="/ico.png" alt="" class="md:hidden w-[120vw] -mx-[10vw]">
       <div class="container !pb-0">
         <div class="columns">
@@ -329,6 +332,7 @@
       </div>
     </div>
     <div class="section">
+      <div id="token" class="absolute -top-[100px]"></div>
       <div class="container space-y-10">
         <div class="headline lt-md:text-center">The VetAPP token sale</div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 children:p-5 children:rounded-2xl children:border children:border-[#00C7A066] children:text-center">
@@ -505,6 +509,7 @@
       </div>
     </div>
     <div class="section">
+      <div id="roadmap" class="absolute -top-[100px]"></div>
       <div class="container md:rounded-2xl bg-light p-20">
         <div class="headline lt-md:text-center !mb-10">Project roadmap</div>
         <div class="roadmap">
@@ -553,32 +558,47 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section !pb-0">
       <div class="container">
         <div class="headline text-center !mb-10">Team</div>
-        <div class="grid grid-cols-5 lt-lg:grid-cols-1">
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user1.png" class="w-46" />
+        <div class="grid grid-cols-5 gap-5 lt-lg:grid-cols-1">
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user1.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">PhD Mariusz Andrych</div>
             <div class="text-3.5">Board Member</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user2.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user2.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Przemyslaw Mazurek</div>
             <div class="text-3.5">Board Member</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user3.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user3.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Anna Andrych</div>
             <div class="text-3.5">CMO / CSO</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user4.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user4.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">PhD Ewa Stanczyk</div>
             <div class="text-3.5">Medical Expert</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user5.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user5.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">PhD Katarzyna Kołomyjec</div>
             <div class="text-3.5">Medical Department Director</div>
           </div>
@@ -586,29 +606,44 @@
       </div>
       <div class="container">
         <div class="headline text-center !mb-10">Advisory board</div>
-        <div class="grid grid-cols-5 lt-lg:grid-cols-1">
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user6.png" class="w-46" />
+        <div class="grid grid-cols-5 gap-5 lt-lg:grid-cols-1">
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user6.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Artur Kuczmowski</div>
             <div class="text-3.5">Legal Advisor</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user7.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user7.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Adam Kuziora</div>
             <div class="text-3.5">Blockchain Advisor</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user8.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user8.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Prof. Barbara Mroz-Gorgon</div>
             <div class="text-3.5">Marketing Advisor</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user9.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user9.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Marcin Rzeczkowski</div>
             <div class="text-3.5">Customer Loyalty and UX Advisor</div>
           </div>
-          <div class="space-y-3.5 font-600 text-center">
-            <img src="/user10.png" class="w-46" />
+          <div class="space-y-5 font-600 text-center">
+            <a href="#" class="relative">
+              <img src="/user10.png" class="w-46" alt=""/>
+              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
+            </a>
             <div class="text-5">Dimitri Haußmann</div>
             <div class="text-3.5">Blockchain Advisor</div>
           </div>

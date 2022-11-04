@@ -3,705 +3,787 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./../img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      type="image/png"
-      href="/favicon.png"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Vetapp</title>
-    <script type="module" crossorigin src="/assets/index.e292748a.js"></script>
-    <link rel="stylesheet" href="/assets/index.e69d95b2.css">
-  </head>
-  <body class="bg-[#f8fcfb]">
-    <header class="bg-white w-ful top-0 z-10 sticky">
-      <div class="container !p-5 flex items-center justify-between">
-        <img src="/logo.svg" alt="logo" class="logo" />
-        <div id="opener" class="mobile">
-          <img src="/menu.svg" />
-          <img src="/close.svg" />
+    <title>Starzz</title>
+  <script defer src="index.js"></script><link href="styles/index.css" rel="stylesheet"></head>
+
+  <body>
+    <header class="header section">
+      <img src="./../img/starzz-logo.svg" alt="logo" />
+      <div class="divider"></div>
+      <div id="opener">
+        <img src="./../img/starzz-icons/menu.svg" />
+        <img src="./../img/starzz-icons/close.svg" />
+      </div>
+      <nav>
+        <a href="#mission" class="anchor">Mission</a>
+        <a href="#advantages" class="anchor">Advantages</a>
+        <a href="#token" class="anchor">Token</a>
+        <a href="#ico" class="anchor">ICO</a>
+        <a href="#" class="btn btn--primary">Register for ICO</a>
+        <div class="divider"></div>
+        <div class="social">
+          <a href="#"><img src="./../img/starzz-icons/fb.svg" alt="" /></a>
+          <a href="#"><img src="./../img/starzz-icons/ig.svg" alt="" /></a>
+          <a href="#"><img src="./../img/starzz-icons/tg.svg" alt="" /></a>
+          <a href="#"><img src="./../img/starzz-icons/tw.svg" alt="" /></a>
+          <a href="#"><img src="./../img/starzz-icons/yt.svg" alt="" /></a>
+          <a href="#"><img src="./../img/starzz-icons/ln.svg" alt="" /></a>
+        </div>
+      </nav>
+    </header>
+    <div class="hero section">
+      <div class="container">
+        <div class="info">
+          <div>
+            <div class="headline">
+              A digital currency for sport clubs & celebrities
+            </div>
+            <div class="body">
+              The Starzz project creates a full-fledged, blockchain-based,
+              crowd- and fanbase management ecosystem that will bring the
+              interaction between Champions (clubs, athletes, celebrities,
+              content creators) and their communities to a whole new level.
+              <br />
+              <br />
+              The Starzz ecosystem combines the Supporterzz.com Platform and the
+              Starzz Exchange, underpinned by the native SRZ token and unique
+              Champion tokens.
+            </div>
+            <div class="actions">
+              <button class="btn btn--primary">Whitepaper</button>
+              <button class="btn btn--secondary">One Pager</button>
+            </div>
+          </div>
+          <div>
+            <img src="./../img//starzz-hero.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+    </div>
+    <div class="forms section">
+      <div class="container">
+        <div class="headline headline--uppercase">Known from</div>
+        <div class="forms__list">
+          <div class="forms__item">
+            <img src="./../img/strazz-know-form.png" alt="" />
+          </div>
+          <div class="forms__item">
+            <img src="./../img/strazz-know-form.png" alt="" />
+          </div>
+          <div class="forms__item">
+            <img src="./../img/strazz-know-form.png" alt="" />
+          </div>
+          <div class="forms__item">
+            <img src="./../img/strazz-know-form.png" alt="" />
+          </div>
+          <div class="forms__item">
+            <img src="./../img/strazz-know-form.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mission section section--light" id="mission">
+      <div class="container">
+        <div class="headline">Our mission</div>
+        <div class="info">
+          <div class="body">
+            We want to enable Champions to identify their most loyal fans,
+            unlock additional monetization possibilities and maximize the
+            lifetime value of every fan by actively including them in the
+            decision making process through voting with the unique Champion
+            tokens. The Starzz ecosystem will further offer a wide array of
+            products and services such as social media networking, live
+            streaming, marketplace for merchandising and NFTs, marketing
+            services, ticketing and many more.
+            <br />
+            <br />
+            Fans will finally have the power to influence the decisions and
+            future of their favorite Champions, as well as a degree of
+            interaction with them that they have never had access to before. We
+            are also introducing a novel concept known as the Decentralized
+            Authonomous Club, a sports club that is run democratically by all
+            fans as a DAO. The purpose of the DAC is aligned with our main goal,
+            which is to bring the decision power back where it belongs — in the
+            hands of the fans.
+          </div>
+          <img src="./../img/starzz-mission.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="section platform" id="advantages">
+      <div class="container">
+        <div class="headline">The Supporterzz.com Platform</div>
+        <div class="list">
+          <div>
+            <div class="subheadline">Voting with Champion tokens</div>
+            <div class="body">
+              We are introducing unique tokens for every Champion that will give
+              voting rights to its holders and will be tradable on the Starzz
+              exchange.
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">Social media network</div>
+            <div class="body">
+              Our social media network will offer multiple tools for advanced
+              interaction between fans and Champions.
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">Marketplace</div>
+            <div class="body">
+              The marketplace will offer multiple product and service listings
+              including NFTs, unique merchandise
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">Incentives</div>
+            <div class="body">
+              We are implementing multiple incentive mechanisms and an
+              Ambassador program that will continuously reward users.
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          The Supporterzz platform will be available both as a web and mobile
+          application and will provide the use-case infrastructure for both the
+          SRZ and Champion tokens.
+          <br /><br />
+          The platform will combine a variety of functionalities with various
+          sub-functionalities and incentive programs built within the whole
+          ecosystem. An essential part of the Supporterzz platform will also be
+          the marketplace for unique products, tickets, services and NFTs.
+        </div>
+      </div>
+    </div>
+    <div class="section section--light exchange">
+      <div class="container">
+        <div class="headline">The Starzz exchange</div>
+        <div class="info">
+          <img src="./../img/starzz-exchange.png" alt="" />
+          <div class="body">
+            The Starzz exchange is where the Champion tokens will be listed as
+            trading pairs to SRZ. We will also provide further pairs such as
+            SRZ/BTC, SRZ/ETH and SRZ/USDT options. Champion tokens will be
+            exclusively changeable only to the native SRZ token.
+            <br /><br />
+            Lowest offer price will be listed at the top and automatically
+            assigned to the buyer (and vice-versa) completing the trade. Every
+            transaction will be a subject of a transaction cost of 0,19%, which
+            will be split among the Starzz Exchange (0,09%) and the Champions
+            (0,10%).
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section tocken">
+      <div class="container">
+        <div class="headline">Champion tokens</div>
+        <div class="body">
+          Champion tokens will grant fans voting power on polls and surveys
+          created by the their favorite Champions, which they can exercise
+          transparently on the blockchain and participate in the professional
+          development and decision making process. The voting system will be
+          completely transparent, ensuring no fraudulent behavior is possible
+          for either of the stakeholders.
+          <br />
+          <br />
+          For a limited time, the tokens will be made available for sale (much
+          like during an ICO sale), allowing fans to gain early access at the
+          best possible price and thus incentivize demand. These tokens will be
+          transferable on the Starzz exchange in pairs for the platform’s native
+          SRZ token. Champion tokens will be hosted on the permissioned Ethereum
+          sidechain instance.
+          <br />
+          <br />
+          The economy behind Champion tokens is based on supply and demand for
+          the voting power they hold and unlocks multiple possibilities for both
+          Champions and their fans.
+        </div>
+        <a href="#" class="btn btn--primary">Learn more</a>
+      </div>
+      <div class="separator"></div>
+    </div>
+    <div class="section ecosystem">
+      <div class="container">
+        <div class="headline">
+          The Starzz ecosystem: unlock the full power of fan engagement
+        </div>
+        <div class="body">
+          Fan engagement has been confirmed by marketers and psychologists to be
+          the future in the interaction between consumers and professional
+          stakeholders within the E&M sector.
+          <br />
+          <br />
+          Our ultimate goal is to provide the most comprehensive set of tools
+          for Champions and their fans under one roof. This is how it all comes
+          together.
+        </div>
+        <div class="cards">
+          <div>
+            <div class="card">
+              <img src="./../img/starzz-crypto-1.svg" alt="" />
+              <div class="subheadline">The Supporterzz.com Platform</div>
+              <div class="body">
+                The Supporterzz.com Platform is where all the action happens -
+                fans and Champions can interact with each other like never
+                before.
+              </div>
+            </div>
+            <div class="card">
+              <img src="./../img/starzz-crypto-2.svg" alt="" />
+              <div class="subheadline">The native SRZ token</div>
+              <div class="body">
+                The Supporterzz.com Platform is where all the action happens -
+                fans and Champions can interact with each other like never
+                before.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <img src="./../img/starzz-exchange-1.svg" alt="" />
+              <div class="subheadline">The Starzz Exchange</div>
+              <div class="body">
+                The Starzz Exchange facilitates the distribution and transfer of
+                Champion tokens and is the source of
+              </div>
+            </div>
+            <div class="card">
+              <img src="./../img/starzz-exchange-2.svg" alt="" />
+              <div class="subheadline">Champion tokens</div>
+              <div class="body">
+                Champion tokens grant voting rights that can be exercised on the
+                Supporterzz.com Platform and are transferable on the exchange.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section dac">
+      <div class="container">
+        <img src="./../img/starzz-logo-light.svg" alt="" />
+        <div class="headline">The DAC</div>
+        <div class="subheadline">Decentralized Authonomous Club</div>
+        <div class="body">
+          We are creating the world's first DAC (Decentralized Autonomous Club),
+          which is based on the DAO concept, with the purpose of reversing the
+          traditional structure of bottom-down decision making power. We will
+          acquire the full rights over an existing football club and create its
+          own unique Champion token. Anyone owning the token will be able to
+          vote on club decisions and have an impact on how the club is run. The
+          DAC will essentially be a non-profit organization and the fans will
+          vote on how the profits should be spent for its further development.
+          The DAC will have no managing figure behind it and will instead be
+          entirely community-governed, fans will have the full decision power
+          over how it is managed in the long-term.
+          <br />
+          <br />
+          What better way for fan engagement than giving fans the full power
+          over how a club is governed in a transparent and democratic way?
+        </div>
+        <a href="#" class="btn btn--primary">Learn more</a>
+      </div>
+    </div>
+    <div class="section section--light utility-token" id="ico">
+      <div class="container">
+        <div class="headline">The SRZ Utility token</div>
+        <div class="cards">
+          <div class="card">
+            <div class="subheadline">SRZ</div>
+            <div class="body">Token name</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">ERC-20</div>
+            <div class="body">Technology</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">Utility</div>
+            <div class="body">Token Type</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">3,000,000,000 SRZ</div>
+            <div class="body">Token Supply</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">990,000,000</div>
+            <div class="body">Token ICO</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">0.06 €</div>
+            <div class="body">ICO price</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">9,000,000€</div>
+            <div class="body">Soft cap</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">45,000,000 €</div>
+            <div class="body">Hard cap</div>
+          </div>
+        </div>
+        <div class="body">
+          SRZ is a Utility token released on the Ethereum blockchain according
+          to the ERC20 standard.
+          <br /><br />
+          Unsold SRZ will be relocated to the next sale phases. At the end of
+          the last sale phase (main sale), all unsold tokens will be burned.
+          <br /><br />
+          For the facilitation of the Champion tokens, we will create our own
+          permissioned Ethereum sidechain network that will run parallel to the
+          main Ethereum network. The purpose is to reach better execution times
+          and costs due to the high amount of expected transactions in Champion
+          tokens.
+        </div>
+      </div>
+    </div>
+    <div class="section tokenomics" id="token">
+      <div class="container">
+        <div class="headline text-center">The Supporterzz.com Platform</div>
+        <div class="cards">
+          <div class="card">
+            <div class="subheadline">Private sale</div>
+            <div class="body">01.12.2022 — 31.01.2023</div>
+            <div class="subheadline">500,000,000 SRZ</div>
+            <div class="body">Amount</div>
+            <div class="subheadline">0,036 €</div>
+            <div class="body">Price (40% bonus)</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">Pre-sale</div>
+            <div class="body">1.02.2023 — 31.03.2023</div>
+            <div class="subheadline">200,000,000 SRZ</div>
+            <div class="body">Amount</div>
+            <div class="subheadline">0,048 €</div>
+            <div class="body">Price (20% bonus)</div>
+          </div>
+          <div class="card">
+            <div class="subheadline">Main sale</div>
+            <div class="body">01.04.2023 — 31.05.2023</div>
+            <div class="subheadline">300,000,000 SRZ</div>
+            <div class="body">Amount</div>
+            <div class="subheadline">0,06 €</div>
+            <div class="body">Price</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="subheadline">Token distribution</div>
+        <div class="info first">
+          <img src="./../img/starzz-chart-1.png" alt="" />
+          <div>
+            <div>
+              <div><div style="width: 33%"></div></div>
+              <div>
+                <div>Crowdsale</div>
+                <div>33%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 12%"></div></div>
+              <div>
+                <div>Marketing</div>
+                <div>12%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 13%"></div></div>
+              <div>
+                <div>Reserve</div>
+                <div>13%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 4%"></div></div>
+              <div>
+                <div>Bug bounty program</div>
+                <div>4%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 3%"></div></div>
+              <div>
+                <div>Ambassador program</div>
+                <div>3%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 10%"></div></div>
+              <div>
+                <div>Community rewards</div>
+                <div>10%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 12%"></div></div>
+              <div>
+                <div>Team</div>
+                <div>12%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 3%"></div></div>
+              <div>
+                <div>Advisory board</div>
+                <div>3%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 10%"></div></div>
+              <div>
+                <div>Partnerships & Strategic acquisition</div>
+                <div>10%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="container">
+        <div class="subheadline">Funds distribution</div>
+        <div class="info second">
+          <div>
+            <div>
+              <div><div style="width: 45%"></div></div>
+              <div>
+                <div>Development:</div>
+                <div>45%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 15%"></div></div>
+              <div>
+                <div>Marketing</div>
+                <div>15%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 29%"></div></div>
+              <div>
+                <div>Other operating costs</div>
+                <div>29%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 6%"></div></div>
+              <div>
+                <div>Legal</div>
+                <div>6%</div>
+              </div>
+            </div>
+            <div>
+              <div><div style="width: 5%"></div></div>
+              <div>
+                <div>Corporate structuring</div>
+                <div>5%</div>
+              </div>
+            </div>
+          </div>
+          <img src="./../img/starzz-chart-2.png" alt="" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="headline">Lock-up and vesting period</div>
+        <div class="grid">
+          <div>
+            <div>
+              <div class="subheadline">Backers</div>
+              <div class="body">Seed Round</div>
+              <div class="body">Private Round</div>
+              <div class="body">Pre-Sale</div>
+              <div class="body">Main-Sale</div>
+            </div>
+            <div>
+              <div class="subheadline">Lock-up period</div>
+              <div class="body">3 months</div>
+              <div class="body">3 months</div>
+              <div class="body">1 month</div>
+              <div class="body">0 month</div>
+            </div>
+            <div>
+              <div class="subheadline">Vesting period</div>
+              <div class="body">36 months</div>
+              <div class="body">24 months</div>
+              <div class="body">18 months</div>
+              <div class="body">12 months</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="subheadline">Organisation</div>
+              <div class="body">Team</div>
+              <div class="body">Advisory</div>
+              <div class="body">Partners</div>
+            </div>
+            <div>
+              <div class="subheadline">Lock-up period</div>
+              <div class="body">12 months</div>
+              <div class="body">6 months</div>
+              <div class="body">6 months</div>
+            </div>
+            <div>
+              <div class="subheadline">Vesting period</div>
+              <div class="body">36 months</div>
+              <div class="body">18 months</div>
+              <div class="body">36 months</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="subheadline">Community</div>
+              <div class="body">Incentives</div>
+              <div class="body">Advisory</div>
+              <div class="body">Partners</div>
+            </div>
+            <div>
+              <div class="subheadline">Lock-up period</div>
+              <div class="body">0 months</div>
+              <div class="body">0 months</div>
+              <div class="body">0 months</div>
+            </div>
+            <div>
+              <div class="subheadline">Vesting period</div>
+              <div class="body">36 months</div>
+              <div class="body">24 months</div>
+              <div class="body">24 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section roadmap">
+      <div class="container">
+        <div class="headline">Project roadmap</div>
+        <div class="timeline">
+          <div>
+            <div class="subheadline">November 2022</div>
+            <ul>
+              <li>Official Whitepaper release</li>
+              <li>Website & Investor Dashboard</li>
+              <li>
+                Preparation of legal documents, company incorporation, token
+                sale agreement etc
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">Dec — Jan 22/23</div>
+            <ul>
+              <li>Start Private Sale</li>
+              <li>Airdrop & Bounty campaigns</li>
+              <li>Start Marketing & Community Building</li>
+            </ul>
+            <div class="details">
+              <div class="subheadline">2023</div>
+              <div class="body">
+                Successful completion of the ICO sale, launch of the Supporterzz
+                Platform and Starzz exchange.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">Feb — Mar 2023</div>
+            <ul>
+              <li>Start Pre-Sale</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">Apr — May 2023</div>
+            <ul>
+              <li>Main sale</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">Dec — Mar 23/24</div>
+            <ul>
+              <li>Pilot STARZZ Exchange</li>
+              <li>Pilot SUPPORTERZZ platform</li>
+            </ul>
+            <div class="details">
+              <div class="subheadline">2024</div>
+              <div class="body">
+                Implementation of additional functionalities, introduction of
+                more Champion tokens, worldwide expansion, reach of break-even
+                point and profit.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">Apr — May 2024</div>
+            <ul>
+              <li>Launch of ECO System</li>
+              <li>Listing of 1st 10+ Champion token</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">June 2024</div>
+            <ul>
+              <li>
+                Start of further development of DAO, NFTs, product and services
+                to the ecosystem
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">2025</div>
+            <ul>
+              <li>Scale to 50+ Champion Token</li>
+            </ul>
+            <div class="details">
+              <div class="subheadline">2025</div>
+              <div class="body">
+                Further expansion of the company and the ecosystem
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="subheadline">2026</div>
+            <ul>
+              <li>First positive EBIT report</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subheadline">2027</div>
+            <ul>
+              <li>More than 1 million € EBIT</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section--light team">
+      <div class="container">
+        <div class="headline">Team</div>
+        <div class="list">
+          <a href="#" class="item">
+            <img src="./../img/users/user1.png" alt="" />
+            <p class="subheadline">Marco Kowalewski</p>
+            <p class="body">CEO</p>
+          </a>
+          <a href="#" class="item no-user">
+            <img src="./../img/users/no-user.png" alt="" />
+            <p class="subheadline">Hamed Saleh</p>
+            <p class="body">CEO</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user2.png" alt="" />
+            <p class="subheadline">Jörg Zeitz</p>
+            <p class="body">CSO</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user3.png" alt="" />
+            <p class="subheadline">Fabian Bäumler</p>
+            <p class="body">CTO</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user4.png" alt="" />
+            <p class="subheadline">Maria Buseck</p>
+            <p class="body">Head of Marketing</p>
+          </a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="container">
+        <div class="headline">Team</div>
+        <div class="list">
+          <a href="#" class="item">
+            <img src="./../img/users/user1.png" alt="" />
+            <p class="subheadline">Frank Fitzgerald</p>
+          </a>
+          <a href="#" class="item no-user">
+            <img src="./../img/users/no-user.png" alt="" />
+            <p class="subheadline">Feyyaz Alingan</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user2.png" alt="" />
+            <p class="subheadline">Jennifer Tanner</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user3.png" alt="" />
+            <p class="subheadline">Joshua Bell</p>
+          </a>
+          <a href="#" class="item">
+            <img src="./../img/users/user4.png" alt="" />
+            <p class="subheadline">Harald Horrmann</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="section adopter">
+      <div class="container">
+        <div class="headline">Become an early adopter</div>
+        <div class="subheadline">
+          First movers get up to 40% bonus on their investment.
+        </div>
+        <a href="#" class="btn btn--primary">Register for ICO</a>
+      </div>
+    </div>
+    <div class="section partners">
+      <div class="container">
+        <div class="subheadline">Our partners</div>
+        <div class="logos">
+          <img src="./../img/starzz-adopter1.png" alt="" />
+          <img src="./../img/starzz-adopter2.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="sign-up">
+          <div class="subheadline">Sign up for exclusive updates</div>
+          <form>
+            <input type="text" placeholder="Your email" />
+            <button type="submit" class="btn btn--primary">Sign up</button>
+          </form>
         </div>
         <nav>
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#token">Token</a>
-          <a href="#ico">ICO</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#" class="btn-primary btn mobile">Sign up for ICO</a>
+          <div>
+            <div>About us</div>
+            <ul>
+              <li><a href="#">Imprint</a></li>
+              <li><a href="#">Terms and conditions</a></li>
+              <li><a href="#">Token sale agreement</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">AML policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <div>For investors</div>
+            <ul>
+              <li><a href="#">Register for the ICO</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <div>Documents</div>
+            <ul>
+              <li><a href="#">Whitepaper</a></li>
+              <li><a href="#">One Pager</a></li>
+            </ul>
+          </div>
+          <div>
+            <div>Connect</div>
+            <div class="icons">
+              <a href="#"><img src="./../img/starzz-icons/fb.svg" alt="" /></a>
+              <a href="#"><img src="./../img/starzz-icons/ig.svg" alt="" /></a>
+              <a href="#"><img src="./../img/starzz-icons/tg.svg" alt="" /></a>
+              <a href="#"><img src="./../img/starzz-icons/tw.svg" alt="" /></a>
+              <a href="#"><img src="./../img/starzz-icons/yt.svg" alt="" /></a>
+              <a href="#"><img src="./../img/starzz-icons/ln.svg" alt="" /></a>
+            </div>
+          </div>
         </nav>
-        <a href="#" class="btn-primary btn desktop !py-2.5">Sign up for ICO</a>
       </div>
-    </header>
-    <div class="section mb-20">
-      <div class="container">
-        <img src="/hero.png" alt="" class="lg:hidden w-full relative left-12">
-        <div class="lg:flex lg:children:w-1/2 items-end lt-lg:text-center">
-          <div class="space-y-10">
-            <div class="text-8.5 font-700">The first full-fledged blockchain-based solution for veterinarians and pet owners</div>
-            <div class="font-500">
-              The first full-fledged blockchain-based solution for veterinarians and pet owners
-            </div>
-            <div class="flex lt-lg:justify-center gap-10 !lt-md:gap-5 !lt-md:flex-col !lt-md:items-center">
-              <a href="#" class="btn btn-primary">Sign up for ICO</a>
-              <a href="#" class="btn btn-secondary">One Pager</a>
-            </div>
-            <div class="headline">Pre-Sale starting in</div>
-            <div class="timer">
-              <div data-units="days" id="days">00</div>
-              <span>:</span>
-              <div data-units="hours" id="hours">00</div>
-              <span>:</span>
-              <div data-units="minutes" id="minutes">00</div>
-              <span>:</span>
-              <div data-units="seconds" id="seconds">00</div>
-            </div>
-          </div>
-          <div>
-            <img src="/hero.png" alt="" class="lt-lg:hidden w-full">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="headline text-center">Known from</div>
-        <div class="rounded-2xl bg-light p-6 flex lg:space-x-4 justify-center lt-lg:flex-col lt-lg:space-y-4 lt-lg:items-center children:rounded-xl children:bg-white children:py-2.5 children:px-12">
-          <div><img src="/form.png" alt="" class="w-[80px] h-[80px]"></div>
-          <div><img src="/form.png" alt="" class="w-[80px] h-[80px]"></div>
-          <div><img src="/form.png" alt="" class="w-[80px] h-[80px]"></div>
-          <div><img src="/form.png" alt="" class="w-[80px] h-[80px]"></div>
-          <div><img src="/form.png" alt="" class="w-[80px] h-[80px]"></div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div id="how" class="absolute -top-[100px]"></div>
-      <div class="container !max-w-[800px]">
-        <div class="headline text-center">Meet VetAPP</div>
-        <div class="body text-center mb-10">
-          We are changing the vet healthcare market as we know it. Our mission is to improve the conditions for pet owners and veterinarians by providing them with innovative tools for various purposes from diagnosis, monitoring, booking management, interaction and many more.
-        </div>
-        <div class="mb-20 children:w-[230px] children:h-[180px] text-center py-[110px] rounded-2xl lt-md:rounded-0 lt-md:-mx-8 bg-[#DFEFEC]" style="background-image: url(/meet.png)">
-          <img src="/logo.svg" alt="">
-        </div>
-      </div>
-      <div class="container">
-        <div class="columns !lt-md:flex-col-reverse items-center mb-20">
-          <div>
-            <div class="headline">For pet owners</div>
-            <div class="body">
-              We are offering pet owners a one-stop solution that allows them to take better care of their pets. VetAPP will provide a revolutionary AI tool for prediagnosis that will shorten the communciation paths between pet owners and vets and provide better outcome in the early onset of dangerous conditions. VetAPP will also facilitate easy access of pet owners to veterinary services by connecting the two stakeholder groups directly, as well as to high quality products on the marketplace.
-            </div>
-          </div>
-          <div class="bg-primary rounded-2xl py-16 text-center">
-            <img src="/owners.svg" alt="">
-          </div>
-        </div>
-        <div class="columns items-center mb-20">
-          <div class="bg-main rounded-2xl py-16 text-center">
-            <img src="/veterinarian.svg" alt="">
-          </div>
-          <div>
-            <div class="headline">For veterinarians</div>
-            <div class="body">
-              VetAPP is made by vets for vets - we want to allow vet clinics and practices to maximize their revenues, while increasing the quality of the services they provide to their customers. Our solution will improve the workflow of vets through various tools for pre-diagnosis, treatment, monitoring, appointment and booking management. We are offering vets access to a wider customer base and multiple additional monetization streams.
-            </div>
-          </div>
-        </div>
-        <div class="columns !lt-md:flex-col-reverse items-center mb-20">
-          <div>
-            <div class="headline">For animals</div>
-            <div class="body">
-              Last but not least — VetAPP is essentially created for the well-being of all our faithful companions whom we love. By helping pet owners and vets, we are directly creating a better world for animals.
-              <br><br>
-              Our solution will have potential use cases outside the scope of pets, extending to farms and other industries where animals.
-            </div>
-          </div>
-          <div class="bg-primary rounded-2xl py-16 text-center">
-            <img src="/animals.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div id="features" class="absolute -top-[100px]"></div>
-      <div class="container md:rounded-2xl bg-light pt-15">
-        <div class="headline text-center">The VetAPP ecosystem</div>
-        <div class="body mb-10 text-center">The VetAPP ecosystem combines a wide array of features for both pet owners and veterinarians.</div>
-        <div class="grid gap-5 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 children:p-5 children:rounded-2xl children:border children:border-[#00C7A066] children:text-center">
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">AI diagnosis tools</div>
-            <div class="font-500 text-3.5">Our revolutionary AI diagnosis tool will collect enough information from the pet owner to define a diagnosis and book an appointment at the vet if necessary.</div>
-          </div>
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">Matchmaking</div>
-            <div class="font-500 text-3.5">We will connect vets and pet owners directly based on different variables such as geolocation, categories, average rating, price and many more.</div>
-          </div>
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">Telemedicine</div>
-            <div class="font-500 text-3.5">Telemedicine allows for a direct contact between pet owners and veterinarians online, which will aid in diagnosis, treatment and monitoring.</div>
-          </div>
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">Booking tools</div>
-            <div class="font-500 text-3.5">Appointment booking and management tools allowing vets to save valuable time and resources that are currently spent on administrative tasks.</div>
-          </div>
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">Knowledge base</div>
-            <div class="font-500 text-3.5">Our knowledge base will allow pet owners to gain insight on how to best take care of their pets by giving them valuable and confirmed information.</div>
-          </div>
-          <div>
-            <img src="/check-mark.svg" alt="" class="w-9">
-            <div class="font-700 text-5 text-primary">Wearables</div>
-            <div class="font-500 text-3.5">VetAPP will be integratable to bracelets and microchips that will accumulate data, based on which the more advanced AI algorithms will be developed in the future.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="headline !mb-10 text-center">The AI prediagnosis tool</div>
-        <div class="grid gap-5 md:grid-cols-3 lt-md:grid-cols-1">
-          <div class="children:p-5 space-y-5 lt-md:text-center">
-            <div class="space-y-2.5">
-              <img src="/check-mark.svg" alt="" class="w-9">
-              <div class="font-700 text-5 text-primary">AI diagnosis tools</div>
-              <div class="font-500 text-3.5">Our revolutionary AI diagnosis tool will collect enough information from the pet owner to define a diagnosis and book an appointment at the vet if necessary.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/check-mark.svg" alt="" class="w-9">
-              <div class="font-700 text-5 text-primary">AI diagnosis tools</div>
-              <div class="font-500 text-3.5">Our revolutionary AI diagnosis tool will collect enough information from the pet owner to define a diagnosis and book an appointment at the vet if necessary.</div>
-            </div>
-          </div>
-          <div class="bg-primary rounded-2xl justify-self-center flex justify-center items-center w-[260px] h-[440px] text-white">
-            Screenshot
-          </div>
-          <div class="text-right children:p-5 space-y-5 lt-md:text-center">
-            <div class="space-y-2.5">
-              <img src="/check-mark.svg" alt="" class="w-9">
-              <div class="font-700 text-5 text-primary">AI diagnosis tools</div>
-              <div class="font-500 text-3.5">Our revolutionary AI diagnosis tool will collect enough information from the pet owner to define a diagnosis and book an appointment at the vet if necessary.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/check-mark.svg" alt="" class="w-9">
-              <div class="font-700 text-5 text-primary">AI diagnosis tools</div>
-              <div class="font-500 text-3.5">Our revolutionary AI diagnosis tool will collect enough information from the pet owner to define a diagnosis and book an appointment at the vet if necessary.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section bg-light">
-      <div class="container gap-5 grid grid-cols-[2fr_1fr] !lt-md:grid-cols-1">
-        <div class="space-y-5 lt-md:text-center">
-          <div class="headline">The social network</div>
-          <div class="body max-w-120 lt-md:mx-auto">The VetAPP social media network will allow pet lovers, owners and vets to connect with each other and interact on a high level.</div>
-          <div class="bg-primary rounded-2xl justify-self-center justify-center items-center w-[260px] h-[440px] text-white !lt-md:flex hidden mx-auto">
-            Screenshot
-          </div>
-          <div class="flex lt-lg:flex-col gap-5">
-            <div class="space-y-2.5">
-              <img src="/features.svg" alt="">
-              <div class="font-700 text-5 text-primary">Features</div>
-              <div class="body text-3.5">Multiple functionalities such as chatting, newsfeeds, commenting, liking and multimedia to stories and reels.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/advertisers.svg" alt="">
-              <div class="font-700 text-5 text-primary">Advertisers</div>
-              <div class="body text-3.5">We will unlock an additional monetization stream by allowing advertisers to leverage the potential of the user base.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/rewards.svg" alt="">
-              <div class="font-700 text-5 text-primary">Rewards</div>
-              <div class="body text-3.5">We are also planning on integrating a reward structure for high quality community-generated content.</div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-primary rounded-2xl justify-self-center flex justify-center items-center w-[260px] h-[440px] text-white !lt-md:hidden">
-          Screenshot
-        </div>
-      </div>
-      <div class="container gap-5 grid grid-cols-[1fr_2fr] !lt-md:grid-cols-1">
-        <div class="bg-primary rounded-2xl justify-self-center flex justify-center items-center w-[260px] h-[440px] text-white !lt-md:hidden">
-          Screenshot
-        </div>
-        <div class="space-y-5 lt-md:text-center">
-          <div class="headline">The marketplace</div>
-          <div class="body max-w-120 lt-md:mx-auto">The VetAPP marketplace will provide pet owners with access to various high quality products - from pet food, pharmaceuticals to toys and many others, including services.</div>
-          <div class="bg-primary rounded-2xl justify-self-center justify-center items-center w-[260px] h-[440px] text-white !lt-md:flex hidden mx-auto">
-            Screenshot
-          </div>
-          <div class="flex lt-lg:flex-col gap-5">
-            <div class="space-y-2.5">
-              <img src="/for-vets.svg" alt="">
-              <div class="font-700 text-5 text-primary">For vets</div>
-              <div class="body text-3.5">The marketplace will allow vets to get access to additional monetization streams by offering their own products.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/discount.svg" alt="">
-              <div class="font-700 text-5 text-primary">Vouchers</div>
-              <div class="body text-3.5">VetAPP users will be rewarded with vouchers and discounts which they can use on the marketplace.</div>
-            </div>
-            <div class="space-y-2.5">
-              <img src="/money.svg" alt="">
-              <div class="font-700 text-5 text-primary">Flexible payments</div>
-              <div class="body text-3.5">The marketplace will allow users to use both fiat currencies and the native VETC token to execute payments.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section bg-main bg-bottom bg-cover !px-0 !md:pb-0" style="background-image: url(/vets-token.png)">
-      <div id="ico" class="absolute -top-[100px]"></div>
-      <img src="/ico.png" alt="" class="md:hidden w-[120vw] -mx-[10vw]">
-      <div class="container !pb-0">
-        <div class="columns">
-          <div class="lt-md:hidden">
-            <img src="/ico.png" alt="" class="w-full">
-          </div>
-          <div class="space-y-5 !lt-md:text-center">
-            <div class="headline text-white">The VETC token</div>
-            <div class="body text-white">
-              The VETC token will be used for payments within the VetAPP ecosystem for services and subscriptions. The token will also act as a reward mechanism, giving access to VETC subscribers to the unique VETC reward programme.
-              <br><br>
-              The token will be deflationary, with 5% to 10% of the net profit of VetAPP from subscriptions committed towards token buybacks from exchanges and their burning.
-            </div>
-            <a href="#" class="btn btn-primary">Whitepaper</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <img src="/screenshot.svg" alt="" class="w-[120vw] -mx-[10vw] lt-md:block hidden">
-      <div class="container">
-        <div class="columns items-center">
-          <div>
-            <img src="/screenshot.svg" alt="" class="w-full lt-md:hidden">
-          </div>
-          <div>
-            <div class="headline">Subscriptions</div>
-            <div class="body">
-              Subscriptions are paid monthly by users and give various rewards and advantages such as access to more functionalities, cosmetic rewards, higher discounts on products and access to two different loyalty programs.
-              <br><br>
-              There will be three subscription tiers, with an exclusive VETC token tier which will offer exclusive access to the VETC reward programme and further advantages.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <img src="/screenshot.svg" alt="" class="w-[120vw] -mx-[10vw] lt-md:block hidden">
-      <div class="container">
-        <div class="columns items-center">
-          <div>
-            <div class="headline">Incentive mechanisms</div>
-            <div class="body">
-              We will implement a comprehensive gamification program and various incentive structures with different rewards for both fiat and VETC users, with the higher tiers reserved for the most active users within the ecosystem.
-              <br><br>
-              We will introduce another layer of incentives for the top 15% percentile of the users, also known as VetAPP Evangelists, who will receive a wide array of additional bonuses.
-            </div>
-          </div>
-          <div>
-            <img src="/screenshot.svg" alt="" class="w-full lt-md:hidden">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section px-4">
-      <div class="container rounded-2xl bg-light p-20">
-        <div class="columns">
-          <div class="space-y-10">
-            <div class="headline lt-md:text-center">Resources</div>
-            <div class="body lt-md:text-center">Read our Whitepaper and One Pager to learn more about our mission and offering.</div>
-            <div class="flex mb-10 gap-10  !lt-md:gap-5 !lt-md:flex-col !lt-md:items-center">
-              <a href="#" class="btn btn-primary">Sign up for ICO</a>
-              <a href="#" class="btn btn-secondary">One Pager</a>
-            </div>
-          </div>
-          <div class="text-center">
-            <img src="/whitepaper.svg" class="w-60" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div id="token" class="absolute -top-[100px]"></div>
-      <div class="container space-y-10">
-        <div class="headline lt-md:text-center">The VetAPP token sale</div>
-        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 children:p-5 children:rounded-2xl children:border children:border-[#00C7A066] children:text-center">
-          <div>
-            <div class="font-700 text-5">VETC</div>
-            <div>Token name</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">Utility</div>
-            <div>Token type</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">BSC</div>
-            <div>Blockchain</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">BEP-20</div>
-            <div>Contract</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">500,000,000 VETC</div>
-            <div>Token supply</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">0,10 €</div>
-            <div>ICO price (main sale)</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">1,000,000 €</div>
-            <div>Soft cap</div>
-          </div>
-          <div>
-            <div class="font-700 text-5">29,000,000 €</div>
-            <div>Hard cap</div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="grid gap-5 grid-cols-1 md:grid-cols-3 children:p-5 children:rounded-2xl children:bg-light children:text-center">
-          <div class="space-y-2.5">
-            <div class="text-5 font-600 text-primary">
-              Private sale  
-              <div class="text-5 font-700">01.12.2022 — 31.01.2023</div>   
-            </div>         
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Amount</div>
-              100 000 000 VETC
-            </div>            
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Price</div>
-              0,06 EUR
-            </div>            
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Bonus</div>
-              40%
-            </div>
-          </div>
-          <div class="space-y-2.5">
-            <div class="text-5 font-600 text-primary">
-              Pre-sale  
-              <div class="text-5 font-700">01.02.2023 — 31.03.2023</div>    
-            </div>        
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Amount</div>
-              100 000 000 VETC
-            </div>            
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Price</div>
-              0,08 EUR
-            </div>            
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Bonus</div>
-              20%
-            </div>
-          </div>
-          <div class="space-y-2.5">
-            <div class="text-5 font-600 text-primary">
-              Main sale  
-              <div class="text-5 font-700">01.04.2023 — 31.05.2023</div>         
-            </div>   
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Amount</div>
-              150,000,000 VETC
-            </div>            
-            <div class="text-5 font-700">
-              <div class="text-3.5 font-500">Price</div>
-              0,10 EUR
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="columns items-center !lt-md:flex-col-reverse">
-          <div>
-            <img src="/chart1.png" alt="" class="w-full">
-          </div>
-          <div class="space-y-6">
-            <div class="headline">Token distribution</div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-primary rounded-md h-full w-7/10"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Crowdsale</span>
-                <span class="font-600">70%</span>
-              </div>
-            </div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-[#79D8C5] rounded-md h-full w-1/5"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Community rewards</span>
-                <span class="font-600">20%</span>
-              </div>
-            </div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-[#7A99AE] rounded-md h-full w-1/20"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Legal & Exchanges</span>
-                <span class="font-600">5%</span>
-              </div>
-            </div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-[#19446D] rounded-md h-full w-1/20"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Team & Advisors</span>
-                <span class="font-600">5%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="columns items-center">
-          <div class="space-y-6">
-            <div class="headline">Funds distribution</div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-primary rounded-md h-full w-6/10"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Development</span>
-                <span class="font-600">60%</span>
-              </div>
-            </div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-[#79D8C5] rounded-md h-full w-[35%]"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Marketing</span>
-                <span class="font-600">35%</span>
-              </div>
-            </div>
-            <div>
-              <div class="h-6 rounded-md bg-light mb-1.5">
-                <div class="bg-[#19446D] rounded-md h-full w-1/20"></div>
-              </div>
-              <div class="flex justify-between">
-                <span class="font-500">Legal & Exchanges</span>
-                <span class="font-600">5%</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src="/chart2.png" alt="" class="w-full">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div id="roadmap" class="absolute -top-[100px]"></div>
-      <div class="container md:rounded-2xl bg-light p-20">
-        <div class="headline lt-md:text-center !mb-10">Project roadmap</div>
-        <div class="roadmap">
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">December 2022</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Start Private-Sale</li>
-            </ul>
-          </div>
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">February 2023</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Pre-sale sale</li>    
-              <li>Start with the VetAPP mobile app development</li>   
-            </ul>
-          </div>
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">April 2023</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Start main sale</li>    
-              <li>Airdrop & Bounty campaigns</li>   
-            </ul>
-          </div>
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">Q3 2023</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Listing of VETC on exchanges</li>    
-              <li>Completion of the VetAPP mobile application and alpha version</li>   
-            </ul>
-          </div>
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">Q4 2023</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Roll out of the VetAPP app</li>    
-              <li>Alpha version of the web platform</li>   
-              <li>Worldwide expansion</li>   
-            </ul>
-          </div>
-          <div>
-            <div class="font-600 text-5 text-primary mb-2.5">Q1 2024</div>
-            <ul class="children:text-3.5 children:font-500 children:list-inside">
-              <li>Roll out of the VetAPP web platform</li>   
-              <li>Worldwide expansion</li>   
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section !pb-0">
-      <div class="container">
-        <div class="headline text-center !mb-10">Team</div>
-        <div class="grid grid-cols-5 gap-5 lt-lg:grid-cols-1">
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user1.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">PhD Mariusz Andrych</div>
-            <div class="text-3.5">Board Member</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user2.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Przemyslaw Mazurek</div>
-            <div class="text-3.5">Board Member</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user3.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Anna Andrych</div>
-            <div class="text-3.5">CMO / CSO</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user4.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">PhD Ewa Stanczyk</div>
-            <div class="text-3.5">Medical Expert</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user5.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">PhD Katarzyna Kołomyjec</div>
-            <div class="text-3.5">Medical Department Director</div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="headline text-center !mb-10">Advisory board</div>
-        <div class="grid grid-cols-5 gap-5 lt-lg:grid-cols-1">
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user6.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Artur Kuczmowski</div>
-            <div class="text-3.5">Legal Advisor</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user7.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Adam Kuziora</div>
-            <div class="text-3.5">Blockchain Advisor</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user8.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Prof. Barbara Mroz-Gorgon</div>
-            <div class="text-3.5">Marketing Advisor</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user9.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Marcin Rzeczkowski</div>
-            <div class="text-3.5">Customer Loyalty and UX Advisor</div>
-          </div>
-          <div class="space-y-5 font-600 text-center">
-            <a href="#" class="relative">
-              <img src="/user10.png" class="w-46" alt=""/>
-              <img src="ln-dark.svg" class="absolute -bottom-0.5 right-0" />
-            </a>
-            <div class="text-5">Dimitri Haußmann</div>
-            <div class="text-3.5">Blockchain Advisor</div>
-          </div>
-        </div>
-      </div>
-      <div class="container md:rounded-3xl bg-cover !max-w-200 h-100 mx-auto !p-10 lt-md:bg-center lt-md:h-200" style="background-image: url(/bottom-dog.png)">
-        <div class="w-60 space-y-10 lt-md:text-center lt-md:mx-auto">
-          <div class="headline text-white">Become an early adopter</div>
-          <div class="body text-white">First movers get up to 40% bonus on their investment.</div>
-          <a href="#" class="btn btn-secondary">Sign up</a>
-        </div>
-      </div>
-    </div>
-    <div class="section bg-dark">
-      <div class="container">
-        <div class="text-5 font-600 mb-5 text-white">Sign up for exclusive updates</div>
-        <form class="rounded-[30px] bg-white flex overflow-hidden max-w-120 mb-10">
-          <input placeholder="Your email" class="flex-grow-1 px-4"/>
-          <button type="submit" class="btn btn-primary">Sign up</button>
-        </form>
-        <div class="grid md:grid-cols-4 lt-md:px-10 gap-5">
-          <div>
-            <div class="text-5 font-700 text-white mb-2.5">About us</div>
-            <ul class="children:list-inside children:text-white children:font-400 space-y-2">
-              <li>Imprint</li>
-              <li>Terms and conditions</li>
-              <li>Token sale agreement</li>
-              <li>Privacy policy</li>
-              <li>AML policy</li>
-            </ul>
-          </div>
-          <div>
-            <div class="text-5 font-700 text-white mb-2.5">For investors</div>
-            <ul class="children:list-inside children:text-white children:font-400 space-y-2">
-              <li>Register for the ICO</li>
-              <li>Login</li>
-            </ul>
-          </div>
-          <div>
-            <div class="text-5 font-700 text-white mb-2.5">Documents</div>
-            <ul class="children:list-inside children:text-white children:font-400 space-y-2">
-              <li>Whitepaper</li>
-              <li>One Pager</li>
-            </ul>
-          </div>
-          <div>
-            <div class="text-5 font-700 text-white mb-2.5">Connect</div>
-            <div class="flex gap-2.5 children:w-[30px]">
-              <img src="/fb.svg" alt="">
-              <img src="/tg.svg" alt="">
-              <img src="/tw.svg" alt="">
-              <img src="/ln.svg" alt="">
-              <img src="/yt.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    </footer>
   </body>
 </html>
